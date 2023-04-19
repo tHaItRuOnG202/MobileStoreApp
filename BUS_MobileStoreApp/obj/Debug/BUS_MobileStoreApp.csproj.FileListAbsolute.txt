@@ -1,0 +1,12 @@
+E:\LTGD\MobileStoreApp\BUS_MobileStoreApp\bin\Debug\BUS_MobileStoreApp.dll
+E:\LTGD\MobileStoreApp\BUS_MobileStoreApp\bin\Debug\BUS_MobileStoreApp.pdb
+E:\LTGD\MobileStoreApp\BUS_MobileStoreApp\bin\Debug\DAO_MoblieStoreApp.dll
+E:\LTGD\MobileStoreApp\BUS_MobileStoreApp\bin\Debug\DTO_MobileStoreApp.dll
+E:\LTGD\MobileStoreApp\BUS_MobileStoreApp\bin\Debug\DAO_MoblieStoreApp.pdb
+E:\LTGD\MobileStoreApp\BUS_MobileStoreApp\bin\Debug\DAO_MoblieStoreApp.dll.config
+E:\LTGD\MobileStoreApp\BUS_MobileStoreApp\bin\Debug\DTO_MobileStoreApp.pdb
+E:\LTGD\MobileStoreApp\BUS_MobileStoreApp\obj\Debug\BUS_MobileStoreApp.csproj.AssemblyReference.cache
+E:\LTGD\MobileStoreApp\BUS_MobileStoreApp\obj\Debug\BUS_MobileStoreApp.csproj.CoreCompileInputs.cache
+E:\LTGD\MobileStoreApp\BUS_MobileStoreApp\obj\Debug\BUS_MobileStoreApp.csproj.CopyComplete
+E:\LTGD\MobileStoreApp\BUS_MobileStoreApp\obj\Debug\BUS_MobileStoreApp.dll
+E:\LTGD\MobileStoreApp\BUS_MobileStoreApp\obj\Debug\BUS_MobileStoreApp.pdb

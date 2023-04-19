@@ -1,0 +1,10 @@
+E:\LTGD\MobileStoreApp\DAO_MoblieStoreApp\bin\Debug\DAO_MoblieStoreApp.dll.config
+E:\LTGD\MobileStoreApp\DAO_MoblieStoreApp\bin\Debug\DAO_MoblieStoreApp.dll
+E:\LTGD\MobileStoreApp\DAO_MoblieStoreApp\bin\Debug\DAO_MoblieStoreApp.pdb
+E:\LTGD\MobileStoreApp\DAO_MoblieStoreApp\bin\Debug\DTO_MobileStoreApp.dll
+E:\LTGD\MobileStoreApp\DAO_MoblieStoreApp\bin\Debug\DTO_MobileStoreApp.pdb
+E:\LTGD\MobileStoreApp\DAO_MoblieStoreApp\obj\Debug\DAO_MoblieStoreApp.csproj.AssemblyReference.cache
+E:\LTGD\MobileStoreApp\DAO_MoblieStoreApp\obj\Debug\DAO_MoblieStoreApp.csproj.CoreCompileInputs.cache
+E:\LTGD\MobileStoreApp\DAO_MoblieStoreApp\obj\Debug\DAO_MoblieStoreApp.csproj.CopyComplete
+E:\LTGD\MobileStoreApp\DAO_MoblieStoreApp\obj\Debug\DAO_MoblieStoreApp.dll
+E:\LTGD\MobileStoreApp\DAO_MoblieStoreApp\obj\Debug\DAO_MoblieStoreApp.pdb

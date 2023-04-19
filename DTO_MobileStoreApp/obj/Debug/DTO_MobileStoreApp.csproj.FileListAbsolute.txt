@@ -1,0 +1,6 @@
+E:\LTGD\MobileStoreApp\DTO_MobileStoreApp\bin\Debug\DTO_MobileStoreApp.dll
+E:\LTGD\MobileStoreApp\DTO_MobileStoreApp\bin\Debug\DTO_MobileStoreApp.pdb
+E:\LTGD\MobileStoreApp\DTO_MobileStoreApp\obj\Debug\DTO_MobileStoreApp.csproj.CoreCompileInputs.cache
+E:\LTGD\MobileStoreApp\DTO_MobileStoreApp\obj\Debug\DTO_MobileStoreApp.dll
+E:\LTGD\MobileStoreApp\DTO_MobileStoreApp\obj\Debug\DTO_MobileStoreApp.pdb
+E:\LTGD\MobileStoreApp\DTO_MobileStoreApp\obj\Debug\DTO_MobileStoreApp.csproj.AssemblyReference.cache

@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 12.625" name="IMPROOKSTORE">
+  <DataContextMoniker Name="/IMPROOKSTOREDataContext" />
+  <nestedChildShapes>
+    <classShape Id="5e85edac-ddfb-46f9-8a8a-e79a8e4d876c" absoluteBounds="6.25, 1.125, 2, 1.5785953776041664">
+      <DataClassMoniker Name="/IMPROOKSTOREDataContext/ChiTietHoaDon" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d5a1f5e9-9f69-4402-9daa-1f1ba49751a8" absoluteBounds="6.265, 1.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9dead219-d0cf-43aa-a561-678675319087" absoluteBounds="3.5, 9.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/IMPROOKSTOREDataContext/SanPham" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4dafb8a7-8e0f-458e-b4c5-cec2c9fedc70" absoluteBounds="3.515, 9.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c377cd6f-da7e-4ac3-8ed6-235449650360" absoluteBounds="0.75, 10.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/IMPROOKSTOREDataContext/GiamGia" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6d5267a0-1e3e-4bd8-b90a-f7c555558ac1" absoluteBounds="0.765, 11.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c110e116-e734-4d55-bbb6-1896944b7440" absoluteBounds="3.5, 1, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/IMPROOKSTOREDataContext/HoaDon" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a84b29ce-51ee-4b7e-8e81-b3a3c07b64de" absoluteBounds="3.515, 1.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1fb41b4a-dd32-4949-a5d4-08c8ed981e84" absoluteBounds="0.75, 0.875, 2, 1.9631982421875">
+      <DataClassMoniker Name="/IMPROOKSTOREDataContext/KhachHang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fa637935-087a-4d16-8865-e4c8ff9a7472" absoluteBounds="0.765, 1.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="10742f03-33ac-440a-a66c-b2eff72265c6" absoluteBounds="0.75, 8.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/IMPROOKSTOREDataContext/LoaiSanPham" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c75f56ad-8d10-4682-b33c-c680731434c3" absoluteBounds="0.765, 9.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4ca50e00-1018-4c0c-a13a-c43bcee5c53d" absoluteBounds="0.75, 5.25, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/IMPROOKSTOREDataContext/NhanVien" />
+      <nestedChildShapes>
+        <elementListCompartment Id="41d4a2c2-5d63-425f-a8b0-0395bdf13384" absoluteBounds="0.765, 5.71, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 10.5777498372396); (7.25 : 10.5777498372396); (7.25 : 2.70359537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/IMPROOKSTOREDataContext/SanPham/SanPham_ChiTietHoaDon" />
+      <nodes>
+        <classShapeMoniker Id="9dead219-d0cf-43aa-a561-678675319087" />
+        <classShapeMoniker Id="5e85edac-ddfb-46f9-8a8a-e79a8e4d876c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 11.2027498372396); (3.5 : 11.2027498372396)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/IMPROOKSTOREDataContext/GiamGia/GiamGia_SanPham" />
+      <nodes>
+        <classShapeMoniker Id="c377cd6f-da7e-4ac3-8ed6-235449650360" />
+        <classShapeMoniker Id="9dead219-d0cf-43aa-a561-678675319087" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 1.91429768880208); (6.25 : 1.91429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/IMPROOKSTOREDataContext/HoaDon/HoaDon_ChiTietHoaDon" />
+      <nodes>
+        <classShapeMoniker Id="c110e116-e734-4d55-bbb6-1896944b7440" />
+        <classShapeMoniker Id="5e85edac-ddfb-46f9-8a8a-e79a8e4d876c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.88544840494792); (3.5 : 1.88544840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/IMPROOKSTOREDataContext/KhachHang/KhachHang_HoaDon" />
+      <nodes>
+        <classShapeMoniker Id="1fb41b4a-dd32-4949-a5d4-08c8ed981e84" />
+        <classShapeMoniker Id="c110e116-e734-4d55-bbb6-1896944b7440" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 9.72199625651042); (3.5 : 9.72199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/IMPROOKSTOREDataContext/LoaiSanPham/LoaiSanPham_SanPham" />
+      <nodes>
+        <classShapeMoniker Id="10742f03-33ac-440a-a66c-b2eff72265c6" />
+        <classShapeMoniker Id="9dead219-d0cf-43aa-a561-678675319087" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.52005126953125); (4.5 : 6.52005126953125); (4.5 : 2.77089680989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/IMPROOKSTOREDataContext/NhanVien/NhanVien_HoaDon" />
+      <nodes>
+        <classShapeMoniker Id="4ca50e00-1018-4c0c-a13a-c43bcee5c53d" />
+        <classShapeMoniker Id="c110e116-e734-4d55-bbb6-1896944b7440" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
