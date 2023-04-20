@@ -831,7 +831,7 @@ namespace DAO_MoblieStoreApp
         }
 
         //Thanh toán hóa đơn
-        public void InsertReceipt(string idRec, DateTime dateSale, string totalPrice, string idEmpl, string idCust)
+        public void InsertReceipt(int idRec, DateTime dateSale, string totalPrice, int idEmpl, int idCust)
         {
             string query = string.Format("INSERT INTO HoaDon(IDHoaDon, NgayXuatHoaDon, TongTien, IDNhanVien, IDKhachHang) VALUES({0}, N'{1}', N'{2}', {3}, {4})", idRec, dateSale, totalPrice, idEmpl, idCust);
 
@@ -844,7 +844,7 @@ namespace DAO_MoblieStoreApp
             }
         }
 
-        public void InsertReceiptDetail(string idRec, string idPro, string quantity, string uPrice)
+        public void InsertReceiptDetail(int idRec, string idPro, int quantity, string uPrice)
         {
             string query = string.Format("INSERT INTO ChiTietHoaDon(IDHoaDon, IDSanPham, SoLuong, DonGia) VALUES({0}, {1}, N'{2}', N'{3}')", idRec, idPro, quantity, uPrice);
 
@@ -892,6 +892,48 @@ namespace DAO_MoblieStoreApp
         }
 
         //Chức năng quản lý hóa đơn
+        public DataTable LoadReceipt()
+        {
+            SqlDataAdapter da;
+            DataTable dt = new DataTable();
+            string query = String.Format("Select * From HoaDon");
+
+            da = new SqlDataAdapter(query, dc.Connect());
+            da.Fill(dt);
+            return dt;
+        }
+
+        public DataTable LoadReceiptV2()
+        {
+            SqlDataAdapter da;
+            DataTable dt = new DataTable();
+            string query = String.Format("Select hd.IDHoaDon, hd.NgayXuatHoaDon, hd.TongTien, CONCAT(nv.HoNhanVien, ' ', nv.TenNhanVien) as TenNhanVien, kh.TenKhachHang From HoaDon hd, NhanVien nv, KhachHang kh Where hd.IDNhanVien = nv.IDNhanVien And hd.IDKhachHang = kh.IDKhachHang");
+            da = new SqlDataAdapter(query, dc.Connect());
+            da.Fill(dt);
+            return dt;
+        }
+
+        public DataTable LoadReceiptDetail(int recp)
+        {
+            SqlDataAdapter da;
+            DataTable dt = new DataTable();
+            string query = String.Format("Select sp.IDSanPham, sp.TenSanPham, cthd.SoLuong, sp.DonVi, sp.DonGia, km.GiaTri From SanPham sp, ChiTietHoaDon cthd, GiamGia km Where sp.IDSanPham = cthd.IDSanPham AND sp.IDGiamGia = km.IDGiamGia AND cthd.IDHoaDon = {0}", recp);
+            da = new SqlDataAdapter(query, dc.Connect());
+            da.Fill(dt);
+            return dt;
+        }
+
+        public DataTable SearchReceiptCustomers(string kw)
+        {
+            SqlDataAdapter da;
+            DataTable dt = new DataTable();
+            string query = "Select hd.IDHoaDon, hd.NgayXuatHoaDon, hd.TongTien, CONCAT(nv.HoNhanVien, ' ', nv.TenNhanVien) as TenNhanVien, kh.TenKhachHang From HoaDon hd, NhanVien nv, KhachHang kh Where hd.IDNhanVien = nv.IDNhanVien And hd.IDKhachHang = kh.IDKhachHang AND TenKhachHang like N'%" + kw + "%' ";
+
+            da = new SqlDataAdapter(query, dc.Connect());
+            da.Fill(dt);
+            return dt;
+        }
+
         public DataTable LoadReceiptByIDEmployee(int IDEmpl)
         {
             SqlDataAdapter da;

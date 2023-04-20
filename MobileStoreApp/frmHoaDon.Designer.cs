@@ -515,7 +515,7 @@ namespace MobileStoreApp
             // GiamGia
             // 
             this.GiamGia.DataPropertyName = "GiamGia";
-            this.GiamGia.HeaderText = "Giảm giá";
+            this.GiamGia.HeaderText = "Giảm giá/Đơn vị";
             this.GiamGia.MinimumWidth = 6;
             this.GiamGia.Name = "GiamGia";
             this.GiamGia.ReadOnly = true;

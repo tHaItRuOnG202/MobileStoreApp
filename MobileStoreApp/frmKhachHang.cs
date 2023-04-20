@@ -35,8 +35,6 @@ namespace MobileStoreApp
             txtDiaChi.Text = String.Empty;
             txtDienThoai.Text = String.Empty;
             txtEmail.Text = String.Empty;
-            //txtTaiKhoan.Text = String.Empty;
-            //txtMatKhau.Text = String.Empty;
         }
 
         private void ResetEnable()
@@ -212,8 +210,7 @@ namespace MobileStoreApp
                 txtDiaChi.Text = dgvKhachHang.Rows[i].Cells[3].Value.ToString();
                 txtDienThoai.Text = dgvKhachHang.Rows[i].Cells[4].Value.ToString();
                 txtEmail.Text = dgvKhachHang.Rows[i].Cells[5].Value.ToString();
-                //txtTaiKhoan.Text = dgvKhachHang.Rows[i].Cells[6].Value.ToString();
-                //txtMatKhau.Text = dgvKhachHang.Rows[i].Cells[7].Value.ToString();
+
                 ResetDisable();
             }
             catch (Exception ex)

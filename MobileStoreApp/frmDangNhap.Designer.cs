@@ -31,13 +31,13 @@ namespace MobileStoreApp
         {
             this.lbHeader = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.txtTenDangNhap = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,17 +69,15 @@ namespace MobileStoreApp
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
-            // label1
+            // linkLabel1
             // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(3, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(627, 64);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ĐĂNG NHẬP";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(242, 275);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(149, 24);
+            this.linkLabel1.TabIndex = 10;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Quên mật khẩu?";
             // 
             // btnDangNhap
             // 
@@ -92,6 +90,7 @@ namespace MobileStoreApp
             this.btnDangNhap.TabIndex = 9;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.UseVisualStyleBackColor = false;
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // txtMatKhau
             // 
@@ -129,15 +128,17 @@ namespace MobileStoreApp
             this.label3.TabIndex = 6;
             this.label3.Text = "Tên đăng nhập:";
             // 
-            // linkLabel1
+            // label1
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(242, 275);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(149, 24);
-            this.linkLabel1.TabIndex = 10;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Quên mật khẩu?";
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label1.Location = new System.Drawing.Point(3, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(627, 64);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ĐĂNG NHẬP";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmDangNhap
             // 

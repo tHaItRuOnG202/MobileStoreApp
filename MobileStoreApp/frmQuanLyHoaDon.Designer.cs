@@ -41,14 +41,26 @@ namespace MobileStoreApp
             this.txtMaHoaDon = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.btnTimKiem = new System.Windows.Forms.Button();
             this.grChiTiet = new System.Windows.Forms.GroupBox();
             this.dgvChiTietHoaDon = new System.Windows.Forms.DataGridView();
             this.dgvHoaDon = new System.Windows.Forms.DataGridView();
+            this.btnDangXuat = new System.Windows.Forms.Button();
             this.btnDong = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtTongTien = new System.Windows.Forms.TextBox();
-            this.btnDangXuat = new System.Windows.Forms.Button();
+            this.lbTongTien = new System.Windows.Forms.Label();
+            this.IDHoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayXuatHoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label5 = new System.Windows.Forms.Label();
+            this.IDSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonVi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiamGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbThongTin.SuspendLayout();
             this.grChiTiet.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietHoaDon)).BeginInit();
@@ -167,27 +179,17 @@ namespace MobileStoreApp
             // txtTimKiem
             // 
             this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiem.Location = new System.Drawing.Point(23, 350);
+            this.txtTimKiem.Location = new System.Drawing.Point(339, 343);
             this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(296, 28);
             this.txtTimKiem.TabIndex = 2;
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiem.Location = new System.Drawing.Point(356, 343);
-            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(135, 35);
-            this.btnTimKiem.TabIndex = 3;
-            this.btnTimKiem.Text = "Tìm kiếm";
-            this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // grChiTiet
             // 
             this.grChiTiet.Controls.Add(this.dgvChiTietHoaDon);
-            this.grChiTiet.Controls.Add(this.btnTimKiem);
+            this.grChiTiet.Controls.Add(this.label5);
             this.grChiTiet.Controls.Add(this.dgvHoaDon);
             this.grChiTiet.Controls.Add(this.txtTimKiem);
             this.grChiTiet.Controls.Add(this.btnDangXuat);
@@ -205,9 +207,18 @@ namespace MobileStoreApp
             // dgvChiTietHoaDon
             // 
             this.dgvChiTietHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvChiTietHoaDon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IDSanPham,
+            this.TenSanPham,
+            this.SoLuong,
+            this.DonVi,
+            this.DonGia,
+            this.GiamGia,
+            this.ThanhTien});
             this.dgvChiTietHoaDon.Location = new System.Drawing.Point(675, 39);
             this.dgvChiTietHoaDon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvChiTietHoaDon.Name = "dgvChiTietHoaDon";
+            this.dgvChiTietHoaDon.ReadOnly = true;
             this.dgvChiTietHoaDon.RowHeadersWidth = 51;
             this.dgvChiTietHoaDon.RowTemplate.Height = 24;
             this.dgvChiTietHoaDon.Size = new System.Drawing.Size(595, 254);
@@ -216,13 +227,33 @@ namespace MobileStoreApp
             // dgvHoaDon
             // 
             this.dgvHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHoaDon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IDHoaDon,
+            this.NgayXuatHoaDon,
+            this.TongTien,
+            this.NhanVien,
+            this.KhachHang});
             this.dgvHoaDon.Location = new System.Drawing.Point(6, 39);
             this.dgvHoaDon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvHoaDon.Name = "dgvHoaDon";
+            this.dgvHoaDon.ReadOnly = true;
             this.dgvHoaDon.RowHeadersWidth = 51;
             this.dgvHoaDon.RowTemplate.Height = 24;
             this.dgvHoaDon.Size = new System.Drawing.Size(629, 254);
             this.dgvHoaDon.TabIndex = 0;
+            this.dgvHoaDon.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvHoaDon_CellMouseClick);
+            this.dgvHoaDon.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvHoaDon_CellMouseDoubleClick);
+            // 
+            // btnDangXuat
+            // 
+            this.btnDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangXuat.Location = new System.Drawing.Point(1117, 343);
+            this.btnDangXuat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.Size = new System.Drawing.Size(135, 35);
+            this.btnDangXuat.TabIndex = 3;
+            this.btnDangXuat.Text = "Đăng xuất";
+            this.btnDangXuat.UseVisualStyleBackColor = true;
             // 
             // btnDong
             // 
@@ -239,31 +270,129 @@ namespace MobileStoreApp
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(833, 293);
+            this.label4.Location = new System.Drawing.Point(800, 291);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(95, 24);
             this.label4.TabIndex = 0;
             this.label4.Text = "Tổng tiền:";
             // 
-            // txtTongTien
+            // lbTongTien
             // 
-            this.txtTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTongTien.Location = new System.Drawing.Point(967, 290);
-            this.txtTongTien.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtTongTien.Name = "txtTongTien";
-            this.txtTongTien.Size = new System.Drawing.Size(296, 28);
-            this.txtTongTien.TabIndex = 1;
+            this.lbTongTien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lbTongTien.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTongTien.ForeColor = System.Drawing.Color.Black;
+            this.lbTongTien.Location = new System.Drawing.Point(932, 286);
+            this.lbTongTien.Name = "lbTongTien";
+            this.lbTongTien.Size = new System.Drawing.Size(332, 32);
+            this.lbTongTien.TabIndex = 0;
+            this.lbTongTien.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnDangXuat
+            // IDHoaDon
             // 
-            this.btnDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangXuat.Location = new System.Drawing.Point(1117, 343);
-            this.btnDangXuat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.Size = new System.Drawing.Size(135, 35);
-            this.btnDangXuat.TabIndex = 3;
-            this.btnDangXuat.Text = "Đăng xuất";
-            this.btnDangXuat.UseVisualStyleBackColor = true;
+            this.IDHoaDon.DataPropertyName = "IDHoaDon";
+            this.IDHoaDon.HeaderText = "Mã hóa đơn";
+            this.IDHoaDon.MinimumWidth = 6;
+            this.IDHoaDon.Name = "IDHoaDon";
+            this.IDHoaDon.Width = 125;
+            // 
+            // NgayXuatHoaDon
+            // 
+            this.NgayXuatHoaDon.DataPropertyName = "NgayXuatHoaDon";
+            this.NgayXuatHoaDon.HeaderText = "Ngày xuất hóa đơn";
+            this.NgayXuatHoaDon.MinimumWidth = 6;
+            this.NgayXuatHoaDon.Name = "NgayXuatHoaDon";
+            this.NgayXuatHoaDon.Width = 125;
+            // 
+            // TongTien
+            // 
+            this.TongTien.DataPropertyName = "TongTien";
+            this.TongTien.HeaderText = "Tổng tiền";
+            this.TongTien.MinimumWidth = 6;
+            this.TongTien.Name = "TongTien";
+            this.TongTien.Width = 125;
+            // 
+            // NhanVien
+            // 
+            this.NhanVien.DataPropertyName = "TenNhanVien";
+            this.NhanVien.HeaderText = "Nhân viên";
+            this.NhanVien.MinimumWidth = 6;
+            this.NhanVien.Name = "NhanVien";
+            this.NhanVien.Width = 125;
+            // 
+            // KhachHang
+            // 
+            this.KhachHang.DataPropertyName = "TenKhachHang";
+            this.KhachHang.HeaderText = "Khách hàng";
+            this.KhachHang.MinimumWidth = 6;
+            this.KhachHang.Name = "KhachHang";
+            this.KhachHang.Width = 125;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(95, 346);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(238, 24);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Tìm kiếm theo khách hàng:";
+            // 
+            // IDSanPham
+            // 
+            this.IDSanPham.DataPropertyName = "IDSanPham";
+            this.IDSanPham.HeaderText = "Mã sản phẩm";
+            this.IDSanPham.MinimumWidth = 6;
+            this.IDSanPham.Name = "IDSanPham";
+            this.IDSanPham.Width = 125;
+            // 
+            // TenSanPham
+            // 
+            this.TenSanPham.DataPropertyName = "TenSanPham";
+            this.TenSanPham.HeaderText = "Tên sản phẩm";
+            this.TenSanPham.MinimumWidth = 6;
+            this.TenSanPham.Name = "TenSanPham";
+            this.TenSanPham.Width = 125;
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SoLuong";
+            this.SoLuong.HeaderText = "Số lượng";
+            this.SoLuong.MinimumWidth = 6;
+            this.SoLuong.Name = "SoLuong";
+            this.SoLuong.Width = 125;
+            // 
+            // DonVi
+            // 
+            this.DonVi.DataPropertyName = "DonVi";
+            this.DonVi.HeaderText = "Đơn vị";
+            this.DonVi.MinimumWidth = 6;
+            this.DonVi.Name = "DonVi";
+            this.DonVi.Width = 125;
+            // 
+            // DonGia
+            // 
+            this.DonGia.DataPropertyName = "DonGia";
+            this.DonGia.HeaderText = "Đơn giá";
+            this.DonGia.MinimumWidth = 6;
+            this.DonGia.Name = "DonGia";
+            this.DonGia.Width = 125;
+            // 
+            // GiamGia
+            // 
+            this.GiamGia.DataPropertyName = "GiaTri";
+            this.GiamGia.HeaderText = "Giảm giá/Đơn vị";
+            this.GiamGia.MinimumWidth = 6;
+            this.GiamGia.Name = "GiamGia";
+            this.GiamGia.Width = 125;
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.DataPropertyName = "ThanhTien";
+            this.ThanhTien.HeaderText = "Thành tiền";
+            this.ThanhTien.MinimumWidth = 6;
+            this.ThanhTien.Name = "ThanhTien";
+            this.ThanhTien.Width = 125;
             // 
             // frmQuanLyHoaDon
             // 
@@ -271,14 +400,15 @@ namespace MobileStoreApp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1300, 743);
             this.Controls.Add(this.grChiTiet);
-            this.Controls.Add(this.txtTongTien);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.lbTongTien);
             this.Controls.Add(this.gbThongTin);
             this.Controls.Add(this.lbHeader);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmQuanLyHoaDon";
             this.Text = "Quản lý hóa đơn";
+            this.Load += new System.EventHandler(this.frmQuanLyHoaDon_Load);
             this.gbThongTin.ResumeLayout(false);
             this.gbThongTin.PerformLayout();
             this.grChiTiet.ResumeLayout(false);
@@ -298,7 +428,6 @@ namespace MobileStoreApp
         private System.Windows.Forms.TextBox txtMaHoaDon;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtTimKiem;
-        private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.GroupBox grChiTiet;
         private System.Windows.Forms.DataGridView dgvHoaDon;
         private System.Windows.Forms.Button btnDong;
@@ -309,7 +438,20 @@ namespace MobileStoreApp
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvChiTietHoaDon;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtTongTien;
         private System.Windows.Forms.Button btnDangXuat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDHoaDon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayXuatHoaDon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TongTien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NhanVien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn KhachHang;
+        private System.Windows.Forms.Label lbTongTien;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDSanPham;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenSanPham;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DonVi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GiamGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
     }
 }

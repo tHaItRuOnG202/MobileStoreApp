@@ -190,12 +190,12 @@ namespace BUS_MobileStoreApp
         }
 
         //BUS thanh toán hóa đơn
-        public void AddReceipt(string idRec, DateTime dateSale, string totalPrice, string idEmpl, string idCust)
+        public void AddReceipt(int idRec, DateTime dateSale, string totalPrice, int idEmpl, int idCust)
         {
             ctrl_D.InsertReceipt(idRec, dateSale, totalPrice, idEmpl, idCust);
         }
 
-        public void AddReceiptDetail(string idRec, string idPro, string quantity, string uPrice)
+        public void AddReceiptDetail(int idRec, string idPro, int quantity, string uPrice)
         {
             ctrl_D.InsertReceiptDetail(idRec, idPro, quantity, uPrice);
         }
@@ -213,6 +213,26 @@ namespace BUS_MobileStoreApp
         public KhachHang GetCustByID(int maKH)
         {
             return ctrl_D.GetCustomerByID(maKH);
+        }
+
+        public DataTable ShowReceipt()
+        {
+            return ctrl_D.LoadReceipt();
+        }
+
+        public DataTable ShowReceiptV2()
+        {
+            return ctrl_D.LoadReceiptV2();
+        }
+
+        public DataTable ShowReceiptDetail(int recp)
+        {
+            return ctrl_D.LoadReceiptDetail(recp);
+        }
+
+        public DataTable FindReceiptCustomer(string keyword)
+        {
+            return ctrl_D.SearchReceiptCustomers(keyword);
         }
 
         //BUS quản lý hóa đơn

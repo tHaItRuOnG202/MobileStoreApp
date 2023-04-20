@@ -43,14 +43,6 @@ namespace MobileStoreApp
         private void LoadReceipt()
         {
             txtMaHoaDon.Enabled = false;
-            //cbMaKhachHang.DataSource = ctrl_B.ShowCustomer();
-            //cbMaKhachHang.DisplayMember = "IDKhachHang";
-            //cbMaKhachHang.ValueMember = "IDKhachHang";
-            //cbMaSanPham.DataSource = ctrl_B.ShowProduct();
-            //cbMaSanPham.DisplayMember = "IDSanPham";
-            //cbMaSanPham.ValueMember = "IDSanPham";
-            //cbMaKhachHang.SelectedIndex = 0;
-            //cbMaSanPham.SelectedIndex = 0;
             DataTable ProductList = ctrl_B.ShowProduct();
             DataTable CustomerList = ctrl_B.ShowCustomer();
             string[] idSanPhams = new string[MAX_ARRAY];
@@ -74,6 +66,8 @@ namespace MobileStoreApp
         private void frmHoaDon_Load(object sender, EventArgs e)
         {
             this.LoadReceipt();
+            lbMaNhanVien.Text = IDNhanVien;
+            lbTenNhanVien.Text = HoTen;
         }
 
         public bool DatagridviewCheck()
@@ -201,19 +195,45 @@ namespace MobileStoreApp
 
         private void btnThemHoaDon_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
+                DataTable receipTable = ctrl_B.ShowReceipt();
+                int lastRowIndex = receipTable.Rows.Count - 1;
+                int lastReceiptID = Int32.Parse(receipTable.Rows[lastRowIndex][0].ToString());
+
+                int idHD = lastReceiptID;
+                string idKH = cbMaKhachHang.Text;
+                string idNV = lbMaNhanVien.Text;
+                DateTime dateTime = DateTime.Parse(dtpNgayXuatHoaDon.Text);
+                ctrl_B.AddReceipt(idHD + 1, dateTime, lbTongTien.Text, Int32.Parse(idNV), Int32.Parse(idKH));
+
+                for (int i = 0; i < dgvChiTietHoaDon.RowCount - 1; i++)
+                {
+                    string idPro = dgvChiTietHoaDon.Rows[i].Cells[0].Value.ToString();
+                    string quantity = dgvChiTietHoaDon.Rows[i].Cells[2].Value.ToString();
+                    string uPrice = dgvChiTietHoaDon.Rows[i].Cells[3].Value.ToString();
+                    string totalPrice = dgvChiTietHoaDon.Rows[i].Cells[6].Value.ToString();
+                    //decimal uPrice = decimal.Parse(row.Cells[3].ToString());
+                    //decimal totalPrice = decimal.Parse(row.Cells[6].ToString());
+
+                    ctrl_B.AddReceiptDetail(idHD, idPro, Int32.Parse(quantity), uPrice);
+                }
+                MessageBox.Show("Thêm hóa đơn thành công!");
+                dgvChiTietHoaDon.Rows.Clear();
+                cbMaKhachHang.SelectedIndex = 0;
+                cbMaSanPham.SelectedIndex = 0;
+                //ctrl_B.AddReceiptDetail(idHD, idPro, quantity, uPrice, totalPrice);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void cbMaSanPham_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
-                //int IDProd = 1;
-                //if (cbMaSanPham.SelectedItem != null)
-                //{
-                    
-                //}
-
                 int IDProd = Int32.Parse(cbMaSanPham.Text);
 
                 SanPham sp = ctrl_B.GetPrById(IDProd);
