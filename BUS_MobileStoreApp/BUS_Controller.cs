@@ -13,15 +13,11 @@ namespace BUS_MobileStoreApp
     {
         DAO_Controller ctrl_D = new DAO_Controller();
 
+        // BUS nhân viên
         public DataTable ShowEmployee()
         {
             return ctrl_D.LoadEmployee();
         }
-
-        //public void AddEmployee(Employee epl)
-        //{
-        //    ctrl_D.InsertEmployee(epl);
-        //}
 
         public bool AddEmployee(Employee epl)
         {
@@ -37,20 +33,11 @@ namespace BUS_MobileStoreApp
         {
             return ctrl_D.SearchedEmployee(keyword);
         }
-        //public void RemoveEmployee(Employee epl)
-        //{
-        //    ctrl_D.DeleteEmployee(epl);
-        //}
 
         public bool RemoveEmployee(int IDEmpl)
         {
             return ctrl_D.DeleteEmployee(IDEmpl);
         }
-
-        //public void EditEmployee(Employee epl)
-        //{
-        //    ctrl_D.UpdateEmployee(epl);
-        //}
 
         public bool EditEmployee(Employee epl)
         {
@@ -62,15 +49,11 @@ namespace BUS_MobileStoreApp
             return ctrl_D.UpdatedEmployee(epl);
         }
 
+        //BUS loại sản phẩm
         public DataTable ShowCategories()
         {
             return ctrl_D.LoadCategories();
         }
-
-        //public void AddCategories(Categories cate)
-        //{
-        //    ctrl_D.InsertCategories(cate);
-        //}
 
         public bool AddCategories(Categories cate)
         {
@@ -86,35 +69,23 @@ namespace BUS_MobileStoreApp
         {
             return ctrl_D.SearchedCategories(keyword);
         }
-        //public void RemoveCategories(Categories cate)
-        //{
-        //    ctrl_D.DeleteCategories(cate);
-        //}
 
-        public bool RemoveCategories(Categories cate)
+        public bool RemoveCategories(int IDCate)
         {
-            return ctrl_D.DeleteCategories(cate);
+            return ctrl_D.DeleteCategories(IDCate);
         }
-
-        //public void EditCategories(Categories cate)
-        //{
-        //    ctrl_D.UpdateCategories(cate);
-        //}
 
         public bool EditCategories(Categories cate)
         {
             return ctrl_D.UpdateCategories(cate);
         }
 
+        //BUS khách hàng
         public DataTable ShowCustomer()
         {
             return ctrl_D.LoadCustomer();
         }
 
-        //public void AddCustomer(Customer cust)
-        //{
-        //    ctrl_D.InsertCustomer(cust);
-        //}
 
         public bool AddCustomer(Customer cust)
         {
@@ -131,30 +102,26 @@ namespace BUS_MobileStoreApp
             return ctrl_D.SearchedCustomer(keyword);
         }
 
-        //public void RemoveCustomer(Customer cust)
-        //{
-        //    ctrl_D.DeleteCustomers(cust);
-        //}
-
-        public bool RemoveCustomer(Customer cust)
+        public bool RemoveCustomer(int IDCust)
         {
-           return ctrl_D.DeleteCustomers(cust);
+           return ctrl_D.DeleteCustomer(IDCust);
         }
-
-        //public void EditCustomer(Customer cust)
-        //{
-        //    ctrl_D.UpdateCustomer(cust);
-        //}
 
         public bool EditCustomer(Customer cust)
         {
             return ctrl_D.UpdateCustomer(cust);
         }
 
+        //BUS sản phẩm
         public DataTable ShowProduct()
         {
             return ctrl_D.LoadProduct();
         }
+
+        //public DataTable ShowCBIDProduct()
+        //{
+        //    return ctrl_D.LoadCBIDProduct();
+        //}
 
         public bool AddProduct(Product prod)
         {
@@ -164,6 +131,16 @@ namespace BUS_MobileStoreApp
         public bool RemoveProduct(int prod)
         {
             return ctrl_D.DeleteProduct(prod);
+        }
+
+        public DataTable FindProduct(string keyword)
+        {
+            return ctrl_D.SearchProduct(keyword);
+        }
+
+        public DataTable FoundProduct(string keyword)
+        {
+            return ctrl_D.SearchedProduct(keyword);
         }
 
         public bool EditProduct(Product prod)
@@ -176,6 +153,7 @@ namespace BUS_MobileStoreApp
             return ctrl_D.UpdatedProduct(sanPham);
         }
 
+        //BUS giảm giá
         public DataTable ShowDiscount()
         {
             return ctrl_D.LoadDiscount();
@@ -211,6 +189,33 @@ namespace BUS_MobileStoreApp
             return ctrl_D.UpdatedDiscount(disc);
         }
 
+        //BUS thanh toán hóa đơn
+        public void AddReceipt(string idRec, DateTime dateSale, string totalPrice, string idEmpl, string idCust)
+        {
+            ctrl_D.InsertReceipt(idRec, dateSale, totalPrice, idEmpl, idCust);
+        }
+
+        public void AddReceiptDetail(string idRec, string idPro, string quantity, string uPrice)
+        {
+            ctrl_D.InsertReceiptDetail(idRec, idPro, quantity, uPrice);
+        }
+
+        public string GetDistByProd(int mgg)
+        {
+            return ctrl_D.GetDiscountByProduct(mgg);
+        }
+
+        public SanPham GetPrById(int rd)
+        {
+            return ctrl_D.GetProductByID(rd);
+        }
+
+        public KhachHang GetCustByID(int maKH)
+        {
+            return ctrl_D.GetCustomerByID(maKH);
+        }
+
+        //BUS quản lý hóa đơn
         public DataTable ShowReceiptByIDEmployee(int IDEmpl)
         {
             return ctrl_D.LoadReceiptByIDEmployee(IDEmpl);

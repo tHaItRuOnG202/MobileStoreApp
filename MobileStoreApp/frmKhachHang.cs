@@ -99,8 +99,15 @@ namespace MobileStoreApp
                 if (dr == DialogResult.Yes)
                 {
                     int i = dgvKhachHang.CurrentRow.Index;
+                    int IDCust = Int32.Parse(dgvKhachHang.Rows[i].Cells[0].Value.ToString());
 
-                    Customer cust = new Customer(Int32.Parse(dgvKhachHang.Rows[i].Cells[0].Value.ToString()),
+                    if (IDCust == 0)
+                    {
+                        MessageBox.Show("Không được phép xóa!");
+                    }
+                    else
+                    {
+                        Customer cust = new Customer(Int32.Parse(dgvKhachHang.Rows[i].Cells[0].Value.ToString()),
                         dgvKhachHang.Rows[i].Cells[1].Value.ToString(),
                         DateTime.Parse(dgvKhachHang.Rows[i].Cells[2].Value.ToString()),
                         dgvKhachHang.Rows[i].Cells[3].Value.ToString(),
@@ -108,17 +115,18 @@ namespace MobileStoreApp
                         dgvKhachHang.Rows[i].Cells[5].Value.ToString());
                         //dgvKhachHang.Rows[i].Cells[6].Value.ToString(),
                         //dgvKhachHang.Rows[i].Cells[7].Value.ToString());
-                    bool check = ctrl_B.RemoveCustomer(cust);
-                    if (check == true)
-                    {
-                        MessageBox.Show("Xóa khách hàng thành công!", "Thông báo");
-                        dgvKhachHang.DataSource = ctrl_B.ShowCustomer();
-                        ClearTxt();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Xóa khách hàng thất bại!", "Thông báo");
-                    }
+                        bool check = ctrl_B.RemoveCustomer(Int32.Parse(dgvKhachHang.Rows[i].Cells[0].Value.ToString()));
+                        if (check == true)
+                        {
+                            MessageBox.Show("Xóa khách hàng thành công!", "Thông báo");
+                            dgvKhachHang.DataSource = ctrl_B.ShowCustomer();
+                            ClearTxt();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Xóa khách hàng thất bại!", "Thông báo");
+                        }
+                    }    
                 }    
             }
             catch (Exception ex)

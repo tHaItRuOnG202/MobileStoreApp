@@ -271,17 +271,35 @@ namespace DAO_MoblieStoreApp
         //    db.SubmitChanges();
         //}
 
-        public bool DeleteCategories(Categories cate)
+        //public bool DeleteCategories(Categories cate)
+        //{
+        //    try
+        //    {
+        //        LoaiSanPham loaiSP = new LoaiSanPham();
+        //        loaiSP.IDLoaiSanPham = cate.MaLoaiSP;
+        //        loaiSP.TenLoaiSanPham = cate.TenLoaiSP;
+
+        //        db = new IMPROOKSTOREDataContext();
+        //        db.LoaiSanPhams.Attach(loaiSP);
+        //        db.LoaiSanPhams.DeleteOnSubmit(loaiSP);
+        //        db.SubmitChanges();
+
+        //        return true;
+        //    }
+        //    catch (SqlException)
+        //    {
+        //        return false;
+        //    }
+        //}
+
+        public bool DeleteCategories(int IDCate)
         {
             try
             {
-                LoaiSanPham loaiSP = new LoaiSanPham();
-                loaiSP.IDLoaiSanPham = cate.MaLoaiSP;
-                loaiSP.TenLoaiSanPham = cate.TenLoaiSP;
-
                 db = new IMPROOKSTOREDataContext();
-                db.LoaiSanPhams.Attach(loaiSP);
-                db.LoaiSanPhams.DeleteOnSubmit(loaiSP);
+                LoaiSanPham loaiSanPham = db.LoaiSanPhams.FirstOrDefault(p => p.IDLoaiSanPham == IDCate);
+
+                db.LoaiSanPhams.DeleteOnSubmit(loaiSanPham);
                 db.SubmitChanges();
 
                 return true;
@@ -415,22 +433,40 @@ namespace DAO_MoblieStoreApp
         //    db.SubmitChanges();
         //}
 
-        public bool DeleteCustomers(Customer cust)
+        //public bool DeleteCustomer(Customer cust)
+        //{
+        //    try
+        //    {
+        //        KhachHang khachHang = new KhachHang();
+        //        khachHang.IDKhachHang = cust.MaKH;
+        //        khachHang.TenKhachHang = cust.TenKH;
+        //        khachHang.NgaySinhKhachHang = cust.NgaySinhKH;
+        //        khachHang.DiaChiKhachHang = cust.DiaChiKH;
+        //        khachHang.DienThoaiKhachHang = cust.DienThoaiKH;
+        //        khachHang.EmailKhachHang = cust.EmailKH;
+        //        //khachHang.TaiKhoanKhachHang = cust.TaiKhoanKH;
+        //        //khachHang.MatKhauKhachHang = cust.MatKhauKH;
+
+        //        db = new IMPROOKSTOREDataContext();
+        //        db.KhachHangs.Attach(khachHang);
+        //        db.KhachHangs.DeleteOnSubmit(khachHang);
+        //        db.SubmitChanges();
+
+        //        return true;
+        //    }
+        //    catch (SqlException)
+        //    {
+        //        return false;
+        //    }
+        //}
+
+        public bool DeleteCustomer(int IDCust)
         {
             try
             {
-                KhachHang khachHang = new KhachHang();
-                khachHang.IDKhachHang = cust.MaKH;
-                khachHang.TenKhachHang = cust.TenKH;
-                khachHang.NgaySinhKhachHang = cust.NgaySinhKH;
-                khachHang.DiaChiKhachHang = cust.DiaChiKH;
-                khachHang.DienThoaiKhachHang = cust.DienThoaiKH;
-                khachHang.EmailKhachHang = cust.EmailKH;
-                //khachHang.TaiKhoanKhachHang = cust.TaiKhoanKH;
-                //khachHang.MatKhauKhachHang = cust.MatKhauKH;
-
                 db = new IMPROOKSTOREDataContext();
-                db.KhachHangs.Attach(khachHang);
+                KhachHang khachHang = db.KhachHangs.FirstOrDefault(p => p.IDKhachHang == IDCust);
+
                 db.KhachHangs.DeleteOnSubmit(khachHang);
                 db.SubmitChanges();
 
@@ -513,6 +549,12 @@ namespace DAO_MoblieStoreApp
             da.Fill(dt);
             return dt;
         }
+
+        //public int[] LoadCBIDProduct()
+        //{
+        //    db = new IMPROOKSTOREDataContext();
+        //    return db.SanPhams.;
+        //}
 
         public bool InsertProduct(Product prod)
         {
@@ -649,6 +691,26 @@ namespace DAO_MoblieStoreApp
             }
         }
 
+        public DataTable SearchProduct(string kw)
+        {
+            SqlDataAdapter da;
+            DataTable dt = new DataTable();
+            string query = "Select * From SanPham Where TenSanPham like N'" + kw + "%' ";
+            da = new SqlDataAdapter(query, dc.Connect());
+            da.Fill(dt);
+            return dt;
+        }
+
+        public DataTable SearchedProduct(string kw)
+        {
+            SqlDataAdapter da;
+            DataTable dt = new DataTable();
+            string query = "Select * From SanPham Where TenSanPham like N'%" + kw + "%' ";
+            da = new SqlDataAdapter(query, dc.Connect());
+            da.Fill(dt);
+            return dt;
+        }
+
 
         //Chức năng quản lý giảm giá
         public DataTable LoadDiscount()
@@ -766,6 +828,67 @@ namespace DAO_MoblieStoreApp
             da = new SqlDataAdapter(query, dc.Connect());
             da.Fill(dt);
             return dt;
+        }
+
+        //Thanh toán hóa đơn
+        public void InsertReceipt(string idRec, DateTime dateSale, string totalPrice, string idEmpl, string idCust)
+        {
+            string query = string.Format("INSERT INTO HoaDon(IDHoaDon, NgayXuatHoaDon, TongTien, IDNhanVien, IDKhachHang) VALUES({0}, N'{1}', N'{2}', {3}, {4})", idRec, dateSale, totalPrice, idEmpl, idCust);
+
+            using (SqlConnection connection = dc.Connect())
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
+
+        public void InsertReceiptDetail(string idRec, string idPro, string quantity, string uPrice)
+        {
+            string query = string.Format("INSERT INTO ChiTietHoaDon(IDHoaDon, IDSanPham, SoLuong, DonGia) VALUES({0}, {1}, N'{2}', N'{3}')", idRec, idPro, quantity, uPrice);
+
+            using (SqlConnection connection = dc.Connect())
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
+
+        public SanPham GetProductByID(int maSanPham)
+        {
+            db = new IMPROOKSTOREDataContext();
+            return db.SanPhams.FirstOrDefault(sp => sp.IDSanPham == maSanPham);
+        }
+
+        public string GetDiscountByProduct(int cmbMaSP)
+        {
+            // Lấy mã sản phẩm từ ComboBox
+            int txtMa;
+            string txtKQ;
+            // Tìm sản phẩm trong danh sách sản phẩm
+            SanPham selectedProduct = db.SanPhams.FirstOrDefault(p => p.IDSanPham == cmbMaSP);
+
+            // Nếu tìm thấy sản phẩm, hiển thị tên sản phẩm trên Textbox txtTenSP
+            if (selectedProduct != null)
+            {
+                txtMa = selectedProduct.IDGiamGia;
+                GiamGia selectedProduct2 = db.GiamGias.FirstOrDefault(p => p.IDGiamGia == txtMa);
+                if (selectedProduct2 != null)
+                {
+                    txtKQ = selectedProduct2.GiaTri;
+                    return txtKQ;
+                }
+            }
+            return "Không có giảm giá!";
+        }
+
+        public KhachHang GetCustomerByID(int maKH)
+        {
+            db = new IMPROOKSTOREDataContext();
+            return db.KhachHangs.FirstOrDefault(kh => kh.IDKhachHang == maKH);
         }
 
         //Chức năng quản lý hóa đơn

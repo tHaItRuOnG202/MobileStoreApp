@@ -41,19 +41,19 @@ namespace MobileStoreApp
             this.txtMaGiamGia = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.btnTimKiem = new System.Windows.Forms.Button();
             this.grDanhSach = new System.Windows.Forms.GroupBox();
             this.dgvGiamGia = new System.Windows.Forms.DataGridView();
+            this.MaGiamGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaTri = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThoiGianBatDau = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThoiGianKetThuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDangXuat = new System.Windows.Forms.Button();
             this.btnDong = new System.Windows.Forms.Button();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.MaGiamGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GiaTri = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThoiGianBatDau = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThoiGianKetThuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label4 = new System.Windows.Forms.Label();
             this.gbThongTin.SuspendLayout();
             this.grDanhSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGiamGia)).BeginInit();
@@ -166,20 +166,11 @@ namespace MobileStoreApp
             // txtTimKiem
             // 
             this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiem.Location = new System.Drawing.Point(851, 298);
+            this.txtTimKiem.Location = new System.Drawing.Point(911, 299);
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(296, 28);
+            this.txtTimKiem.Size = new System.Drawing.Size(343, 28);
             this.txtTimKiem.TabIndex = 2;
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiem.Location = new System.Drawing.Point(1153, 295);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(135, 35);
-            this.btnTimKiem.TabIndex = 3;
-            this.btnTimKiem.Text = "Tìm kiếm";
-            this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // grDanhSach
             // 
@@ -208,71 +199,12 @@ namespace MobileStoreApp
             this.ThoiGianKetThuc});
             this.dgvGiamGia.Location = new System.Drawing.Point(7, 39);
             this.dgvGiamGia.Name = "dgvGiamGia";
+            this.dgvGiamGia.ReadOnly = true;
             this.dgvGiamGia.RowHeadersWidth = 51;
             this.dgvGiamGia.RowTemplate.Height = 24;
             this.dgvGiamGia.Size = new System.Drawing.Size(1263, 242);
             this.dgvGiamGia.TabIndex = 0;
-            // 
-            // btnDangXuat
-            // 
-            this.btnDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangXuat.Location = new System.Drawing.Point(1008, 315);
-            this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.Size = new System.Drawing.Size(135, 35);
-            this.btnDangXuat.TabIndex = 3;
-            this.btnDangXuat.Text = "Đăng xuất";
-            this.btnDangXuat.UseVisualStyleBackColor = true;
-            // 
-            // btnDong
-            // 
-            this.btnDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDong.Location = new System.Drawing.Point(833, 315);
-            this.btnDong.Name = "btnDong";
-            this.btnDong.Size = new System.Drawing.Size(135, 35);
-            this.btnDong.TabIndex = 3;
-            this.btnDong.Text = "Đóng";
-            this.btnDong.UseVisualStyleBackColor = true;
-            // 
-            // btnCapNhat
-            // 
-            this.btnCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCapNhat.Location = new System.Drawing.Point(658, 315);
-            this.btnCapNhat.Name = "btnCapNhat";
-            this.btnCapNhat.Size = new System.Drawing.Size(135, 35);
-            this.btnCapNhat.TabIndex = 3;
-            this.btnCapNhat.Text = "Cập nhật";
-            this.btnCapNhat.UseVisualStyleBackColor = true;
-            // 
-            // btnSua
-            // 
-            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Location = new System.Drawing.Point(483, 315);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(135, 35);
-            this.btnSua.TabIndex = 3;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Location = new System.Drawing.Point(308, 315);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(135, 35);
-            this.btnXoa.TabIndex = 3;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnThem
-            // 
-            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(133, 315);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(135, 35);
-            this.btnThem.TabIndex = 3;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
+            this.dgvGiamGia.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvGiamGia_CellMouseClick);
             // 
             // MaGiamGia
             // 
@@ -306,15 +238,91 @@ namespace MobileStoreApp
             this.ThoiGianKetThuc.Name = "ThoiGianKetThuc";
             this.ThoiGianKetThuc.Width = 125;
             // 
+            // btnDangXuat
+            // 
+            this.btnDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangXuat.Location = new System.Drawing.Point(1008, 315);
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.Size = new System.Drawing.Size(135, 35);
+            this.btnDangXuat.TabIndex = 3;
+            this.btnDangXuat.Text = "Đăng xuất";
+            this.btnDangXuat.UseVisualStyleBackColor = true;
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
+            // 
+            // btnDong
+            // 
+            this.btnDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDong.Location = new System.Drawing.Point(833, 315);
+            this.btnDong.Name = "btnDong";
+            this.btnDong.Size = new System.Drawing.Size(135, 35);
+            this.btnDong.TabIndex = 3;
+            this.btnDong.Text = "Đóng";
+            this.btnDong.UseVisualStyleBackColor = true;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
+            // 
+            // btnCapNhat
+            // 
+            this.btnCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCapNhat.Location = new System.Drawing.Point(658, 315);
+            this.btnCapNhat.Name = "btnCapNhat";
+            this.btnCapNhat.Size = new System.Drawing.Size(135, 35);
+            this.btnCapNhat.TabIndex = 3;
+            this.btnCapNhat.Text = "Cập nhật";
+            this.btnCapNhat.UseVisualStyleBackColor = true;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.Location = new System.Drawing.Point(483, 315);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(135, 35);
+            this.btnSua.TabIndex = 3;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Location = new System.Drawing.Point(308, 315);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(135, 35);
+            this.btnXoa.TabIndex = 3;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Location = new System.Drawing.Point(133, 315);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(135, 35);
+            this.btnThem.TabIndex = 3;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(738, 302);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(138, 24);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Tìm theo giá trị:";
+            // 
             // frmGiamGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1300, 743);
             this.Controls.Add(this.grDanhSach);
-            this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.gbThongTin);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.lbHeader);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5);
@@ -338,7 +346,6 @@ namespace MobileStoreApp
         private System.Windows.Forms.TextBox txtMaGiamGia;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtTimKiem;
-        private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.GroupBox grDanhSach;
         private System.Windows.Forms.DataGridView dgvGiamGia;
         private System.Windows.Forms.Button btnDong;
@@ -356,5 +363,6 @@ namespace MobileStoreApp
         private System.Windows.Forms.DataGridViewTextBoxColumn GiaTri;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThoiGianBatDau;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThoiGianKetThuc;
+        private System.Windows.Forms.Label label4;
     }
 }

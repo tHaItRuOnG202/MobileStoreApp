@@ -29,6 +29,54 @@ namespace MobileStoreApp
             dgvGiamGia.DataSource = ctrl_B.ShowDiscount();
         }
 
+        private void ResetEnable()
+        {
+            txtGiaTri.Enabled = true;
+            dtpNgayBatDau.Enabled = true;
+            dtpNgayKetThuc.Enabled = true;
+        }
+
+        private void ResetDisable()
+        {
+            txtGiaTri.Enabled = false;
+            dtpNgayBatDau.Enabled = false;
+            dtpNgayKetThuc.Enabled = false;
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtGiaTri.Text == String.Empty || dtpNgayBatDau.Text == String.Empty ||
+                    dtpNgayKetThuc.Text == String.Empty)
+                {
+                    MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
+                }
+                else
+                {
+                    int lastRowIndex = dgvGiamGia.Rows.Count - 2;
+                    string IDGiamGia = dgvGiamGia.Rows[lastRowIndex].Cells[0].Value.ToString();
+                    Discount disc = new Discount(Int32.Parse(IDGiamGia) + 1, txtGiaTri.Text, DateTime.Parse(dtpNgayBatDau.Text),
+                            DateTime.Parse(dtpNgayKetThuc.Text));
+                    bool check = ctrl_B.AddDiscount(disc);
+                    if (check == true)
+                    {
+                        MessageBox.Show("Thêm giảm giá thành công");
+                        dgvGiamGia.DataSource = ctrl_B.ShowDiscount();
+                        txtGiaTri.Text = String.Empty;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm giảm giá thất bại");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void btnXoa_Click(object sender, EventArgs e)
         {
             try
@@ -39,61 +87,159 @@ namespace MobileStoreApp
                     int i = dgvGiamGia.CurrentRow.Index;
                     int IDDisc = Int32.Parse(dgvGiamGia.Rows[i].Cells[0].Value.ToString());
 
-                    DataTable dt = ctrl_B.ShowProductByIDDiscount(IDDisc);
-                    //for (int j = 0; j < dt.Rows.Count; j++)
-                    //{
-                    //    MessageBox.Show(dt.Rows[j][0].ToString());
-                    //}
-
-                    if (dt == null || dt.Rows.Count == 0)
+                    if (IDDisc == 0)
                     {
-                        bool check = ctrl_B.RemoveDiscount(IDDisc);
-                        if (check == true)
-                        {
-                            MessageBox.Show("Xóa mã giảm giá thành công!");
-                            dgvGiamGia.DataSource = ctrl_B.ShowDiscount();
-                            txtMaGiamGia.Text = txtGiaTri.Text = String.Empty;
-                        }
-                        else
-                        {
-                            MessageBox.Show("Xóa mã giảm giá thất bại!");
-                        }
+                        MessageBox.Show("Không được xóa mã giảm giá này!");
                     }
                     else
                     {
-                        int reset = 0;
-                        for (int j = 0; j < dt.Rows.Count; j++)
-                        {
-                            SanPham sp = new SanPham();
-                            sp.IDSanPham = Int32.Parse(dt.Rows[j][0].ToString());
-                            sp.TenSanPham = dt.Rows[j][1].ToString();
-                            sp.DonVi = dt.Rows[j][2].ToString();
-                            sp.DonGia = dt.Rows[j][3].ToString();
-                            sp.HinhAnh = dt.Rows[j][4].ToString();
-                            sp.IDLoaiSanPham = Int32.Parse(dt.Rows[j][5].ToString());
-                            sp.IDGiamGia = 0;
-                            ctrl_B.EditedProduct(sp);
-                            reset++;
-                        }    
+                        DataTable dt = ctrl_B.ShowProductByIDDiscount(IDDisc);
 
-                        if (reset == dt.Rows.Count)
+                        //for (int j = 0; j < dt.Rows.Count; j++)
+                        //{
+                        //    MessageBox.Show(dt.Rows[j][0].ToString());
+                        //}
+
+                        if (dt == null || dt.Rows.Count == 0)
                         {
                             bool check = ctrl_B.RemoveDiscount(IDDisc);
-                            MessageBox.Show("Những sản phẩm đang áp dụng mã giảm giá này đã được hủy!" + reset.ToString() + dt.Rows.Count.ToString());
-                            dgvGiamGia.DataSource = ctrl_B.ShowDiscount();
-                            txtMaGiamGia.Text = txtGiaTri.Text = String.Empty;
+                            if (check == true)
+                            {
+                                MessageBox.Show("Xóa mã giảm giá thành công!");
+                                dgvGiamGia.DataSource = ctrl_B.ShowDiscount();
+                                txtMaGiamGia.Text = txtGiaTri.Text = String.Empty;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Xóa mã giảm giá thất bại!");
+                            }
                         }
                         else
                         {
-                            MessageBox.Show("Hủy mã giảm giá thất bại");
+                            int reset = 0;
+                            for (int j = 0; j < dt.Rows.Count; j++)
+                            {
+                                SanPham sp = new SanPham();
+                                sp.IDSanPham = Int32.Parse(dt.Rows[j][0].ToString());
+                                sp.TenSanPham = dt.Rows[j][1].ToString();
+                                sp.DonVi = dt.Rows[j][2].ToString();
+                                sp.DonGia = dt.Rows[j][3].ToString();
+                                sp.HinhAnh = dt.Rows[j][4].ToString();
+                                sp.IDLoaiSanPham = Int32.Parse(dt.Rows[j][5].ToString());
+                                sp.IDGiamGia = 0;
+                                ctrl_B.EditedProduct(sp);
+                                reset++;
+                            }
+
+                            if (reset == dt.Rows.Count)
+                            {
+                                bool check = ctrl_B.RemoveDiscount(IDDisc);
+                                MessageBox.Show("Xóa mã giảm giá thành công. Những sản phẩm đang áp dụng mã giảm giá này đã được hủy!");
+                                dgvGiamGia.DataSource = ctrl_B.ShowDiscount();
+                                txtMaGiamGia.Text = txtGiaTri.Text = String.Empty;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Xóa mã giảm giá thất bại");
+                            }
                         }
-                    }  
+                    }    
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ResetEnable();
+                int i = dgvGiamGia.CurrentRow.Index;
+
+                txtMaGiamGia.Text = dgvGiamGia.Rows[i].Cells[0].Value.ToString();
+                txtGiaTri.Text = dgvGiamGia.Rows[i].Cells[1].Value.ToString();
+                dtpNgayBatDau.Text = dgvGiamGia.Rows[i].Cells[2].Value.ToString();
+                dtpNgayKetThuc.Text = dgvGiamGia.Rows[i].Cells[3].Value.ToString();
+
+                btnCapNhat.Enabled = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtGiaTri.Text == String.Empty || dtpNgayBatDau.Text == String.Empty ||
+                    dtpNgayKetThuc.Text == String.Empty)
+                {
+                    MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Cảnh báo");
+                }
+                else
+                {
+                    int lastRowIndex = dgvGiamGia.Rows.Count - 2;
+                    //string IDGiamGia = dgvGiamGia.Rows[lastRowIndex].Cells[0].Value.ToString();
+                    Discount disc = new Discount(Int32.Parse(txtMaGiamGia.Text), txtGiaTri.Text, DateTime.Parse(dtpNgayBatDau.Text),
+                            DateTime.Parse(dtpNgayKetThuc.Text));
+                    bool check = ctrl_B.EditDiscount(disc);
+                    if (check == true)
+                    {
+                        MessageBox.Show("Cập nhật thông tin giảm giá thành công!", "Thông báo");
+                        dgvGiamGia.DataSource = ctrl_B.ShowEmployee();
+                        txtGiaTri.Text = String.Empty;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cập nhật thông tin giảm giá thất bại!", "Thông báo");
+                    }
+                    btnCapNhat.Enabled = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            DataTable dt = ctrl_B.FoundDiscount(txtTimKiem.Text);
+            dgvGiamGia.DataSource = dt;
+        }
+
+        private void dgvGiamGia_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            try
+            {
+                int i = dgvGiamGia.CurrentRow.Index;
+
+                txtMaGiamGia.Text = dgvGiamGia.Rows[i].Cells[0].Value.ToString();
+                txtGiaTri.Text = dgvGiamGia.Rows[i].Cells[1].Value.ToString();
+                dtpNgayBatDau.Text = dgvGiamGia.Rows[i].Cells[2].Value.ToString();
+                dtpNgayKetThuc.Text = dgvGiamGia.Rows[i].Cells[3].Value.ToString();
+                
+                ResetDisable();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnDong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

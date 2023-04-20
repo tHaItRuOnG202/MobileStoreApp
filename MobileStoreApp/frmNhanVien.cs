@@ -150,10 +150,10 @@ namespace MobileStoreApp
                     int IDEmpl = Int32.Parse(dgvNhanVien.Rows[i].Cells[0].Value.ToString());
 
                     DataTable dt = ctrl_B.ShowReceiptByIDEmployee(IDEmpl);
-                    for (int j = 0; j < dt.Rows.Count; j++)
-                    {
-                        MessageBox.Show(dt.Rows[j][0].ToString());
-                    }
+                    //for (int j = 0; j < dt.Rows.Count; j++)
+                    //{
+                    //    MessageBox.Show(dt.Rows[j][0].ToString());
+                    //}
 
                     if (dt == null || dt.Rows.Count == 0)
                     {
@@ -183,8 +183,8 @@ namespace MobileStoreApp
                         empledit.LoaiNhanVien = bool.Parse(dgvNhanVien.Rows[i].Cells[8].Value.ToString());
 
                         //bool checked = ctrl_B.EditedEmployee(empledit);
-                        bool tick = ctrl_B.EditedEmployee(empledit);
-                        if (tick == true)
+                        bool check = ctrl_B.EditedEmployee(empledit);
+                        if (check == true)
                         {
                             MessageBox.Show("Nhân viên đã bị đuổi!");
                             dgvNhanVien.DataSource = ctrl_B.ShowEmployee();
@@ -349,9 +349,7 @@ namespace MobileStoreApp
 
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
-            frmDangNhap frmDangNhap = new frmDangNhap();
-            frmDangNhap.Show();
-            this.Close();
+            
         }
     }
 }

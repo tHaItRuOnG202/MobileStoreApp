@@ -36,6 +36,10 @@ namespace MobileStoreApp
             this.label10 = new System.Windows.Forms.Label();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.gbChiTietHoaDon = new System.Windows.Forms.GroupBox();
+            this.lbGiamGia = new System.Windows.Forms.Label();
+            this.lbTenSanPham = new System.Windows.Forms.Label();
+            this.lbDonGia = new System.Windows.Forms.Label();
+            this.lbDonVi = new System.Windows.Forms.Label();
             this.lbTongTien = new System.Windows.Forms.Label();
             this.cbMaSanPham = new System.Windows.Forms.ComboBox();
             this.dgvChiTietHoaDon = new System.Windows.Forms.DataGridView();
@@ -58,13 +62,16 @@ namespace MobileStoreApp
             this.dtpNgayXuatHoaDon = new System.Windows.Forms.DateTimePicker();
             this.cbMaKhachHang = new System.Windows.Forms.ComboBox();
             this.gbThongTinHoaDon = new System.Windows.Forms.GroupBox();
-            this.lbMaNhanVien = new System.Windows.Forms.Label();
-            this.lbTenNhanVien = new System.Windows.Forms.Label();
             this.lbTenKhachHang = new System.Windows.Forms.Label();
-            this.lbTenSanPham = new System.Windows.Forms.Label();
-            this.lbGiamGia = new System.Windows.Forms.Label();
-            this.lbDonVi = new System.Windows.Forms.Label();
-            this.lbThanhTien = new System.Windows.Forms.Label();
+            this.lbTenNhanVien = new System.Windows.Forms.Label();
+            this.lbMaNhanVien = new System.Windows.Forms.Label();
+            this.IDSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonVi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiamGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbChiTietHoaDon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietHoaDon)).BeginInit();
             this.gbThongTinHoaDon.SuspendLayout();
@@ -134,7 +141,7 @@ namespace MobileStoreApp
             // 
             this.gbChiTietHoaDon.Controls.Add(this.lbGiamGia);
             this.gbChiTietHoaDon.Controls.Add(this.lbTenSanPham);
-            this.gbChiTietHoaDon.Controls.Add(this.lbThanhTien);
+            this.gbChiTietHoaDon.Controls.Add(this.lbDonGia);
             this.gbChiTietHoaDon.Controls.Add(this.lbDonVi);
             this.gbChiTietHoaDon.Controls.Add(this.lbTongTien);
             this.gbChiTietHoaDon.Controls.Add(this.cbMaSanPham);
@@ -161,6 +168,42 @@ namespace MobileStoreApp
             this.gbChiTietHoaDon.TabStop = false;
             this.gbChiTietHoaDon.Text = "Chi tiết hóa đơn:";
             // 
+            // lbGiamGia
+            // 
+            this.lbGiamGia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lbGiamGia.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbGiamGia.Location = new System.Drawing.Point(468, 77);
+            this.lbGiamGia.Name = "lbGiamGia";
+            this.lbGiamGia.Size = new System.Drawing.Size(329, 27);
+            this.lbGiamGia.TabIndex = 6;
+            // 
+            // lbTenSanPham
+            // 
+            this.lbTenSanPham.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lbTenSanPham.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbTenSanPham.Location = new System.Drawing.Point(468, 35);
+            this.lbTenSanPham.Name = "lbTenSanPham";
+            this.lbTenSanPham.Size = new System.Drawing.Size(329, 27);
+            this.lbTenSanPham.TabIndex = 6;
+            // 
+            // lbDonGia
+            // 
+            this.lbDonGia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lbDonGia.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbDonGia.Location = new System.Drawing.Point(947, 77);
+            this.lbDonGia.Name = "lbDonGia";
+            this.lbDonGia.Size = new System.Drawing.Size(208, 27);
+            this.lbDonGia.TabIndex = 6;
+            // 
+            // lbDonVi
+            // 
+            this.lbDonVi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lbDonVi.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbDonVi.Location = new System.Drawing.Point(947, 35);
+            this.lbDonVi.Name = "lbDonVi";
+            this.lbDonVi.Size = new System.Drawing.Size(208, 27);
+            this.lbDonVi.TabIndex = 6;
+            // 
             // lbTongTien
             // 
             this.lbTongTien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -172,22 +215,33 @@ namespace MobileStoreApp
             // 
             // cbMaSanPham
             // 
+            this.cbMaSanPham.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMaSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMaSanPham.FormattingEnabled = true;
             this.cbMaSanPham.Location = new System.Drawing.Point(153, 38);
             this.cbMaSanPham.Name = "cbMaSanPham";
             this.cbMaSanPham.Size = new System.Drawing.Size(146, 28);
             this.cbMaSanPham.TabIndex = 5;
+            this.cbMaSanPham.SelectedIndexChanged += new System.EventHandler(this.cbMaSanPham_SelectedIndexChanged);
             // 
             // dgvChiTietHoaDon
             // 
             this.dgvChiTietHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvChiTietHoaDon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IDSanPham,
+            this.TenSanPham,
+            this.SoLuong,
+            this.DonGia,
+            this.DonVi,
+            this.GiamGia,
+            this.TongTien});
             this.dgvChiTietHoaDon.Location = new System.Drawing.Point(12, 185);
             this.dgvChiTietHoaDon.Name = "dgvChiTietHoaDon";
             this.dgvChiTietHoaDon.RowHeadersWidth = 51;
             this.dgvChiTietHoaDon.RowTemplate.Height = 24;
             this.dgvChiTietHoaDon.Size = new System.Drawing.Size(1143, 207);
             this.dgvChiTietHoaDon.TabIndex = 4;
+            this.dgvChiTietHoaDon.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChiTietHoaDon_CellEndEdit);
             // 
             // button1
             // 
@@ -215,6 +269,7 @@ namespace MobileStoreApp
             this.btnXoaHoaDon.TabIndex = 3;
             this.btnXoaHoaDon.Text = "Xóa hóa đơn";
             this.btnXoaHoaDon.UseVisualStyleBackColor = true;
+            this.btnXoaHoaDon.Click += new System.EventHandler(this.btnXoaHoaDon_Click);
             // 
             // btnThemHoaDon
             // 
@@ -224,6 +279,7 @@ namespace MobileStoreApp
             this.btnThemHoaDon.TabIndex = 3;
             this.btnThemHoaDon.Text = "Thêm hóa đơn";
             this.btnThemHoaDon.UseVisualStyleBackColor = true;
+            this.btnThemHoaDon.Click += new System.EventHandler(this.btnThemHoaDon_Click);
             // 
             // btnXoa
             // 
@@ -233,6 +289,7 @@ namespace MobileStoreApp
             this.btnXoa.TabIndex = 3;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
@@ -242,6 +299,7 @@ namespace MobileStoreApp
             this.btnThem.TabIndex = 3;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label9
             // 
@@ -249,19 +307,19 @@ namespace MobileStoreApp
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(829, 83);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(92, 20);
+            this.label9.Size = new System.Drawing.Size(71, 20);
             this.label9.TabIndex = 0;
-            this.label9.Text = "Thành tiền:";
+            this.label9.Text = "Đơn giá:";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(725, 132);
+            this.label14.Location = new System.Drawing.Point(697, 131);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(83, 20);
+            this.label14.Size = new System.Drawing.Size(115, 20);
             this.label14.TabIndex = 0;
-            this.label14.Text = "Tổng tiền:";
+            this.label14.Text = "Tổng hóa đơn:";
             // 
             // label8
             // 
@@ -352,12 +410,14 @@ namespace MobileStoreApp
             // 
             // cbMaKhachHang
             // 
+            this.cbMaKhachHang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMaKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMaKhachHang.FormattingEnabled = true;
             this.cbMaKhachHang.Location = new System.Drawing.Point(817, 31);
             this.cbMaKhachHang.Name = "cbMaKhachHang";
             this.cbMaKhachHang.Size = new System.Drawing.Size(337, 30);
             this.cbMaKhachHang.TabIndex = 3;
+            this.cbMaKhachHang.SelectedIndexChanged += new System.EventHandler(this.cbMaKhachHang_SelectedIndexChanged);
             // 
             // gbThongTinHoaDon
             // 
@@ -381,24 +441,6 @@ namespace MobileStoreApp
             this.gbThongTinHoaDon.TabStop = false;
             this.gbThongTinHoaDon.Text = "Thông tin hóa đơn:";
             // 
-            // lbMaNhanVien
-            // 
-            this.lbMaNhanVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lbMaNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lbMaNhanVien.Location = new System.Drawing.Point(152, 85);
-            this.lbMaNhanVien.Name = "lbMaNhanVien";
-            this.lbMaNhanVien.Size = new System.Drawing.Size(337, 28);
-            this.lbMaNhanVien.TabIndex = 6;
-            // 
-            // lbTenNhanVien
-            // 
-            this.lbTenNhanVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lbTenNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lbTenNhanVien.Location = new System.Drawing.Point(149, 129);
-            this.lbTenNhanVien.Name = "lbTenNhanVien";
-            this.lbTenNhanVien.Size = new System.Drawing.Size(337, 28);
-            this.lbTenNhanVien.TabIndex = 6;
-            // 
             // lbTenKhachHang
             // 
             this.lbTenKhachHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -408,41 +450,85 @@ namespace MobileStoreApp
             this.lbTenKhachHang.Size = new System.Drawing.Size(337, 28);
             this.lbTenKhachHang.TabIndex = 6;
             // 
-            // lbTenSanPham
+            // lbTenNhanVien
             // 
-            this.lbTenSanPham.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lbTenSanPham.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lbTenSanPham.Location = new System.Drawing.Point(468, 35);
-            this.lbTenSanPham.Name = "lbTenSanPham";
-            this.lbTenSanPham.Size = new System.Drawing.Size(329, 27);
-            this.lbTenSanPham.TabIndex = 6;
+            this.lbTenNhanVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lbTenNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbTenNhanVien.Location = new System.Drawing.Point(152, 129);
+            this.lbTenNhanVien.Name = "lbTenNhanVien";
+            this.lbTenNhanVien.Size = new System.Drawing.Size(334, 28);
+            this.lbTenNhanVien.TabIndex = 6;
             // 
-            // lbGiamGia
+            // lbMaNhanVien
             // 
-            this.lbGiamGia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lbGiamGia.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lbGiamGia.Location = new System.Drawing.Point(468, 77);
-            this.lbGiamGia.Name = "lbGiamGia";
-            this.lbGiamGia.Size = new System.Drawing.Size(329, 27);
-            this.lbGiamGia.TabIndex = 6;
+            this.lbMaNhanVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lbMaNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbMaNhanVien.Location = new System.Drawing.Point(152, 85);
+            this.lbMaNhanVien.Name = "lbMaNhanVien";
+            this.lbMaNhanVien.Size = new System.Drawing.Size(337, 28);
+            this.lbMaNhanVien.TabIndex = 6;
             // 
-            // lbDonVi
+            // IDSanPham
             // 
-            this.lbDonVi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lbDonVi.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lbDonVi.Location = new System.Drawing.Point(947, 35);
-            this.lbDonVi.Name = "lbDonVi";
-            this.lbDonVi.Size = new System.Drawing.Size(208, 27);
-            this.lbDonVi.TabIndex = 6;
+            this.IDSanPham.DataPropertyName = "IDSanPham";
+            this.IDSanPham.HeaderText = "Mã sản phẩm";
+            this.IDSanPham.MinimumWidth = 6;
+            this.IDSanPham.Name = "IDSanPham";
+            this.IDSanPham.ReadOnly = true;
+            this.IDSanPham.Width = 125;
             // 
-            // lbThanhTien
+            // TenSanPham
             // 
-            this.lbThanhTien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lbThanhTien.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lbThanhTien.Location = new System.Drawing.Point(947, 77);
-            this.lbThanhTien.Name = "lbThanhTien";
-            this.lbThanhTien.Size = new System.Drawing.Size(208, 27);
-            this.lbThanhTien.TabIndex = 6;
+            this.TenSanPham.DataPropertyName = "TenSanPham";
+            this.TenSanPham.HeaderText = "Tên sản phẩm";
+            this.TenSanPham.MinimumWidth = 6;
+            this.TenSanPham.Name = "TenSanPham";
+            this.TenSanPham.ReadOnly = true;
+            this.TenSanPham.Width = 125;
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SoLuong";
+            this.SoLuong.HeaderText = "Số lượng";
+            this.SoLuong.MinimumWidth = 6;
+            this.SoLuong.Name = "SoLuong";
+            this.SoLuong.Width = 125;
+            // 
+            // DonGia
+            // 
+            this.DonGia.DataPropertyName = "DonGia";
+            this.DonGia.HeaderText = "Đơn giá";
+            this.DonGia.MinimumWidth = 6;
+            this.DonGia.Name = "DonGia";
+            this.DonGia.ReadOnly = true;
+            this.DonGia.Width = 125;
+            // 
+            // DonVi
+            // 
+            this.DonVi.DataPropertyName = "DonVi";
+            this.DonVi.HeaderText = "Đơn vị";
+            this.DonVi.MinimumWidth = 6;
+            this.DonVi.Name = "DonVi";
+            this.DonVi.ReadOnly = true;
+            this.DonVi.Width = 125;
+            // 
+            // GiamGia
+            // 
+            this.GiamGia.DataPropertyName = "GiamGia";
+            this.GiamGia.HeaderText = "Giảm giá";
+            this.GiamGia.MinimumWidth = 6;
+            this.GiamGia.Name = "GiamGia";
+            this.GiamGia.ReadOnly = true;
+            this.GiamGia.Width = 125;
+            // 
+            // TongTien
+            // 
+            this.TongTien.DataPropertyName = "TongTien";
+            this.TongTien.HeaderText = "Tổng tiền";
+            this.TongTien.MinimumWidth = 6;
+            this.TongTien.Name = "TongTien";
+            this.TongTien.ReadOnly = true;
+            this.TongTien.Width = 125;
             // 
             // frmHoaDon
             // 
@@ -456,6 +542,7 @@ namespace MobileStoreApp
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmHoaDon";
             this.Text = "Thanh toán hóa đơn";
+            this.Load += new System.EventHandler(this.frmHoaDon_Load);
             this.gbChiTietHoaDon.ResumeLayout(false);
             this.gbChiTietHoaDon.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietHoaDon)).EndInit();
@@ -498,10 +585,17 @@ namespace MobileStoreApp
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lbGiamGia;
         private System.Windows.Forms.Label lbTenSanPham;
-        private System.Windows.Forms.Label lbThanhTien;
+        private System.Windows.Forms.Label lbDonGia;
         private System.Windows.Forms.Label lbDonVi;
         private System.Windows.Forms.Label lbTenKhachHang;
         private System.Windows.Forms.Label lbTenNhanVien;
         private System.Windows.Forms.Label lbMaNhanVien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDSanPham;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenSanPham;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DonVi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GiamGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TongTien;
     }
 }

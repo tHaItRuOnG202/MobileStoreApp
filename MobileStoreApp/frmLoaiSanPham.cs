@@ -72,7 +72,7 @@ namespace MobileStoreApp
 
                     Categories cate = new Categories(Int32.Parse(dgvLoaiSanPham.Rows[i].Cells[0].Value.ToString()),
                     dgvLoaiSanPham.Rows[i].Cells[1].Value.ToString());
-                    bool check = ctrl_B.RemoveCategories(cate);
+                    bool check = ctrl_B.RemoveCategories(Int32.Parse(dgvLoaiSanPham.Rows[i].Cells[0].Value.ToString()));
                     if (check == true)
                     {
                         MessageBox.Show("Xóa loại sản phẩm thành công!");
@@ -178,9 +178,7 @@ namespace MobileStoreApp
 
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
-            frmDangNhap frmDangNhap = new frmDangNhap();
-            frmDangNhap.Show();
-            this.Close();
+            
         }
     }
 }

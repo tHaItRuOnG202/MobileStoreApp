@@ -47,18 +47,18 @@ namespace MobileStoreApp
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.grDanhSach = new System.Windows.Forms.GroupBox();
             this.dgvKhachHang = new System.Windows.Forms.DataGridView();
-            this.btnDong = new System.Windows.Forms.Button();
-            this.btnCapNhat = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
             this.MaKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgaySinhKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiaChiKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DienThoaiKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EmailKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnDong = new System.Windows.Forms.Button();
+            this.btnCapNhat = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             this.gbThongTin.SuspendLayout();
             this.grDanhSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).BeginInit();
@@ -244,11 +244,66 @@ namespace MobileStoreApp
             this.EmailKhachHang});
             this.dgvKhachHang.Location = new System.Drawing.Point(7, 26);
             this.dgvKhachHang.Name = "dgvKhachHang";
+            this.dgvKhachHang.ReadOnly = true;
             this.dgvKhachHang.RowHeadersWidth = 51;
             this.dgvKhachHang.RowTemplate.Height = 24;
             this.dgvKhachHang.Size = new System.Drawing.Size(1263, 214);
             this.dgvKhachHang.TabIndex = 0;
             this.dgvKhachHang.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvKhachHang_CellMouseClick);
+            // 
+            // MaKhachHang
+            // 
+            this.MaKhachHang.DataPropertyName = "IDKhachHang";
+            this.MaKhachHang.HeaderText = "Mã khách hàng";
+            this.MaKhachHang.MinimumWidth = 6;
+            this.MaKhachHang.Name = "MaKhachHang";
+            this.MaKhachHang.ReadOnly = true;
+            this.MaKhachHang.Width = 125;
+            // 
+            // TenKhachHang
+            // 
+            this.TenKhachHang.DataPropertyName = "TenKhachHang";
+            this.TenKhachHang.HeaderText = "Tên khách hàng";
+            this.TenKhachHang.MinimumWidth = 6;
+            this.TenKhachHang.Name = "TenKhachHang";
+            this.TenKhachHang.ReadOnly = true;
+            this.TenKhachHang.Width = 125;
+            // 
+            // NgaySinhKhachHang
+            // 
+            this.NgaySinhKhachHang.DataPropertyName = "NgaySinhKhachHang";
+            this.NgaySinhKhachHang.HeaderText = "Ngày sinh";
+            this.NgaySinhKhachHang.MinimumWidth = 6;
+            this.NgaySinhKhachHang.Name = "NgaySinhKhachHang";
+            this.NgaySinhKhachHang.ReadOnly = true;
+            this.NgaySinhKhachHang.Width = 125;
+            // 
+            // DiaChiKhachHang
+            // 
+            this.DiaChiKhachHang.DataPropertyName = "DiaChiKhachHang";
+            this.DiaChiKhachHang.HeaderText = "Địa chỉ";
+            this.DiaChiKhachHang.MinimumWidth = 6;
+            this.DiaChiKhachHang.Name = "DiaChiKhachHang";
+            this.DiaChiKhachHang.ReadOnly = true;
+            this.DiaChiKhachHang.Width = 125;
+            // 
+            // DienThoaiKhachHang
+            // 
+            this.DienThoaiKhachHang.DataPropertyName = "DienThoaiKhachHang";
+            this.DienThoaiKhachHang.HeaderText = "Điện thoại";
+            this.DienThoaiKhachHang.MinimumWidth = 6;
+            this.DienThoaiKhachHang.Name = "DienThoaiKhachHang";
+            this.DienThoaiKhachHang.ReadOnly = true;
+            this.DienThoaiKhachHang.Width = 125;
+            // 
+            // EmailKhachHang
+            // 
+            this.EmailKhachHang.DataPropertyName = "EmailKhachHang";
+            this.EmailKhachHang.HeaderText = "Email";
+            this.EmailKhachHang.MinimumWidth = 6;
+            this.EmailKhachHang.Name = "EmailKhachHang";
+            this.EmailKhachHang.ReadOnly = true;
+            this.EmailKhachHang.Width = 125;
             // 
             // btnDong
             // 
@@ -313,54 +368,6 @@ namespace MobileStoreApp
             this.label9.Size = new System.Drawing.Size(191, 26);
             this.label9.TabIndex = 5;
             this.label9.Text = "Tìm kiếm theo tên:";
-            // 
-            // MaKhachHang
-            // 
-            this.MaKhachHang.DataPropertyName = "IDKhachHang";
-            this.MaKhachHang.HeaderText = "Mã khách hàng";
-            this.MaKhachHang.MinimumWidth = 6;
-            this.MaKhachHang.Name = "MaKhachHang";
-            this.MaKhachHang.Width = 125;
-            // 
-            // TenKhachHang
-            // 
-            this.TenKhachHang.DataPropertyName = "TenKhachHang";
-            this.TenKhachHang.HeaderText = "Tên khách hàng";
-            this.TenKhachHang.MinimumWidth = 6;
-            this.TenKhachHang.Name = "TenKhachHang";
-            this.TenKhachHang.Width = 125;
-            // 
-            // NgaySinhKhachHang
-            // 
-            this.NgaySinhKhachHang.DataPropertyName = "NgaySinhKhachHang";
-            this.NgaySinhKhachHang.HeaderText = "Ngày sinh";
-            this.NgaySinhKhachHang.MinimumWidth = 6;
-            this.NgaySinhKhachHang.Name = "NgaySinhKhachHang";
-            this.NgaySinhKhachHang.Width = 125;
-            // 
-            // DiaChiKhachHang
-            // 
-            this.DiaChiKhachHang.DataPropertyName = "DiaChiKhachHang";
-            this.DiaChiKhachHang.HeaderText = "Địa chỉ";
-            this.DiaChiKhachHang.MinimumWidth = 6;
-            this.DiaChiKhachHang.Name = "DiaChiKhachHang";
-            this.DiaChiKhachHang.Width = 125;
-            // 
-            // DienThoaiKhachHang
-            // 
-            this.DienThoaiKhachHang.DataPropertyName = "DienThoaiKhachHang";
-            this.DienThoaiKhachHang.HeaderText = "Điện thoại";
-            this.DienThoaiKhachHang.MinimumWidth = 6;
-            this.DienThoaiKhachHang.Name = "DienThoaiKhachHang";
-            this.DienThoaiKhachHang.Width = 125;
-            // 
-            // EmailKhachHang
-            // 
-            this.EmailKhachHang.DataPropertyName = "EmailKhachHang";
-            this.EmailKhachHang.HeaderText = "Email";
-            this.EmailKhachHang.MinimumWidth = 6;
-            this.EmailKhachHang.Name = "EmailKhachHang";
-            this.EmailKhachHang.Width = 125;
             // 
             // frmKhachHang
             // 

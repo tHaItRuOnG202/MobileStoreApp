@@ -34,7 +34,6 @@ namespace MobileStoreApp
             this.gbThongTin = new System.Windows.Forms.GroupBox();
             this.picHinhAnh = new System.Windows.Forms.PictureBox();
             this.cbGiamGia = new System.Windows.Forms.ComboBox();
-            this.btnTimKiem = new System.Windows.Forms.Button();
             this.cbLoaiSanPham = new System.Windows.Forms.ComboBox();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -64,6 +63,7 @@ namespace MobileStoreApp
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.gbThongTin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHinhAnh)).BeginInit();
             this.grDanhSach.SuspendLayout();
@@ -86,11 +86,11 @@ namespace MobileStoreApp
             // 
             this.gbThongTin.Controls.Add(this.picHinhAnh);
             this.gbThongTin.Controls.Add(this.cbGiamGia);
-            this.gbThongTin.Controls.Add(this.btnTimKiem);
             this.gbThongTin.Controls.Add(this.cbLoaiSanPham);
             this.gbThongTin.Controls.Add(this.txtTimKiem);
             this.gbThongTin.Controls.Add(this.label1);
             this.gbThongTin.Controls.Add(this.label7);
+            this.gbThongTin.Controls.Add(this.label5);
             this.gbThongTin.Controls.Add(this.label4);
             this.gbThongTin.Controls.Add(this.btnTaiHinhAnh);
             this.gbThongTin.Controls.Add(this.txtDonVi);
@@ -130,17 +130,6 @@ namespace MobileStoreApp
             this.cbGiamGia.Size = new System.Drawing.Size(251, 30);
             this.cbGiamGia.TabIndex = 2;
             // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiem.Location = new System.Drawing.Point(10, 235);
-            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(135, 35);
-            this.btnTimKiem.TabIndex = 3;
-            this.btnTimKiem.Text = "Tìm kiếm";
-            this.btnTimKiem.UseVisualStyleBackColor = true;
-            // 
             // cbLoaiSanPham
             // 
             this.cbLoaiSanPham.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -155,11 +144,12 @@ namespace MobileStoreApp
             // txtTimKiem
             // 
             this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiem.Location = new System.Drawing.Point(172, 237);
+            this.txtTimKiem.Location = new System.Drawing.Point(172, 249);
             this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(296, 30);
+            this.txtTimKiem.Size = new System.Drawing.Size(299, 30);
             this.txtTimKiem.TabIndex = 2;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // label1
             // 
@@ -391,6 +381,7 @@ namespace MobileStoreApp
             this.btnDangXuat.TabIndex = 3;
             this.btnDangXuat.Text = "Đăng xuất";
             this.btnDangXuat.UseVisualStyleBackColor = true;
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
             // btnDong
             // 
@@ -402,6 +393,7 @@ namespace MobileStoreApp
             this.btnDong.TabIndex = 3;
             this.btnDong.Text = "Đóng";
             this.btnDong.UseVisualStyleBackColor = true;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // btnCapNhat
             // 
@@ -413,6 +405,7 @@ namespace MobileStoreApp
             this.btnCapNhat.TabIndex = 3;
             this.btnCapNhat.Text = "Cập nhật";
             this.btnCapNhat.UseVisualStyleBackColor = true;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // btnSua
             // 
@@ -450,6 +443,16 @@ namespace MobileStoreApp
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(6, 255);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(120, 24);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Tìm theo tên:";
+            // 
             // frmSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
@@ -485,7 +488,6 @@ namespace MobileStoreApp
         private System.Windows.Forms.TextBox txtMaSanPham;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtTimKiem;
-        private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.GroupBox grDanhSach;
         private System.Windows.Forms.DataGridView dgvSanPham;
         private System.Windows.Forms.Button btnDong;
@@ -508,5 +510,6 @@ namespace MobileStoreApp
         private System.Windows.Forms.DataGridViewTextBoxColumn GiamGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn HinhAnh;
         private System.Windows.Forms.PictureBox picHinhAnh;
+        private System.Windows.Forms.Label label5;
     }
 }

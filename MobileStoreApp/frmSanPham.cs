@@ -143,7 +143,66 @@ namespace MobileStoreApp
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
+                ResetEnable();
+                int i = dgvSanPham.CurrentRow.Index;
+                txtMaSanPham.Text = dgvSanPham.Rows[i].Cells[0].Value.ToString();
+                txtTenSanPham.Text = dgvSanPham.Rows[i].Cells[1].Value.ToString();
+                txtDonVi.Text = dgvSanPham.Rows[i].Cells[2].Value.ToString();
+                txtDonGia.Text = dgvSanPham.Rows[i].Cells[3].Value.ToString();
+                txtDuongDan.Text = dgvSanPham.Rows[i].Cells[6].Value.ToString();
+                cbLoaiSanPham.Text = dgvSanPham.Rows[i].Cells[5].Value.ToString();
+                cbGiamGia.Text = dgvSanPham.Rows[i].Cells[6].Value.ToString();
+
+                btnCapNhat.Enabled = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtTenSanPham.Text == String.Empty || txtDonVi.Text == String.Empty ||
+                    txtDonGia.Text == String.Empty)
+                {
+                    MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Cảnh báo");
+                }
+                else
+                {
+                    int lastRowIndex = dgvSanPham.Rows.Count - 2;
+                    //string IDSanPham = dgvSanPham.Rows[lastRowIndex].Cells[0].Value.ToString();
+                    Product prod = new Product(Int32.Parse(txtMaSanPham.Text), txtTenSanPham.Text, txtDonVi.Text,
+                            txtDonGia.Text, txtDuongDan.Text, Int32.Parse(cbLoaiSanPham.SelectedValue.ToString()),
+                            Int32.Parse(cbGiamGia.SelectedValue.ToString()));
+                    bool check = ctrl_B.EditProduct(prod);
+                    if (check == true)
+                    {
+                        MessageBox.Show("Cập nhật thông tin sản phẩm thành công!", "Thông báo");
+                        dgvSanPham.DataSource = ctrl_B.ShowProduct();
+                        ClearTxt();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cập nhật thông tin sản phẩm thất bại!", "Thông báo");
+                    }
+                    btnCapNhat.Enabled = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            DataTable dt = ctrl_B.FoundProduct(txtTimKiem.Text);
+            dgvSanPham.DataSource = dt;
         }
 
         private void dgvSanPham_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -158,8 +217,19 @@ namespace MobileStoreApp
             }
             catch (FileNotFoundException)
             {
-                picHinhAnh.Image = Image.FromFile(path + "not-found.png");
+                MessageBox.Show("Không tìm thấy hình ảnh!", "Thông báo");
+                picHinhAnh.Image = Image.FromFile(path + "404-error.png");
             }
+        }
+
+        private void btnDong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

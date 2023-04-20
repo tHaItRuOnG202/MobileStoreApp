@@ -24,3 +24,4 @@ E:\LTGD\MobileStoreApp\MobileStoreApp\obj\Debug\MobileStoreApp.csproj.CoreCompil
 E:\LTGD\MobileStoreApp\MobileStoreApp\obj\Debug\MobileStoreApp.csproj.CopyComplete
 E:\LTGD\MobileStoreApp\MobileStoreApp\obj\Debug\MobileStoreApp.exe
 E:\LTGD\MobileStoreApp\MobileStoreApp\obj\Debug\MobileStoreApp.pdb
+E:\LTGD\MobileStoreApp\MobileStoreApp\obj\Debug\MobileStoreApp.frmThongKe.resources
