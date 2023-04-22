@@ -873,26 +873,63 @@ namespace DAO_MoblieStoreApp
             return db.SanPhams.FirstOrDefault(sp => sp.IDSanPham == maSanPham);
         }
 
-        public string GetDiscountByProduct(int cmbMaSP)
-        {
-            // Lấy mã sản phẩm từ ComboBox
-            int txtMa;
-            string txtKQ;
-            // Tìm sản phẩm trong danh sách sản phẩm
-            SanPham selectedProduct = db.SanPhams.FirstOrDefault(p => p.IDSanPham == cmbMaSP);
+        //public DataTable GetDiscountByProduct(int maKhuyenMai)
+        //{
+        //    //// Lấy mã sản phẩm từ ComboBox
+        //    //int txtMa;
+        //    //string txtKQ;
+        //    //// Tìm sản phẩm trong danh sách sản phẩm
+        //    //SanPham selectedProduct = db.SanPhams.FirstOrDefault(p => p.IDSanPham == cmbMaSP);
 
-            // Nếu tìm thấy sản phẩm, hiển thị tên sản phẩm trên Textbox txtTenSP
-            if (selectedProduct != null)
+        //    //// Nếu tìm thấy sản phẩm, hiển thị tên sản phẩm trên Textbox txtTenSP
+        //    //if (selectedProduct != null)
+        //    //{
+        //    //    txtMa = selectedProduct.IDGiamGia;
+        //    //    GiamGia selectedProduct2 = db.GiamGias.FirstOrDefault(p => p.IDGiamGia == txtMa);
+        //    //    if (selectedProduct2 != null)
+        //    //    {
+        //    //        txtKQ = selectedProduct2.GiaTri;
+        //    //        return txtKQ;
+        //    //    }
+        //    //}
+        //    //return "Không có giảm giá!";
+
+        //    //SqlDataAdapter da;
+        //    //DataTable dt = new DataTable();
+        //    //string query = String.Format("Select * From GiamGia Where IDGiamGiam = {0}", maKhuyenMai);
+        //    //da = new SqlDataAdapter(query, dc.Connect());
+        //    //da.Fill(dt);
+        //    //return dt;
+
+
+        //}
+
+        public Discount getDiscount(int maKhuyenMai)
+        {
+            dc.Connect();
+            
+            string sqlQuery = String.Format("SELECT * FROM GiamGia Where IDGiamGia = {0}", maKhuyenMai);
+            
+            Discount disc = new Discount();
+            using (SqlConnection connection = dc.Connect())
             {
-                txtMa = selectedProduct.IDGiamGia;
-                GiamGia selectedProduct2 = db.GiamGias.FirstOrDefault(p => p.IDGiamGia == txtMa);
-                if (selectedProduct2 != null)
+                SqlCommand command = new SqlCommand(sqlQuery, connection);
+                
+                connection.Open();
+                using (SqlDataReader reader = command.ExecuteReader())
                 {
-                    txtKQ = selectedProduct2.GiaTri;
-                    return txtKQ;
+                    while (reader.Read())
+                    {
+
+                        disc.MaGiamGia = reader.GetInt32(0);
+                        disc.GiaTri = reader.GetString(1);
+                        disc.NgayBatDau = reader.GetDateTime(2);
+                        disc.NgayKetThuc = reader.GetDateTime(3);
+                    }
                 }
+                connection.Close();
             }
-            return "Không có giảm giá!";
+            return disc;
         }
 
         public KhachHang GetCustomerByID(int maKH)
@@ -1006,6 +1043,86 @@ namespace DAO_MoblieStoreApp
             da = new SqlDataAdapter(query, dc.Connect());
             da.Fill(dt);
             return dt;
+        }
+
+        //Chức năng trang chủ sản phẩm
+        public List<Product> sortProduct(int sortChoice)
+        {
+            dc.Connect();
+
+            string sqlQuery = "Select * From SanPham Order By TRY_CONVERT(FLOAT, (DonGia))";
+            if (sortChoice == 1)
+            {
+                sqlQuery += " Asc";
+            }
+            else
+            {
+                sqlQuery += " Desc";
+            }
+
+            List<Product> listProd = new List<Product>();
+            using (SqlConnection connection = dc.Connect())
+            {
+                SqlCommand command = new SqlCommand(sqlQuery, connection);
+
+                connection.Open();
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Product prod = new Product();
+                        prod.MaSP = reader.GetInt32(0);
+                        prod.TenSP = reader.GetString(1);
+                        prod.DonVi = reader.GetString(2);
+                        prod.DonGia = reader.GetString(3);
+                        prod.HinhSanPham = reader.GetString(4);
+                        prod.MaLoaiSP = reader.GetInt32(5);
+                        prod.MaGiamGia = reader.GetInt32(6);
+                        listProd.Add(prod);
+                    }
+                }
+                connection.Close();
+            }
+            return listProd;
+
+            //string query = "Select * From SanPham Order By TRY_CONVERT(FLOAT, (DonGia))";
+            //if (sortChoice == true)
+            //{
+            //    query += " Asc";
+            //}
+            //else
+            //{
+            //    query += " Desc";
+            //}
+        }
+
+        public DataTable sortProd(int sortChoice)
+        {
+            SqlDataAdapter da;
+            DataTable dt = new DataTable();
+            string query = "Select * From SanPham Order By TRY_CONVERT(FLOAT, (DonGia))";
+            if (sortChoice == 1)
+            {
+                query += " Asc";
+            }
+            else
+            {
+                query += " Desc";
+            }
+
+            da = new SqlDataAdapter(query, dc.Connect());
+            da.Fill(dt);
+            return dt;
+
+            //string query = "Select * From SanPham Order By TRY_CONVERT(FLOAT, (DonGia))";
+            //if (sortChoice == 1)
+            //{
+            //    query += " Asc";
+            //}
+            //else
+            //{
+            //    query += " Desc";
+            //}
         }
     }
 }

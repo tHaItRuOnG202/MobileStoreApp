@@ -152,8 +152,8 @@ namespace MobileStoreApp
                 txtDonVi.Text = dgvSanPham.Rows[i].Cells[2].Value.ToString();
                 txtDonGia.Text = dgvSanPham.Rows[i].Cells[3].Value.ToString();
                 txtDuongDan.Text = dgvSanPham.Rows[i].Cells[6].Value.ToString();
-                cbLoaiSanPham.Text = dgvSanPham.Rows[i].Cells[5].Value.ToString();
-                cbGiamGia.Text = dgvSanPham.Rows[i].Cells[6].Value.ToString();
+                cbLoaiSanPham.Text = dgvSanPham.Rows[i].Cells[4].Value.ToString();
+                cbGiamGia.Text = dgvSanPham.Rows[i].Cells[5].Value.ToString();
 
                 btnCapNhat.Enabled = true;
             }
@@ -209,6 +209,14 @@ namespace MobileStoreApp
         {
             int i = dgvSanPham.CurrentRow.Index;
 
+            txtMaSanPham.Text = dgvSanPham.Rows[i].Cells[0].Value.ToString();
+            txtTenSanPham.Text = dgvSanPham.Rows[i].Cells[1].Value.ToString();
+            txtDonVi.Text = dgvSanPham.Rows[i].Cells[2].Value.ToString();
+            txtDonGia.Text = dgvSanPham.Rows[i].Cells[3].Value.ToString();
+            //txtDuongDan.Text = dgvSanPham.Rows[i].Cells[6].Value.ToString();
+            cbLoaiSanPham.Text = dgvSanPham.Rows[i].Cells[4].Value.ToString();
+            cbGiamGia.Text = dgvSanPham.Rows[i].Cells[5].Value.ToString();
+
             txtDuongDan.Text = dgvSanPham.Rows[i].Cells[6].Value.ToString();
             picHinhAnh.SizeMode = PictureBoxSizeMode.Zoom;
             try
@@ -220,6 +228,8 @@ namespace MobileStoreApp
                 MessageBox.Show("Không tìm thấy hình ảnh!", "Thông báo");
                 picHinhAnh.Image = Image.FromFile(path + "404-error.png");
             }
+
+            ResetDisable();
         }
 
         private void btnDong_Click(object sender, EventArgs e)

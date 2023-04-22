@@ -31,7 +31,11 @@ namespace MobileStoreApp
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.llbThanhToan = new System.Windows.Forms.LinkLabel();
+            this.llbDangNhap = new System.Windows.Forms.LinkLabel();
+            this.cbSort = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -41,9 +45,9 @@ namespace MobileStoreApp
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.Control;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 146);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 195);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1372, 585);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1372, 536);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // label1
@@ -58,25 +62,69 @@ namespace MobileStoreApp
             this.label1.Text = "I\'MPROOK MOBILE STORE";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // llbThanhToan
+            // llbDangNhap
             // 
-            this.llbThanhToan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.llbThanhToan.AutoSize = true;
-            this.llbThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llbThanhToan.Location = new System.Drawing.Point(1263, 99);
-            this.llbThanhToan.Name = "llbThanhToan";
-            this.llbThanhToan.Size = new System.Drawing.Size(102, 20);
-            this.llbThanhToan.TabIndex = 5;
-            this.llbThanhToan.TabStop = true;
-            this.llbThanhToan.Text = "Thanh toán";
-            this.llbThanhToan.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llbThanhToan_LinkClicked);
+            this.llbDangNhap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.llbDangNhap.AutoSize = true;
+            this.llbDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llbDangNhap.Location = new System.Drawing.Point(1263, 99);
+            this.llbDangNhap.Name = "llbDangNhap";
+            this.llbDangNhap.Size = new System.Drawing.Size(98, 20);
+            this.llbDangNhap.TabIndex = 5;
+            this.llbDangNhap.TabStop = true;
+            this.llbDangNhap.Text = "Đăng nhập";
+            this.llbDangNhap.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llbThanhToan_LinkClicked);
+            // 
+            // cbSort
+            // 
+            this.cbSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSort.FormattingEnabled = true;
+            this.cbSort.Location = new System.Drawing.Point(109, 99);
+            this.cbSort.Name = "cbSort";
+            this.cbSort.Size = new System.Drawing.Size(197, 28);
+            this.cbSort.TabIndex = 6;
+            this.cbSort.SelectedIndexChanged += new System.EventHandler(this.cbSort_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 102);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 20);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Sắp xếp:";
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(781, 105);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(275, 27);
+            this.txtSearch.TabIndex = 8;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(586, 112);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(147, 20);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Tìm kiếm theo tên:";
             // 
             // TrangChuMuaHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1396, 743);
-            this.Controls.Add(this.llbThanhToan);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.cbSort);
+            this.Controls.Add(this.llbDangNhap);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "TrangChuMuaHang";
@@ -91,6 +139,10 @@ namespace MobileStoreApp
         #endregion
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.LinkLabel llbThanhToan;
+        private System.Windows.Forms.LinkLabel llbDangNhap;
+        private System.Windows.Forms.ComboBox cbSort;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Label label3;
     }
 }

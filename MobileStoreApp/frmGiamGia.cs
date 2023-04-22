@@ -54,21 +54,28 @@ namespace MobileStoreApp
                 }
                 else
                 {
-                    int lastRowIndex = dgvGiamGia.Rows.Count - 2;
-                    string IDGiamGia = dgvGiamGia.Rows[lastRowIndex].Cells[0].Value.ToString();
-                    Discount disc = new Discount(Int32.Parse(IDGiamGia) + 1, txtGiaTri.Text, DateTime.Parse(dtpNgayBatDau.Text),
-                            DateTime.Parse(dtpNgayKetThuc.Text));
-                    bool check = ctrl_B.AddDiscount(disc);
-                    if (check == true)
+                    if (dtpNgayBatDau.Value.Date > dtpNgayKetThuc.Value.Date)
                     {
-                        MessageBox.Show("Thêm giảm giá thành công");
-                        dgvGiamGia.DataSource = ctrl_B.ShowDiscount();
-                        txtGiaTri.Text = String.Empty;
+                        MessageBox.Show("Ngày bắt đầu phải nhỏ hơn ngày kết thúc!");
                     }
                     else
                     {
-                        MessageBox.Show("Thêm giảm giá thất bại");
-                    }
+                        int lastRowIndex = dgvGiamGia.Rows.Count - 2;
+                        string IDGiamGia = dgvGiamGia.Rows[lastRowIndex].Cells[0].Value.ToString();
+                        Discount disc = new Discount(Int32.Parse(IDGiamGia) + 1, txtGiaTri.Text, DateTime.Parse(dtpNgayBatDau.Text),
+                                DateTime.Parse(dtpNgayKetThuc.Text));
+                        bool check = ctrl_B.AddDiscount(disc);
+                        if (check == true)
+                        {
+                            MessageBox.Show("Thêm giảm giá thành công");
+                            dgvGiamGia.DataSource = ctrl_B.ShowDiscount();
+                            txtGiaTri.Text = String.Empty;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Thêm giảm giá thất bại");
+                        }
+                    }    
                 }
             }
             catch (Exception ex)

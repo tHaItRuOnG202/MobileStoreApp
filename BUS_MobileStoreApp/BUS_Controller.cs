@@ -200,9 +200,14 @@ namespace BUS_MobileStoreApp
             ctrl_D.InsertReceiptDetail(idRec, idPro, quantity, uPrice);
         }
 
-        public string GetDistByProd(int mgg)
+        //public DataTable GetDistByProd(int maGiamGia)
+        //{
+        //    return ctrl_D.GetDiscountByProduct(maGiamGia);
+        //}
+
+        public Discount takeDiscount(int maKhuyenMai)
         {
-            return ctrl_D.GetDiscountByProduct(mgg);
+            return ctrl_D.getDiscount(maKhuyenMai);
         }
 
         public SanPham GetPrById(int rd)
@@ -260,6 +265,16 @@ namespace BUS_MobileStoreApp
         public DataTable ShowProductV2()
         {
             return ctrl_D.LoadProductV2();
+        }
+
+        public List<Product> sortGood(int sortChoice)
+        {
+            return ctrl_D.sortProduct(sortChoice);
+        }
+
+        public DataTable sortGd(int sortChoice)
+        {
+            return ctrl_D.sortProd(sortChoice);
         }
     }
 }

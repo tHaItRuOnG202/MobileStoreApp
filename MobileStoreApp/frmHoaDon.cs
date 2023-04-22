@@ -89,6 +89,24 @@ namespace MobileStoreApp
             }
             return isNull;
         }
+
+        private bool applyDiscount(SanPham sp)
+        {
+            DateTime ngayBatDau = ctrl_B.takeDiscount(sp.IDGiamGia).NgayBatDau;
+            DateTime ngayKetThuc = ctrl_B.takeDiscount(sp.IDGiamGia).NgayKetThuc;
+            DateTime ngayHientai = DateTime.Now;
+
+            if (ngayHientai.Date.CompareTo(ngayBatDau.Date) >= 0 && ngayHientai.CompareTo(ngayKetThuc.Date) <= 0)
+            {
+                MessageBox.Show("Sản phẩm đang trong thời gian giảm giá!");
+                return true;
+            }
+            else
+            {
+                return false;
+            }    
+        }
+
         private void btnThem_Click(object sender, EventArgs e)
         {
             try
@@ -99,13 +117,24 @@ namespace MobileStoreApp
                     return;
                 }
 
+                SanPham sp = ctrl_B.GetPrById(Int32.Parse(cbMaSanPham.Text));
+                bool check = applyDiscount(sp);
+
                 string maSP = cbMaSanPham.Text;
                 string tenSP = lbTenSanPham.Text;
                 string soLuong = txtSoLuong.Text;
                 string donGia = lbDonGia.Text;
                 string donVi = lbDonVi.Text;
                 string giamGia = (Int16.Parse(lbGiamGia.Text)).ToString();
-                string tien = (Int16.Parse(txtSoLuong.Text) * decimal.Parse(lbDonGia.Text) - decimal.Parse(lbGiamGia.Text) * Int16.Parse(txtSoLuong.Text)).ToString();
+                string tien;
+                if (check == true)
+                {
+                    tien = (Int16.Parse(txtSoLuong.Text) * decimal.Parse(lbDonGia.Text) - decimal.Parse(lbGiamGia.Text) * Int16.Parse(txtSoLuong.Text)).ToString();
+                }
+                else
+                {
+                    tien = (Int16.Parse(txtSoLuong.Text) * decimal.Parse(lbDonGia.Text)).ToString();
+                }
 
                 if (dgvChiTietHoaDon.Rows.Count == 1)
                 {
@@ -243,8 +272,8 @@ namespace MobileStoreApp
                 {
                     lbTenSanPham.Text = sp.TenSanPham;
                     lbDonVi.Text = sp.DonVi;
-                    lbGiamGia.Text = ctrl_B.GetDistByProd(Int32.Parse(cbMaSanPham.Text));
-                    lbDonGia.Text = sp.DonGia;
+                    lbGiamGia.Text = ctrl_B.takeDiscount(sp.IDGiamGia).GiaTri;
+                    lbDonGia.Text = sp.DonGia;    
                 }
             }
             catch (Exception ex)

@@ -44,13 +44,14 @@ namespace MobileStoreApp
                         {
                             MessageBox.Show("Đăng nhập thành công");
 
-                            TrangChuMuaHang trangChuMuaHang = new TrangChuMuaHang();
+                            //TrangChuMuaHang trangChuMuaHang = new TrangChuMuaHang();
                             //trangChuMuaHang.ShowDialog();
-                            //frmHoaDon frmHoaDon = new frmHoaDon();
+                            frmHoaDon frmHoaDon = new frmHoaDon();
                             frmHoaDon.HoTen = n.HoNhanVien + " " + n.TenNhanVien;
                             frmHoaDon.IDNhanVien = n.IDNhanVien.ToString();
-                            trangChuMuaHang.ShowDialog();
-                            //frmHoaDon.ShowDialog();
+                            
+                            //trangChuMuaHang.ShowDialog();
+                            frmHoaDon.ShowDialog();
                             //this.Close();
                             //frmHoaDon.Show();
                             break;
