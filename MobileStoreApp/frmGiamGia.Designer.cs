@@ -212,6 +212,7 @@ namespace MobileStoreApp
             this.MaGiamGia.HeaderText = "Mã giảm giá";
             this.MaGiamGia.MinimumWidth = 6;
             this.MaGiamGia.Name = "MaGiamGia";
+            this.MaGiamGia.ReadOnly = true;
             this.MaGiamGia.Width = 125;
             // 
             // GiaTri
@@ -220,6 +221,7 @@ namespace MobileStoreApp
             this.GiaTri.HeaderText = "Giá trị";
             this.GiaTri.MinimumWidth = 6;
             this.GiaTri.Name = "GiaTri";
+            this.GiaTri.ReadOnly = true;
             this.GiaTri.Width = 125;
             // 
             // ThoiGianBatDau
@@ -228,6 +230,7 @@ namespace MobileStoreApp
             this.ThoiGianBatDau.HeaderText = "Thời gian bắt đầu";
             this.ThoiGianBatDau.MinimumWidth = 6;
             this.ThoiGianBatDau.Name = "ThoiGianBatDau";
+            this.ThoiGianBatDau.ReadOnly = true;
             this.ThoiGianBatDau.Width = 125;
             // 
             // ThoiGianKetThuc
@@ -236,6 +239,7 @@ namespace MobileStoreApp
             this.ThoiGianKetThuc.HeaderText = "Thời gian kết thúc";
             this.ThoiGianKetThuc.MinimumWidth = 6;
             this.ThoiGianKetThuc.Name = "ThoiGianKetThuc";
+            this.ThoiGianKetThuc.ReadOnly = true;
             this.ThoiGianKetThuc.Width = 125;
             // 
             // btnDangXuat
@@ -328,6 +332,8 @@ namespace MobileStoreApp
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmGiamGia";
             this.Text = "Quản lý giảm giá";
+            this.TopMost = true;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmGiamGia_Load);
             this.gbThongTin.ResumeLayout(false);
             this.gbThongTin.PerformLayout();

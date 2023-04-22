@@ -76,7 +76,7 @@ namespace MobileStoreApp
             this.LoadReceipt();
             //lbMaNhanVien.Text = IDNhanVien;
             //lbTenNhanVien.Text = HoTen;
-
+            dtpNgayXuatHoaDon.Enabled = false;
             lbMaNhanVien.Text = ID.ToString();
             lbTenNhanVien.Text = Ho + " " + Ten;
         }
@@ -238,7 +238,7 @@ namespace MobileStoreApp
 
                 if (isNull == true)
                 {
-                    MessageBox.Show("Chưa có hóa đơn để thêm!");
+                    MessageBox.Show("Chưa có thông tin hóa đơn để thêm!");
                 }
                 else
                 {
@@ -387,13 +387,13 @@ namespace MobileStoreApp
             string pattern = @"^(\d*|\s*)$";
             Regex regex = new Regex(pattern);
             bool isMatch = regex.IsMatch(txtSoLuong.Text);
-            if (isMatch)
+            if (isMatch && txtSoLuong.Text != "0")
             {
 
             }
             else
             {
-                MessageBox.Show("Chỉ được phép nhập số!");
+                MessageBox.Show("Chỉ được phép nhập số lớn hơn 0!");
                 txtSoLuong.Text = "1";
             }    
         }

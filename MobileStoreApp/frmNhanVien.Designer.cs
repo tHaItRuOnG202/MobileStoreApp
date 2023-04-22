@@ -517,6 +517,8 @@ namespace MobileStoreApp
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmNhanVien";
             this.Text = "Quản lý nhân viên";
+            this.TopMost = true;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmNhanVien_Load);
             this.gbThongTin.ResumeLayout(false);
             this.gbThongTin.PerformLayout();

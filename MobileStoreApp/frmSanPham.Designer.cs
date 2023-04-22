@@ -38,6 +38,7 @@ namespace MobileStoreApp
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnTaiHinhAnh = new System.Windows.Forms.Button();
             this.txtDonVi = new System.Windows.Forms.TextBox();
@@ -63,7 +64,6 @@ namespace MobileStoreApp
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.gbThongTin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHinhAnh)).BeginInit();
             this.grDanhSach.SuspendLayout();
@@ -170,6 +170,16 @@ namespace MobileStoreApp
             this.label7.Size = new System.Drawing.Size(138, 24);
             this.label7.TabIndex = 0;
             this.label7.Text = "Loại sản phẩm:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(6, 255);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(120, 24);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Tìm theo tên:";
             // 
             // label4
             // 
@@ -443,16 +453,6 @@ namespace MobileStoreApp
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 255);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(120, 24);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Tìm theo tên:";
-            // 
             // frmSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
@@ -465,6 +465,8 @@ namespace MobileStoreApp
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmSanPham";
             this.Text = "Quản lý sản phẩm";
+            this.TopMost = true;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmSanPham_Load);
             this.gbThongTin.ResumeLayout(false);
             this.gbThongTin.PerformLayout();

@@ -129,6 +129,7 @@ namespace MobileStoreApp
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "TrangChuMuaHang";
             this.Text = "Trang Chủ Mua Hàng";
+            this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.TrangChuMuaHang_Load);
             this.ResumeLayout(false);

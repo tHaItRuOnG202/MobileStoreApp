@@ -544,6 +544,8 @@ namespace MobileStoreApp
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmHoaDon";
             this.Text = "Thanh toán hóa đơn";
+            this.TopMost = true;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmHoaDon_Load);
             this.gbChiTietHoaDon.ResumeLayout(false);
             this.gbChiTietHoaDon.PerformLayout();

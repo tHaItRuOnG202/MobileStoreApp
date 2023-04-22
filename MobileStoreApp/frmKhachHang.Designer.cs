@@ -104,7 +104,7 @@ namespace MobileStoreApp
             this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgaySinh.Location = new System.Drawing.Point(126, 159);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
-            this.dtpNgaySinh.Size = new System.Drawing.Size(250, 28);
+            this.dtpNgaySinh.Size = new System.Drawing.Size(349, 28);
             this.dtpNgaySinh.TabIndex = 2;
             // 
             // txtEmail
@@ -166,7 +166,7 @@ namespace MobileStoreApp
             this.txtTenKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenKhachHang.Location = new System.Drawing.Point(126, 100);
             this.txtTenKhachHang.Name = "txtTenKhachHang";
-            this.txtTenKhachHang.Size = new System.Drawing.Size(250, 28);
+            this.txtTenKhachHang.Size = new System.Drawing.Size(349, 28);
             this.txtTenKhachHang.TabIndex = 1;
             // 
             // label6
@@ -194,7 +194,7 @@ namespace MobileStoreApp
             this.txtMaKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaKhachHang.Location = new System.Drawing.Point(126, 41);
             this.txtMaKhachHang.Name = "txtMaKhachHang";
-            this.txtMaKhachHang.Size = new System.Drawing.Size(250, 28);
+            this.txtMaKhachHang.Size = new System.Drawing.Size(349, 28);
             this.txtMaKhachHang.TabIndex = 1;
             // 
             // label2
@@ -383,6 +383,8 @@ namespace MobileStoreApp
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmKhachHang";
             this.Text = "Quản lý khách hàng";
+            this.TopMost = true;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmKhachHang_Load);
             this.gbThongTin.ResumeLayout(false);
             this.gbThongTin.PerformLayout();

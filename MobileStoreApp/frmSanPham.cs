@@ -138,6 +138,8 @@ namespace MobileStoreApp
                 string filePath = dlg.FileName;
                 string fileName = Path.GetFileName(filePath);
                 txtDuongDan.Text = fileName;
+                picHinhAnh.Image = Image.FromFile(filePath);
+                picHinhAnh.SizeMode = PictureBoxSizeMode.Zoom;
             }
         }
 
