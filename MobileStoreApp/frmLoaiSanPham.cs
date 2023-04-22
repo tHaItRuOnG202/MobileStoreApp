@@ -120,7 +120,7 @@ namespace MobileStoreApp
                 {
                     int lastRowIndex = dgvLoaiSanPham.Rows.Count - 2;
                     string IDLoaiSanPham = dgvLoaiSanPham.Rows[lastRowIndex].Cells[0].Value.ToString();
-                    Categories cate = new Categories(Int32.Parse(IDLoaiSanPham), txtTenLoaiSanPham.Text);
+                    Categories cate = new Categories(Int32.Parse(txtMaLoaiSanPham.Text), txtTenLoaiSanPham.Text);
                     bool check = ctrl_B.EditCategories(cate);
                     if(check == true)
                     {

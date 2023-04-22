@@ -169,7 +169,7 @@ namespace MobileStoreApp
                 {
                     int lastRowIndex = dgvKhachHang.Rows.Count - 2;
                     string IDKhachHang = dgvKhachHang.Rows[lastRowIndex].Cells[0].Value.ToString();
-                    Customer cust = new Customer(Int32.Parse(IDKhachHang), txtTenKhachHang.Text,
+                    Customer cust = new Customer(Int32.Parse(txtMaKhachHang.Text), txtTenKhachHang.Text,
                             DateTime.Parse(dtpNgaySinh.Text), txtDiaChi.Text, txtDienThoai.Text, txtEmail.Text);
                     bool check = ctrl_B.EditCustomer(cust);
                     if (check == true)

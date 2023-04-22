@@ -46,5 +46,10 @@ namespace MobileStoreApp
 
             dgvKhachHangDoanhThu.DataSource = ctrl_B.ShowRevenueCustomer(month, year);
         }
+
+        private void btnDong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

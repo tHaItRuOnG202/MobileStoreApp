@@ -146,6 +146,7 @@ namespace MobileStoreApp
             this.IDKhachHang.HeaderText = "Mã khách hàng";
             this.IDKhachHang.MinimumWidth = 6;
             this.IDKhachHang.Name = "IDKhachHang";
+            this.IDKhachHang.ReadOnly = true;
             this.IDKhachHang.Width = 125;
             // 
             // TenKhachHang
@@ -154,6 +155,7 @@ namespace MobileStoreApp
             this.TenKhachHang.HeaderText = "Tên khách hàng";
             this.TenKhachHang.MinimumWidth = 6;
             this.TenKhachHang.Name = "TenKhachHang";
+            this.TenKhachHang.ReadOnly = true;
             this.TenKhachHang.Width = 125;
             // 
             // TongTien
@@ -162,6 +164,7 @@ namespace MobileStoreApp
             this.TongTien.HeaderText = "Tổng tiền";
             this.TongTien.MinimumWidth = 6;
             this.TongTien.Name = "TongTien";
+            this.TongTien.ReadOnly = true;
             this.TongTien.Width = 125;
             // 
             // dgvSanPhamDoanhThu
@@ -238,6 +241,7 @@ namespace MobileStoreApp
             this.btnDong.TabIndex = 3;
             this.btnDong.Text = "Đóng";
             this.btnDong.UseVisualStyleBackColor = true;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // groupBox1
             // 

@@ -17,14 +17,21 @@ namespace MobileStoreApp
     public partial class frmHoaDon : Form
     {
         BUS_Controller ctrl_B = new BUS_Controller();
-        public static string HoTen = "";
-        public static string IDNhanVien = "";
+        //public static string HoTen = "";
+        //public static string IDNhanVien = "";
+        private int ID;
+        private string Ho;
+        private string Ten;
         const int MAX_ARRAY = 9999999;
         int count;
-        public frmHoaDon()
+        
+        public frmHoaDon(int IDNhanVien, string HoNhanVien, string TenNhanVien)
         {
-            frmDangNhap frmDangNhap = new frmDangNhap();
+            //frmDangNhap frmDangNhap = new frmDangNhap();
             InitializeComponent();
+            this.ID = IDNhanVien;
+            this.Ho = HoNhanVien;
+            this.Ten = TenNhanVien;
         }
 
         private void ClearTxt()
@@ -67,8 +74,11 @@ namespace MobileStoreApp
         private void frmHoaDon_Load(object sender, EventArgs e)
         {
             this.LoadReceipt();
-            lbMaNhanVien.Text = IDNhanVien;
-            lbTenNhanVien.Text = HoTen;
+            //lbMaNhanVien.Text = IDNhanVien;
+            //lbTenNhanVien.Text = HoTen;
+
+            lbMaNhanVien.Text = ID.ToString();
+            lbTenNhanVien.Text = Ho + " " + Ten;
         }
 
         public bool DatagridviewCheck()
@@ -125,15 +135,15 @@ namespace MobileStoreApp
                 string soLuong = txtSoLuong.Text;
                 string donGia = lbDonGia.Text;
                 string donVi = lbDonVi.Text;
-                string giamGia = (Int16.Parse(lbGiamGia.Text)).ToString();
+                string giamGia = (Int32.Parse(lbGiamGia.Text)).ToString();
                 string tien;
                 if (check == true)
                 {
-                    tien = (Int16.Parse(txtSoLuong.Text) * decimal.Parse(lbDonGia.Text) - decimal.Parse(lbGiamGia.Text) * Int16.Parse(txtSoLuong.Text)).ToString();
+                    tien = (Int32.Parse(txtSoLuong.Text) * decimal.Parse(lbDonGia.Text) - decimal.Parse(lbGiamGia.Text) * Int32.Parse(txtSoLuong.Text)).ToString();
                 }
                 else
                 {
-                    tien = (Int16.Parse(txtSoLuong.Text) * decimal.Parse(lbDonGia.Text)).ToString();
+                    tien = (Int32.Parse(txtSoLuong.Text) * decimal.Parse(lbDonGia.Text)).ToString();
                 }
 
                 if (dgvChiTietHoaDon.Rows.Count == 1)
@@ -199,10 +209,7 @@ namespace MobileStoreApp
                     {
                         MessageBox.Show("Không có gì để xóa!");
                     }
-                    //if (dgvHoaDon.Rows[rowIndex].Cells[0].Value.ToString() == String.Empty || dgvHoaDon.Rows[rowIndex].Cells[0].Value == null)
-                    //{
-                    //    MessageBox.Show("Không có gì để xóa!");
-                    //}
+                    
                     else
                     {
                         dgvChiTietHoaDon.Rows.RemoveAt(rowIndex);
@@ -227,32 +234,41 @@ namespace MobileStoreApp
         {
             try
             {
-                DataTable receipTable = ctrl_B.ShowReceipt();
-                int lastRowIndex = receipTable.Rows.Count - 1;
-                int lastReceiptID = Int32.Parse(receipTable.Rows[lastRowIndex][0].ToString());
+                bool isNull = DatagridviewCheck();
 
-                int idHD = lastReceiptID;
-                string idKH = cbMaKhachHang.Text;
-                string idNV = lbMaNhanVien.Text;
-                DateTime dateTime = DateTime.Parse(dtpNgayXuatHoaDon.Text);
-                ctrl_B.AddReceipt(idHD + 1, dateTime, lbTongTien.Text, Int32.Parse(idNV), Int32.Parse(idKH));
-
-                for (int i = 0; i < dgvChiTietHoaDon.RowCount - 1; i++)
+                if (isNull == true)
                 {
-                    string idPro = dgvChiTietHoaDon.Rows[i].Cells[0].Value.ToString();
-                    string quantity = dgvChiTietHoaDon.Rows[i].Cells[2].Value.ToString();
-                    string uPrice = dgvChiTietHoaDon.Rows[i].Cells[3].Value.ToString();
-                    string totalPrice = dgvChiTietHoaDon.Rows[i].Cells[6].Value.ToString();
-                    //decimal uPrice = decimal.Parse(row.Cells[3].ToString());
-                    //decimal totalPrice = decimal.Parse(row.Cells[6].ToString());
-
-                    ctrl_B.AddReceiptDetail(idHD, idPro, Int32.Parse(quantity), uPrice);
+                    MessageBox.Show("Chưa có hóa đơn để thêm!");
                 }
-                MessageBox.Show("Thêm hóa đơn thành công!");
-                dgvChiTietHoaDon.Rows.Clear();
-                cbMaKhachHang.SelectedIndex = 0;
-                cbMaSanPham.SelectedIndex = 0;
-                //ctrl_B.AddReceiptDetail(idHD, idPro, quantity, uPrice, totalPrice);
+                else
+                {
+                    DataTable receiptTable = ctrl_B.ShowReceipt();
+                    int lastRowIndex = receiptTable.Rows.Count - 1;
+                    int lastReceiptID = Int32.Parse(receiptTable.Rows[lastRowIndex][0].ToString());
+
+                    int idHD = lastReceiptID;
+                    string idKH = cbMaKhachHang.Text;
+                    string idNV = lbMaNhanVien.Text;
+                    DateTime dateTime = DateTime.Parse(dtpNgayXuatHoaDon.Text);
+                    ctrl_B.AddReceipt(idHD + 1, dateTime, lbTongTien.Text, Int32.Parse(idNV), Int32.Parse(idKH));
+
+                    for (int i = 0; i < dgvChiTietHoaDon.RowCount - 1; i++)
+                    {
+                        string idPro = dgvChiTietHoaDon.Rows[i].Cells[0].Value.ToString();
+                        string quantity = dgvChiTietHoaDon.Rows[i].Cells[2].Value.ToString();
+                        string uPrice = dgvChiTietHoaDon.Rows[i].Cells[3].Value.ToString();
+                        string totalPrice = dgvChiTietHoaDon.Rows[i].Cells[6].Value.ToString();
+                        //decimal uPrice = decimal.Parse(row.Cells[3].ToString());
+                        //decimal totalPrice = decimal.Parse(row.Cells[6].ToString());
+
+                        ctrl_B.AddReceiptDetail(idHD + 1, idPro, Int32.Parse(quantity), uPrice);
+                    }
+                    MessageBox.Show("Thêm hóa đơn thành công!");
+                    dgvChiTietHoaDon.Rows.Clear();
+                    cbMaKhachHang.SelectedIndex = 0;
+                    cbMaSanPham.SelectedIndex = 0;
+                    //ctrl_B.AddReceiptDetail(idHD, idPro, quantity, uPrice, totalPrice);
+                }
             }
             catch (Exception ex)
             {
@@ -382,6 +398,15 @@ namespace MobileStoreApp
             }    
         }
 
-        
+        private void logOut()
+        {
+            this.Close();
+            
+        }
+
+        private void btnDong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

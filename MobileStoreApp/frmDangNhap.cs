@@ -46,12 +46,13 @@ namespace MobileStoreApp
 
                             //TrangChuMuaHang trangChuMuaHang = new TrangChuMuaHang();
                             //trangChuMuaHang.ShowDialog();
-                            frmHoaDon frmHoaDon = new frmHoaDon();
-                            frmHoaDon.HoTen = n.HoNhanVien + " " + n.TenNhanVien;
-                            frmHoaDon.IDNhanVien = n.IDNhanVien.ToString();
-                            
+                            frmHoaDon frmHoaDon = new frmHoaDon(n.IDNhanVien, n.HoNhanVien, n.TenNhanVien);
+                            frmHoaDon.Owner = this;
+                            //frmHoaDon.HoTen = n.HoNhanVien + " " + n.TenNhanVien;
+                            //frmHoaDon.IDNhanVien = n.IDNhanVien.ToString();
+                            //this.Close();
                             //trangChuMuaHang.ShowDialog();
-                            frmHoaDon.ShowDialog();
+                            frmHoaDon.Show();
                             //this.Close();
                             //frmHoaDon.Show();
                             break;

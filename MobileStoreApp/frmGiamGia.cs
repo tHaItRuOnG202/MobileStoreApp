@@ -198,7 +198,7 @@ namespace MobileStoreApp
                     if (check == true)
                     {
                         MessageBox.Show("Cập nhật thông tin giảm giá thành công!", "Thông báo");
-                        dgvGiamGia.DataSource = ctrl_B.ShowEmployee();
+                        dgvGiamGia.DataSource = ctrl_B.ShowDiscount();
                         txtGiaTri.Text = String.Empty;
                     }
                     else

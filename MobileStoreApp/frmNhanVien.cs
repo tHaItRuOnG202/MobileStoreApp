@@ -96,7 +96,7 @@ namespace MobileStoreApp
                 else
                 {
                     bool isEmployee = false;
-                    MessageBox.Show(isEmployee.ToString());
+                    //MessageBox.Show(isEmployee.ToString());
                     if (cbChucVu.SelectedIndex == 0)
                     {
                         isEmployee = true;

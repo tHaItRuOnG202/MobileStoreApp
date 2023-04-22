@@ -50,7 +50,7 @@ namespace MobileStoreApp
             this.DonVi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GiamGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnDangXuat = new System.Windows.Forms.Button();
             this.btnDong = new System.Windows.Forms.Button();
             this.btnXoaHoaDon = new System.Windows.Forms.Button();
             this.btnThemHoaDon = new System.Windows.Forms.Button();
@@ -147,7 +147,7 @@ namespace MobileStoreApp
             this.gbChiTietHoaDon.Controls.Add(this.lbTongTien);
             this.gbChiTietHoaDon.Controls.Add(this.cbMaSanPham);
             this.gbChiTietHoaDon.Controls.Add(this.dgvChiTietHoaDon);
-            this.gbChiTietHoaDon.Controls.Add(this.button1);
+            this.gbChiTietHoaDon.Controls.Add(this.btnDangXuat);
             this.gbChiTietHoaDon.Controls.Add(this.btnDong);
             this.gbChiTietHoaDon.Controls.Add(this.btnXoaHoaDon);
             this.gbChiTietHoaDon.Controls.Add(this.btnThemHoaDon);
@@ -306,14 +306,14 @@ namespace MobileStoreApp
             this.TongTien.ReadOnly = true;
             this.TongTien.Width = 125;
             // 
-            // button1
+            // btnDangXuat
             // 
-            this.button1.Location = new System.Drawing.Point(776, 412);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 35);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Đăng xuất";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnDangXuat.Location = new System.Drawing.Point(776, 412);
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.Size = new System.Drawing.Size(102, 35);
+            this.btnDangXuat.TabIndex = 3;
+            this.btnDangXuat.Text = "Đăng xuất";
+            this.btnDangXuat.UseVisualStyleBackColor = true;
             // 
             // btnDong
             // 
@@ -323,6 +323,7 @@ namespace MobileStoreApp
             this.btnDong.TabIndex = 3;
             this.btnDong.Text = "Đóng";
             this.btnDong.UseVisualStyleBackColor = true;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // btnXoaHoaDon
             // 
@@ -583,7 +584,7 @@ namespace MobileStoreApp
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox cbMaSanPham;
         private System.Windows.Forms.Label lbTongTien;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDangXuat;
         private System.Windows.Forms.Label lbGiamGia;
         private System.Windows.Forms.Label lbTenSanPham;
         private System.Windows.Forms.Label lbDonGia;

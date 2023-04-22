@@ -44,10 +44,10 @@ namespace MobileStoreApp
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.Control;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 195);
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 255);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1372, 536);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1372, 476);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // label1
@@ -67,7 +67,7 @@ namespace MobileStoreApp
             this.llbDangNhap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.llbDangNhap.AutoSize = true;
             this.llbDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llbDangNhap.Location = new System.Drawing.Point(1263, 99);
+            this.llbDangNhap.Location = new System.Drawing.Point(1263, 144);
             this.llbDangNhap.Name = "llbDangNhap";
             this.llbDangNhap.Size = new System.Drawing.Size(98, 20);
             this.llbDangNhap.TabIndex = 5;
@@ -80,7 +80,7 @@ namespace MobileStoreApp
             this.cbSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSort.FormattingEnabled = true;
-            this.cbSort.Location = new System.Drawing.Point(109, 99);
+            this.cbSort.Location = new System.Drawing.Point(109, 144);
             this.cbSort.Name = "cbSort";
             this.cbSort.Size = new System.Drawing.Size(197, 28);
             this.cbSort.TabIndex = 6;
@@ -90,7 +90,7 @@ namespace MobileStoreApp
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 102);
+            this.label2.Location = new System.Drawing.Point(12, 147);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 20);
             this.label2.TabIndex = 7;
@@ -99,7 +99,7 @@ namespace MobileStoreApp
             // txtSearch
             // 
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(781, 105);
+            this.txtSearch.Location = new System.Drawing.Point(781, 150);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(275, 27);
             this.txtSearch.TabIndex = 8;
@@ -109,7 +109,7 @@ namespace MobileStoreApp
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(586, 112);
+            this.label3.Location = new System.Drawing.Point(586, 157);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(147, 20);
             this.label3.TabIndex = 7;

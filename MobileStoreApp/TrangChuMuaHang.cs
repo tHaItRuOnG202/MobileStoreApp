@@ -126,18 +126,23 @@ namespace MobileStoreApp
                 Label nameProduct = new Label();
                 nameProduct.Text = tenSanPhams[i];
                 nameProduct.Dock = DockStyle.Fill;
-                nameProduct.Size = new Size(200, 20);
-                nameProduct.Margin = new Padding(10, 10, 10, 10);
+                nameProduct.Anchor = AnchorStyles.None;
+                nameProduct.TextAlign = ContentAlignment.MiddleCenter;
+                nameProduct.Size = new Size(200, 200);
                 nameProduct.Font = new Font("Microsoft Sans Serif", 9, FontStyle.Bold);
+                //nameProduct.BackColor = Color.Aqua;
                 productLayout.Controls.Add(nameProduct, 0, 0);
                 //l.Location = new Point(pictureBox.Width, pictureBox.Height);
 
                 Label priceProduct = new Label();
                 priceProduct.Text = giaSanPhams[i];
                 priceProduct.Dock = DockStyle.Fill;
-                priceProduct.Size = new Size(200, 20);
-                priceProduct.Margin = new Padding(10, 10, 10, 10);
+                priceProduct.Size = new Size(200, 200);
+                priceProduct.Anchor = AnchorStyles.None;
+                priceProduct.TextAlign = ContentAlignment.MiddleCenter;
+                //priceProduct.Margin = new Padding(10, 10, 10, 10);
                 priceProduct.Font = new Font("Microsoft Sans Serif", 9, FontStyle.Bold);
+                //priceProduct.BackColor = Color.Yellow;
                 productLayout.Controls.Add(priceProduct, 0, 1);
 
                 try
