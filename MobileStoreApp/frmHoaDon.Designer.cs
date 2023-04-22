@@ -79,8 +79,9 @@ namespace MobileStoreApp
             // 
             // label1
             // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 31.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Tahoma", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Navy;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
@@ -131,15 +132,18 @@ namespace MobileStoreApp
             // 
             // txtSoLuong
             // 
-            this.txtSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoLuong.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoLuong.Location = new System.Drawing.Point(152, 81);
             this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(147, 27);
+            this.txtSoLuong.Size = new System.Drawing.Size(147, 30);
             this.txtSoLuong.TabIndex = 1;
             this.txtSoLuong.TextChanged += new System.EventHandler(this.txtSoLuong_TextChanged);
             // 
             // gbChiTietHoaDon
             // 
+            this.gbChiTietHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbChiTietHoaDon.BackColor = System.Drawing.Color.Transparent;
             this.gbChiTietHoaDon.Controls.Add(this.lbGiamGia);
             this.gbChiTietHoaDon.Controls.Add(this.lbTenSanPham);
             this.gbChiTietHoaDon.Controls.Add(this.lbDonGia);
@@ -161,7 +165,7 @@ namespace MobileStoreApp
             this.gbChiTietHoaDon.Controls.Add(this.label11);
             this.gbChiTietHoaDon.Controls.Add(this.label12);
             this.gbChiTietHoaDon.Controls.Add(this.label13);
-            this.gbChiTietHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbChiTietHoaDon.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbChiTietHoaDon.Location = new System.Drawing.Point(10, 293);
             this.gbChiTietHoaDon.Name = "gbChiTietHoaDon";
             this.gbChiTietHoaDon.Size = new System.Drawing.Size(1178, 464);
@@ -173,6 +177,7 @@ namespace MobileStoreApp
             // 
             this.lbGiamGia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lbGiamGia.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbGiamGia.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbGiamGia.Location = new System.Drawing.Point(468, 77);
             this.lbGiamGia.Name = "lbGiamGia";
             this.lbGiamGia.Size = new System.Drawing.Size(329, 27);
@@ -182,6 +187,7 @@ namespace MobileStoreApp
             // 
             this.lbTenSanPham.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lbTenSanPham.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbTenSanPham.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTenSanPham.Location = new System.Drawing.Point(468, 35);
             this.lbTenSanPham.Name = "lbTenSanPham";
             this.lbTenSanPham.Size = new System.Drawing.Size(329, 27);
@@ -189,8 +195,11 @@ namespace MobileStoreApp
             // 
             // lbDonGia
             // 
+            this.lbDonGia.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbDonGia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lbDonGia.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbDonGia.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDonGia.Location = new System.Drawing.Point(947, 77);
             this.lbDonGia.Name = "lbDonGia";
             this.lbDonGia.Size = new System.Drawing.Size(208, 27);
@@ -198,8 +207,11 @@ namespace MobileStoreApp
             // 
             // lbDonVi
             // 
+            this.lbDonVi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbDonVi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lbDonVi.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbDonVi.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDonVi.Location = new System.Drawing.Point(947, 35);
             this.lbDonVi.Name = "lbDonVi";
             this.lbDonVi.Size = new System.Drawing.Size(208, 27);
@@ -207,26 +219,32 @@ namespace MobileStoreApp
             // 
             // lbTongTien
             // 
+            this.lbTongTien.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbTongTien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lbTongTien.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lbTongTien.Location = new System.Drawing.Point(818, 126);
+            this.lbTongTien.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTongTien.ForeColor = System.Drawing.Color.Red;
+            this.lbTongTien.Location = new System.Drawing.Point(846, 126);
             this.lbTongTien.Name = "lbTongTien";
-            this.lbTongTien.Size = new System.Drawing.Size(337, 27);
+            this.lbTongTien.Size = new System.Drawing.Size(309, 27);
             this.lbTongTien.TabIndex = 6;
             // 
             // cbMaSanPham
             // 
             this.cbMaSanPham.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbMaSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMaSanPham.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMaSanPham.FormattingEnabled = true;
             this.cbMaSanPham.Location = new System.Drawing.Point(153, 38);
             this.cbMaSanPham.Name = "cbMaSanPham";
-            this.cbMaSanPham.Size = new System.Drawing.Size(146, 28);
+            this.cbMaSanPham.Size = new System.Drawing.Size(146, 30);
             this.cbMaSanPham.TabIndex = 5;
             this.cbMaSanPham.SelectedIndexChanged += new System.EventHandler(this.cbMaSanPham_SelectedIndexChanged);
             // 
             // dgvChiTietHoaDon
             // 
+            this.dgvChiTietHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvChiTietHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvChiTietHoaDon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDSanPham,
@@ -260,7 +278,7 @@ namespace MobileStoreApp
             this.TenSanPham.MinimumWidth = 6;
             this.TenSanPham.Name = "TenSanPham";
             this.TenSanPham.ReadOnly = true;
-            this.TenSanPham.Width = 125;
+            this.TenSanPham.Width = 200;
             // 
             // SoLuong
             // 
@@ -268,7 +286,7 @@ namespace MobileStoreApp
             this.SoLuong.HeaderText = "Số lượng";
             this.SoLuong.MinimumWidth = 6;
             this.SoLuong.Name = "SoLuong";
-            this.SoLuong.Width = 125;
+            this.SoLuong.Width = 150;
             // 
             // DonGia
             // 
@@ -277,7 +295,7 @@ namespace MobileStoreApp
             this.DonGia.MinimumWidth = 6;
             this.DonGia.Name = "DonGia";
             this.DonGia.ReadOnly = true;
-            this.DonGia.Width = 125;
+            this.DonGia.Width = 150;
             // 
             // DonVi
             // 
@@ -295,7 +313,7 @@ namespace MobileStoreApp
             this.GiamGia.MinimumWidth = 6;
             this.GiamGia.Name = "GiamGia";
             this.GiamGia.ReadOnly = true;
-            this.GiamGia.Width = 125;
+            this.GiamGia.Width = 150;
             // 
             // TongTien
             // 
@@ -304,65 +322,82 @@ namespace MobileStoreApp
             this.TongTien.MinimumWidth = 6;
             this.TongTien.Name = "TongTien";
             this.TongTien.ReadOnly = true;
-            this.TongTien.Width = 125;
+            this.TongTien.Width = 150;
             // 
             // btnDangXuat
             // 
-            this.btnDangXuat.Location = new System.Drawing.Point(776, 412);
+            this.btnDangXuat.BackColor = System.Drawing.Color.Red;
+            this.btnDangXuat.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangXuat.ForeColor = System.Drawing.Color.White;
+            this.btnDangXuat.Location = new System.Drawing.Point(794, 409);
             this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.Size = new System.Drawing.Size(102, 35);
+            this.btnDangXuat.Size = new System.Drawing.Size(145, 38);
             this.btnDangXuat.TabIndex = 3;
             this.btnDangXuat.Text = "Đăng xuất";
-            this.btnDangXuat.UseVisualStyleBackColor = true;
+            this.btnDangXuat.UseVisualStyleBackColor = false;
             // 
             // btnDong
             // 
-            this.btnDong.Location = new System.Drawing.Point(647, 412);
+            this.btnDong.BackColor = System.Drawing.Color.White;
+            this.btnDong.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDong.ForeColor = System.Drawing.Color.Red;
+            this.btnDong.Location = new System.Drawing.Point(647, 409);
             this.btnDong.Name = "btnDong";
-            this.btnDong.Size = new System.Drawing.Size(102, 35);
+            this.btnDong.Size = new System.Drawing.Size(110, 38);
             this.btnDong.TabIndex = 3;
             this.btnDong.Text = "Đóng";
-            this.btnDong.UseVisualStyleBackColor = true;
-            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
+            this.btnDong.UseVisualStyleBackColor = false;
             // 
             // btnXoaHoaDon
             // 
-            this.btnXoaHoaDon.Location = new System.Drawing.Point(480, 412);
+            this.btnXoaHoaDon.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnXoaHoaDon.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaHoaDon.ForeColor = System.Drawing.Color.White;
+            this.btnXoaHoaDon.Location = new System.Drawing.Point(441, 409);
             this.btnXoaHoaDon.Name = "btnXoaHoaDon";
-            this.btnXoaHoaDon.Size = new System.Drawing.Size(140, 35);
+            this.btnXoaHoaDon.Size = new System.Drawing.Size(169, 38);
             this.btnXoaHoaDon.TabIndex = 3;
             this.btnXoaHoaDon.Text = "Xóa hóa đơn";
-            this.btnXoaHoaDon.UseVisualStyleBackColor = true;
+            this.btnXoaHoaDon.UseVisualStyleBackColor = false;
             this.btnXoaHoaDon.Click += new System.EventHandler(this.btnXoaHoaDon_Click);
             // 
             // btnThemHoaDon
             // 
-            this.btnThemHoaDon.Location = new System.Drawing.Point(301, 412);
+            this.btnThemHoaDon.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnThemHoaDon.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemHoaDon.ForeColor = System.Drawing.Color.White;
+            this.btnThemHoaDon.Location = new System.Drawing.Point(207, 409);
             this.btnThemHoaDon.Name = "btnThemHoaDon";
-            this.btnThemHoaDon.Size = new System.Drawing.Size(152, 35);
+            this.btnThemHoaDon.Size = new System.Drawing.Size(197, 38);
             this.btnThemHoaDon.TabIndex = 3;
             this.btnThemHoaDon.Text = "Thêm hóa đơn";
-            this.btnThemHoaDon.UseVisualStyleBackColor = true;
+            this.btnThemHoaDon.UseVisualStyleBackColor = false;
             this.btnThemHoaDon.Click += new System.EventHandler(this.btnThemHoaDon_Click);
             // 
             // btnXoa
             // 
+            this.btnXoa.BackColor = System.Drawing.Color.White;
+            this.btnXoa.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnXoa.Location = new System.Drawing.Point(152, 126);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(102, 35);
             this.btnXoa.TabIndex = 3;
             this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
+            this.btnThem.BackColor = System.Drawing.Color.White;
+            this.btnThem.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnThem.Location = new System.Drawing.Point(15, 126);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(102, 35);
             this.btnThem.TabIndex = 3;
             this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label9
@@ -378,10 +413,10 @@ namespace MobileStoreApp
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(697, 131);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(115, 20);
+            this.label14.Size = new System.Drawing.Size(148, 23);
             this.label14.TabIndex = 0;
             this.label14.Text = "Tổng hóa đơn:";
             // 
@@ -398,84 +433,89 @@ namespace MobileStoreApp
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(6, 38);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 24);
+            this.label2.Size = new System.Drawing.Size(117, 23);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã hóa đơn:";
             // 
             // txtMaHoaDon
             // 
-            this.txtMaHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaHoaDon.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaHoaDon.Location = new System.Drawing.Point(152, 34);
             this.txtMaHoaDon.Name = "txtMaHoaDon";
-            this.txtMaHoaDon.Size = new System.Drawing.Size(337, 28);
+            this.txtMaHoaDon.Size = new System.Drawing.Size(337, 30);
             this.txtMaHoaDon.TabIndex = 1;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(651, 34);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(145, 24);
+            this.label5.Size = new System.Drawing.Size(147, 23);
             this.label5.TabIndex = 0;
             this.label5.Text = "Mã khách hàng:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(6, 84);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(129, 24);
+            this.label3.Size = new System.Drawing.Size(131, 23);
             this.label3.TabIndex = 0;
             this.label3.Text = "Mã nhân viên:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(651, 81);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(153, 24);
+            this.label6.Size = new System.Drawing.Size(154, 23);
             this.label6.TabIndex = 0;
             this.label6.Text = "Tên khách hàng:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(6, 131);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(137, 24);
+            this.label4.Size = new System.Drawing.Size(138, 23);
             this.label4.TabIndex = 0;
             this.label4.Text = "Tên nhân viên:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(648, 126);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(131, 24);
+            this.label7.Size = new System.Drawing.Size(134, 23);
             this.label7.TabIndex = 0;
             this.label7.Text = "Ngày xuất HD:";
             // 
             // dtpNgayXuatHoaDon
             // 
-            this.dtpNgayXuatHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNgayXuatHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpNgayXuatHoaDon.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNgayXuatHoaDon.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgayXuatHoaDon.Location = new System.Drawing.Point(817, 126);
             this.dtpNgayXuatHoaDon.Name = "dtpNgayXuatHoaDon";
-            this.dtpNgayXuatHoaDon.Size = new System.Drawing.Size(337, 28);
+            this.dtpNgayXuatHoaDon.Size = new System.Drawing.Size(337, 30);
             this.dtpNgayXuatHoaDon.TabIndex = 2;
             // 
             // cbMaKhachHang
             // 
+            this.cbMaKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbMaKhachHang.BackColor = System.Drawing.Color.White;
             this.cbMaKhachHang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbMaKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMaKhachHang.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMaKhachHang.FormattingEnabled = true;
             this.cbMaKhachHang.Location = new System.Drawing.Point(817, 31);
             this.cbMaKhachHang.Name = "cbMaKhachHang";
@@ -485,6 +525,9 @@ namespace MobileStoreApp
             // 
             // gbThongTinHoaDon
             // 
+            this.gbThongTinHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbThongTinHoaDon.BackColor = System.Drawing.Color.Transparent;
             this.gbThongTinHoaDon.Controls.Add(this.lbTenKhachHang);
             this.gbThongTinHoaDon.Controls.Add(this.lbTenNhanVien);
             this.gbThongTinHoaDon.Controls.Add(this.lbMaNhanVien);
@@ -497,7 +540,7 @@ namespace MobileStoreApp
             this.gbThongTinHoaDon.Controls.Add(this.label5);
             this.gbThongTinHoaDon.Controls.Add(this.txtMaHoaDon);
             this.gbThongTinHoaDon.Controls.Add(this.label2);
-            this.gbThongTinHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbThongTinHoaDon.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbThongTinHoaDon.Location = new System.Drawing.Point(11, 91);
             this.gbThongTinHoaDon.Name = "gbThongTinHoaDon";
             this.gbThongTinHoaDon.Size = new System.Drawing.Size(1178, 179);
@@ -507,8 +550,11 @@ namespace MobileStoreApp
             // 
             // lbTenKhachHang
             // 
+            this.lbTenKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbTenKhachHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lbTenKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbTenKhachHang.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTenKhachHang.Location = new System.Drawing.Point(817, 80);
             this.lbTenKhachHang.Name = "lbTenKhachHang";
             this.lbTenKhachHang.Size = new System.Drawing.Size(337, 28);
@@ -518,15 +564,17 @@ namespace MobileStoreApp
             // 
             this.lbTenNhanVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lbTenNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbTenNhanVien.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTenNhanVien.Location = new System.Drawing.Point(152, 129);
             this.lbTenNhanVien.Name = "lbTenNhanVien";
-            this.lbTenNhanVien.Size = new System.Drawing.Size(334, 28);
+            this.lbTenNhanVien.Size = new System.Drawing.Size(337, 28);
             this.lbTenNhanVien.TabIndex = 6;
             // 
             // lbMaNhanVien
             // 
             this.lbMaNhanVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lbMaNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbMaNhanVien.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMaNhanVien.Location = new System.Drawing.Point(152, 85);
             this.lbMaNhanVien.Name = "lbMaNhanVien";
             this.lbMaNhanVien.Size = new System.Drawing.Size(337, 28);
@@ -536,17 +584,19 @@ namespace MobileStoreApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1200, 773);
             this.Controls.Add(this.gbChiTietHoaDon);
             this.Controls.Add(this.gbThongTinHoaDon);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmHoaDon";
             this.Text = "Thanh toán hóa đơn";
-            this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmHoaDon_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.frmHoaDon_Paint);
             this.gbChiTietHoaDon.ResumeLayout(false);
             this.gbChiTietHoaDon.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietHoaDon)).EndInit();

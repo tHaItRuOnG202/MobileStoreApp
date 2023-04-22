@@ -44,7 +44,8 @@ namespace MobileStoreApp
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.flowLayoutPanel1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 255);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1372, 476);
@@ -52,8 +53,9 @@ namespace MobileStoreApp
             // 
             // label1
             // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 31.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Tahoma", 31.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Navy;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
@@ -65,53 +67,56 @@ namespace MobileStoreApp
             // llbDangNhap
             // 
             this.llbDangNhap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.llbDangNhap.AutoSize = true;
-            this.llbDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llbDangNhap.Location = new System.Drawing.Point(1263, 144);
+            this.llbDangNhap.BackColor = System.Drawing.Color.Transparent;
+            this.llbDangNhap.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llbDangNhap.Location = new System.Drawing.Point(1201, 144);
             this.llbDangNhap.Name = "llbDangNhap";
-            this.llbDangNhap.Size = new System.Drawing.Size(98, 20);
+            this.llbDangNhap.Size = new System.Drawing.Size(160, 40);
             this.llbDangNhap.TabIndex = 5;
             this.llbDangNhap.TabStop = true;
             this.llbDangNhap.Text = "Đăng nhập";
+            this.llbDangNhap.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.llbDangNhap.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llbThanhToan_LinkClicked);
             // 
             // cbSort
             // 
             this.cbSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSort.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSort.FormattingEnabled = true;
             this.cbSort.Location = new System.Drawing.Point(109, 144);
             this.cbSort.Name = "cbSort";
-            this.cbSort.Size = new System.Drawing.Size(197, 28);
+            this.cbSort.Size = new System.Drawing.Size(197, 30);
             this.cbSort.TabIndex = 6;
             this.cbSort.SelectedIndexChanged += new System.EventHandler(this.cbSort_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 147);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 20);
+            this.label2.Size = new System.Drawing.Size(85, 23);
             this.label2.TabIndex = 7;
             this.label2.Text = "Sắp xếp:";
             // 
             // txtSearch
             // 
-            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(781, 150);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(275, 27);
+            this.txtSearch.Size = new System.Drawing.Size(275, 29);
             this.txtSearch.TabIndex = 8;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(586, 157);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(147, 20);
+            this.label3.Size = new System.Drawing.Size(169, 23);
             this.label3.TabIndex = 7;
             this.label3.Text = "Tìm kiếm theo tên:";
             // 
@@ -132,6 +137,7 @@ namespace MobileStoreApp
             this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.TrangChuMuaHang_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.TrangChuMuaHang_Paint);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -11,6 +11,7 @@ using DAO_MoblieStoreApp;
 using DTO_MobileStoreApp;
 using BUS_MobileStoreApp;
 using System.Text.RegularExpressions;
+using System.Drawing.Drawing2D;
 
 namespace MobileStoreApp
 {
@@ -407,6 +408,18 @@ namespace MobileStoreApp
         private void btnDong_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void frmHoaDon_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics myGraphics = e.Graphics;
+            Pen myPen = new Pen(Color.FromArgb(144, 238, 144), 1);
+
+            Rectangle area = new Rectangle(0, 0, this.Width - 1, this.Height - 1);
+            LinearGradientBrush lgb = new LinearGradientBrush(area, Color.FromArgb(144, 238, 144), Color.FromArgb(245, 251, 251), LinearGradientMode.ForwardDiagonal);
+
+            myGraphics.FillRectangle(lgb, area);
+            myGraphics.DrawRectangle(myPen, area);
         }
     }
 }

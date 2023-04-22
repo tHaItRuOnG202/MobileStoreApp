@@ -153,6 +153,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="TrangChuMuaHang.resx">
       <DependentUpon>TrangChuMuaHang.cs</DependentUpon>
@@ -183,6 +184,10 @@
       <Project>{a9c42fa8-e328-4881-b7b0-5e90897ba556}</Project>
       <Name>DTO_MobileStoreApp</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\2_transparent1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
