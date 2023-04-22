@@ -35,12 +35,11 @@ namespace MobileStoreApp
             this.menuKhachHang = new System.Windows.Forms.ToolStripMenuItem();
             this.menuLoaiSanPham = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSanPham = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuDanhMucHoaDon = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuGiamGia = new System.Windows.Forms.ToolStripMenuItem();
             this.menuHoaDon = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.menuThoat = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuTimKiem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuTimKiemHoaDon = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuThongKe = new System.Windows.Forms.ToolStripMenuItem();
             this.menuQuanLy.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +48,7 @@ namespace MobileStoreApp
             this.menuQuanLy.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuQuanLy.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuDMQuanLy,
-            this.menuTimKiem});
+            this.menuThongKe});
             this.menuQuanLy.Location = new System.Drawing.Point(0, 0);
             this.menuQuanLy.Name = "menuQuanLy";
             this.menuQuanLy.Size = new System.Drawing.Size(1000, 28);
@@ -63,7 +62,7 @@ namespace MobileStoreApp
             this.menuKhachHang,
             this.menuLoaiSanPham,
             this.menuSanPham,
-            this.menuDanhMucHoaDon,
+            this.menuGiamGia,
             this.menuHoaDon,
             this.toolStripSeparator1,
             this.menuThoat});
@@ -74,64 +73,63 @@ namespace MobileStoreApp
             // menuNhanVien
             // 
             this.menuNhanVien.Name = "menuNhanVien";
-            this.menuNhanVien.Size = new System.Drawing.Size(218, 26);
+            this.menuNhanVien.Size = new System.Drawing.Size(224, 26);
             this.menuNhanVien.Text = "Nhân viên";
+            this.menuNhanVien.Click += new System.EventHandler(this.menuNhanVien_Click);
             // 
             // menuKhachHang
             // 
             this.menuKhachHang.Name = "menuKhachHang";
-            this.menuKhachHang.Size = new System.Drawing.Size(218, 26);
+            this.menuKhachHang.Size = new System.Drawing.Size(224, 26);
             this.menuKhachHang.Text = "Khách hàng";
+            this.menuKhachHang.Click += new System.EventHandler(this.menuKhachHang_Click);
             // 
             // menuLoaiSanPham
             // 
             this.menuLoaiSanPham.Name = "menuLoaiSanPham";
-            this.menuLoaiSanPham.Size = new System.Drawing.Size(218, 26);
+            this.menuLoaiSanPham.Size = new System.Drawing.Size(224, 26);
             this.menuLoaiSanPham.Text = "Loại sản phẩm";
+            this.menuLoaiSanPham.Click += new System.EventHandler(this.menuLoaiSanPham_Click);
             // 
             // menuSanPham
             // 
             this.menuSanPham.Name = "menuSanPham";
-            this.menuSanPham.Size = new System.Drawing.Size(218, 26);
+            this.menuSanPham.Size = new System.Drawing.Size(224, 26);
             this.menuSanPham.Text = "Sản phẩm";
+            this.menuSanPham.Click += new System.EventHandler(this.menuSanPham_Click);
             // 
-            // menuDanhMucHoaDon
+            // menuGiamGia
             // 
-            this.menuDanhMucHoaDon.Name = "menuDanhMucHoaDon";
-            this.menuDanhMucHoaDon.Size = new System.Drawing.Size(218, 26);
-            this.menuDanhMucHoaDon.Text = "Danh mục hóa đơn";
+            this.menuGiamGia.Name = "menuGiamGia";
+            this.menuGiamGia.Size = new System.Drawing.Size(224, 26);
+            this.menuGiamGia.Text = "Giảm giá";
+            this.menuGiamGia.Click += new System.EventHandler(this.menuGiamGia_Click);
             // 
             // menuHoaDon
             // 
             this.menuHoaDon.Name = "menuHoaDon";
-            this.menuHoaDon.Size = new System.Drawing.Size(218, 26);
-            this.menuHoaDon.Text = "Hóa đơn bán";
+            this.menuHoaDon.Size = new System.Drawing.Size(224, 26);
+            this.menuHoaDon.Text = "Hóa đơn";
+            this.menuHoaDon.Click += new System.EventHandler(this.menuHoaDon_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(215, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
             // 
             // menuThoat
             // 
             this.menuThoat.Name = "menuThoat";
             this.menuThoat.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.menuThoat.Size = new System.Drawing.Size(218, 26);
+            this.menuThoat.Size = new System.Drawing.Size(224, 26);
             this.menuThoat.Text = "Thoát";
             // 
-            // menuTimKiem
+            // menuThongKe
             // 
-            this.menuTimKiem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuTimKiemHoaDon});
-            this.menuTimKiem.Name = "menuTimKiem";
-            this.menuTimKiem.Size = new System.Drawing.Size(84, 24);
-            this.menuTimKiem.Text = "Tìm kiếm";
-            // 
-            // menuTimKiemHoaDon
-            // 
-            this.menuTimKiemHoaDon.Name = "menuTimKiemHoaDon";
-            this.menuTimKiemHoaDon.Size = new System.Drawing.Size(150, 26);
-            this.menuTimKiemHoaDon.Text = "Hóa đơn";
+            this.menuThongKe.Name = "menuThongKe";
+            this.menuThongKe.Size = new System.Drawing.Size(84, 24);
+            this.menuThongKe.Text = "Thống kê";
+            this.menuThongKe.Click += new System.EventHandler(this.menuThongKe_Click);
             // 
             // formTrangChuQuanLy
             // 
@@ -161,12 +159,11 @@ namespace MobileStoreApp
         private System.Windows.Forms.ToolStripMenuItem menuKhachHang;
         private System.Windows.Forms.ToolStripMenuItem menuLoaiSanPham;
         private System.Windows.Forms.ToolStripMenuItem menuSanPham;
-        private System.Windows.Forms.ToolStripMenuItem menuDanhMucHoaDon;
+        private System.Windows.Forms.ToolStripMenuItem menuGiamGia;
         private System.Windows.Forms.ToolStripMenuItem menuHoaDon;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem menuThoat;
-        private System.Windows.Forms.ToolStripMenuItem menuTimKiem;
-        private System.Windows.Forms.ToolStripMenuItem menuTimKiemHoaDon;
+        private System.Windows.Forms.ToolStripMenuItem menuThongKe;
     }
 }
 

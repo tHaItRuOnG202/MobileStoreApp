@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DAO_MoblieStoreApp;
 using DTO_MobileStoreApp;
 using BUS_MobileStoreApp;
+using System.Text.RegularExpressions;
 
 namespace MobileStoreApp
 {
@@ -143,7 +144,7 @@ namespace MobileStoreApp
                     thanhTien += double.Parse(dgvChiTietHoaDon.Rows[i].Cells[columnIndex].Value.ToString());
                 }
                 txtSoLuong.Text = String.Empty;
-                lbTongTien.Text = thanhTien.ToString("N0") + " đ";
+                lbTongTien.Text = thanhTien.ToString();
             }
             catch (Exception ex)
             {
@@ -183,7 +184,7 @@ namespace MobileStoreApp
                     {
                         thanhTien += double.Parse(dgvChiTietHoaDon.Rows[i].Cells[columnIndex].Value.ToString());
                     }
-                    lbTongTien.Text = thanhTien.ToString("N0") + " đ";
+                    lbTongTien.Text = thanhTien.ToString();
                     MessageBox.Show("Xóa thành công sản phẩm!");
                 }
             }
@@ -289,7 +290,7 @@ namespace MobileStoreApp
             {
                 thanhTien += double.Parse(dgvChiTietHoaDon.Rows[i].Cells[columnIndex].Value.ToString());
             }
-            lbTongTien.Text = thanhTien.ToString("N0") + " đ";
+            lbTongTien.Text = thanhTien.ToString();
         }
 
         private void dgvChiTietHoaDon_CellEndEdit(object sender, DataGridViewCellEventArgs e)
@@ -322,7 +323,7 @@ namespace MobileStoreApp
                     {
                         thanhTien += double.Parse(dgvChiTietHoaDon.Rows[i].Cells[columnIndex].Value.ToString());
                     }
-                    lbTongTien.Text = thanhTien.ToString("N0") + " đ";
+                    lbTongTien.Text = thanhTien.ToString();
                 }
             }
             catch (Exception ex)
@@ -335,5 +336,23 @@ namespace MobileStoreApp
         {
             dgvChiTietHoaDon.Rows.Clear();
         }
+
+        private void txtSoLuong_TextChanged(object sender, EventArgs e)
+        {
+            string pattern = @"^(\d*|\s*)$";
+            Regex regex = new Regex(pattern);
+            bool isMatch = regex.IsMatch(txtSoLuong.Text);
+            if (isMatch)
+            {
+
+            }
+            else
+            {
+                MessageBox.Show("Chỉ được phép nhập số!");
+                txtSoLuong.Text = "1";
+            }    
+        }
+
+        
     }
 }

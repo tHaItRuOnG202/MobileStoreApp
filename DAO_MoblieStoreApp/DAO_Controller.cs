@@ -550,6 +550,16 @@ namespace DAO_MoblieStoreApp
             return dt;
         }
 
+        public DataTable LoadProductV2()
+        {
+            SqlDataAdapter da;
+            DataTable dt = new DataTable();
+            string query = "Select * From SanPham";
+            da = new SqlDataAdapter(query, dc.Connect());
+            da.Fill(dt);
+            return dt;
+        }
+
         //public int[] LoadCBIDProduct()
         //{
         //    db = new IMPROOKSTOREDataContext();
@@ -950,6 +960,48 @@ namespace DAO_MoblieStoreApp
             SqlDataAdapter da;
             DataTable dt = new DataTable();
             string query = String.Format("Select * From SanPham Where IDGiamGia = {0}", IDDis);
+
+            da = new SqlDataAdapter(query, dc.Connect());
+            da.Fill(dt);
+            return dt;
+        }
+
+        //Chức năng thống kê
+        public DataTable LoadRevenueCustomer(int month, int year)
+        {
+            SqlDataAdapter da;
+            DataTable dt = new DataTable();
+            //string query = String.Format("SELECT KhachHang.IDKhachHang, KhachHang.TenKhachHang, SUM(CAST(hd.TongTien AS FLOAT)) As TongTien " +
+            //    "FROM    KhachHang, HoaDon hd" +
+            //    "WHERE   KhachHang.IDKhachHang = hd.IDKhachHang AND MONTH(hd.NgayXuatHoaDon) = {0} AND YEAR(hd.NgayXuatHoaDon) = {1}" +
+            //    "GROUP BY KhachHang.IDKhachHang, KhachHang.TenKhachHang" +
+            //    "ORDER BY TongTien Desc",  month, year);
+
+            string query = String.Format("SELECT kh.IDKhachHang, kh.TenKhachHang, SUM(TRY_CONVERT(FLOAT, hd.TongTien)) As TongTien" +
+                " FROM	KhachHang kh, HoaDon hd" +
+                " WHERE	kh.IDKhachHang = hd.IDKhachHang " +
+                " AND MONTH(hd.NgayXuatHoaDon) = {0} " +
+                " AND YEAR(hd.NgayXuatHoaDon) = {1} " +
+                " GROUP BY kh.IDKhachHang, kh.TenKhachHang " +
+                " ORDER BY SUM(CAST(hd.TongTien AS FLOAT)) DESC", month, year);
+
+            da = new SqlDataAdapter(query, dc.Connect());
+            da.Fill(dt);
+            return dt;
+        }
+
+        public DataTable LoadRevenueProduct(int month, int year)
+        {
+            SqlDataAdapter da;
+            DataTable dt = new DataTable();
+
+            string query = String.Format("SELECT cthd.IDSanPham, sp.TenSanPham, SUM(TRY_CONVERT(FLOAT, (cthd.SoLuong))) As SoLuong, SUM(TRY_CONVERT(FLOAT, (cthd.SoLuong * sp.DonGia))) As DoanhThu " +
+                " FROM SanPham sp, HoaDon hd, ChiTietHoaDon cthd " +
+                " WHERE sp.IDSanPham = cthd.IDSanPham AND cthd.IDHoaDon = hd.IDHoaDon " +
+                " AND MONTH(hd.NgayXuatHoaDon) = {0} " +
+                " AND YEAR(hd.NgayXuatHoaDon) = {1} " +
+                " GROUP BY cthd.IDSanPham, sp.TenSanPham " +
+                " ORDER BY SUM(TRY_CONVERT(FLOAT, (cthd.SoLuong * sp.DonGia))) Desc", month, year);
 
             da = new SqlDataAdapter(query, dc.Connect());
             da.Fill(dt);

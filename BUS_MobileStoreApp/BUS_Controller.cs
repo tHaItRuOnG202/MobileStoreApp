@@ -245,5 +245,21 @@ namespace BUS_MobileStoreApp
         {
             return ctrl_D.LoadProductByIDDiscount(IDDis);
         }
+
+        //BUS thống kê
+        public DataTable ShowRevenueCustomer(int month, int year)
+        {
+            return ctrl_D.LoadRevenueCustomer(month, year);
+        }
+
+        public DataTable ShowRevenueProduct(int month, int year)
+        {
+            return ctrl_D.LoadRevenueProduct(month, year);
+        }
+
+        public DataTable ShowProductV2()
+        {
+            return ctrl_D.LoadProductV2();
+        }
     }
 }

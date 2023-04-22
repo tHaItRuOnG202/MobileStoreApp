@@ -32,6 +32,48 @@ namespace MobileStoreApp
             e.Graphics.FillRectangle(lgbrush, rect);
             e.Graphics.DrawString(slogan, font, hbr, rect, format);
         }
+
+        private void menuNhanVien_Click(object sender, EventArgs e)
+        {
+            frmNhanVien frmNhanVien = new frmNhanVien();
+            frmNhanVien.ShowDialog();
+        }
+
+        private void menuKhachHang_Click(object sender, EventArgs e)
+        {
+            frmKhachHang frmKhachHang = new frmKhachHang();
+            frmKhachHang.ShowDialog();
+        }
+
+        private void menuLoaiSanPham_Click(object sender, EventArgs e)
+        {
+            frmLoaiSanPham frmLoaiSanPham = new frmLoaiSanPham();
+            frmLoaiSanPham.ShowDialog();
+        }
+
+        private void menuSanPham_Click(object sender, EventArgs e)
+        {
+            frmSanPham frmSanPham = new frmSanPham();
+            frmSanPham.ShowDialog();
+        }
+
+        private void menuGiamGia_Click(object sender, EventArgs e)
+        {
+            frmGiamGia frmGiamGia = new frmGiamGia();
+            frmGiamGia.ShowDialog();
+        }
+
+        private void menuHoaDon_Click(object sender, EventArgs e)
+        {
+            frmQuanLyHoaDon frmQuanLyHoaDon = new frmQuanLyHoaDon();
+            frmQuanLyHoaDon.ShowDialog();
+        }
+
+        private void menuThongKe_Click(object sender, EventArgs e)
+        {
+            frmThongKe frmThongKe = new frmThongKe();
+            frmThongKe.ShowDialog();
+        }
     }
 
 }

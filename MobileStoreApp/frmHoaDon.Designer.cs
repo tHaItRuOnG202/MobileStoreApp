@@ -43,6 +43,13 @@ namespace MobileStoreApp
             this.lbTongTien = new System.Windows.Forms.Label();
             this.cbMaSanPham = new System.Windows.Forms.ComboBox();
             this.dgvChiTietHoaDon = new System.Windows.Forms.DataGridView();
+            this.IDSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonVi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiamGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.btnDong = new System.Windows.Forms.Button();
             this.btnXoaHoaDon = new System.Windows.Forms.Button();
@@ -65,13 +72,6 @@ namespace MobileStoreApp
             this.lbTenKhachHang = new System.Windows.Forms.Label();
             this.lbTenNhanVien = new System.Windows.Forms.Label();
             this.lbMaNhanVien = new System.Windows.Forms.Label();
-            this.IDSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonVi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GiamGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbChiTietHoaDon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietHoaDon)).BeginInit();
             this.gbThongTinHoaDon.SuspendLayout();
@@ -136,6 +136,7 @@ namespace MobileStoreApp
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Size = new System.Drawing.Size(147, 27);
             this.txtSoLuong.TabIndex = 1;
+            this.txtSoLuong.TextChanged += new System.EventHandler(this.txtSoLuong_TextChanged);
             // 
             // gbChiTietHoaDon
             // 
@@ -242,6 +243,68 @@ namespace MobileStoreApp
             this.dgvChiTietHoaDon.Size = new System.Drawing.Size(1143, 207);
             this.dgvChiTietHoaDon.TabIndex = 4;
             this.dgvChiTietHoaDon.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChiTietHoaDon_CellEndEdit);
+            // 
+            // IDSanPham
+            // 
+            this.IDSanPham.DataPropertyName = "IDSanPham";
+            this.IDSanPham.HeaderText = "Mã sản phẩm";
+            this.IDSanPham.MinimumWidth = 6;
+            this.IDSanPham.Name = "IDSanPham";
+            this.IDSanPham.ReadOnly = true;
+            this.IDSanPham.Width = 125;
+            // 
+            // TenSanPham
+            // 
+            this.TenSanPham.DataPropertyName = "TenSanPham";
+            this.TenSanPham.HeaderText = "Tên sản phẩm";
+            this.TenSanPham.MinimumWidth = 6;
+            this.TenSanPham.Name = "TenSanPham";
+            this.TenSanPham.ReadOnly = true;
+            this.TenSanPham.Width = 125;
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SoLuong";
+            this.SoLuong.HeaderText = "Số lượng";
+            this.SoLuong.MinimumWidth = 6;
+            this.SoLuong.Name = "SoLuong";
+            this.SoLuong.Width = 125;
+            // 
+            // DonGia
+            // 
+            this.DonGia.DataPropertyName = "DonGia";
+            this.DonGia.HeaderText = "Đơn giá";
+            this.DonGia.MinimumWidth = 6;
+            this.DonGia.Name = "DonGia";
+            this.DonGia.ReadOnly = true;
+            this.DonGia.Width = 125;
+            // 
+            // DonVi
+            // 
+            this.DonVi.DataPropertyName = "DonVi";
+            this.DonVi.HeaderText = "Đơn vị";
+            this.DonVi.MinimumWidth = 6;
+            this.DonVi.Name = "DonVi";
+            this.DonVi.ReadOnly = true;
+            this.DonVi.Width = 125;
+            // 
+            // GiamGia
+            // 
+            this.GiamGia.DataPropertyName = "GiamGia";
+            this.GiamGia.HeaderText = "Giảm giá/Đơn vị";
+            this.GiamGia.MinimumWidth = 6;
+            this.GiamGia.Name = "GiamGia";
+            this.GiamGia.ReadOnly = true;
+            this.GiamGia.Width = 125;
+            // 
+            // TongTien
+            // 
+            this.TongTien.DataPropertyName = "TongTien";
+            this.TongTien.HeaderText = "Tổng tiền";
+            this.TongTien.MinimumWidth = 6;
+            this.TongTien.Name = "TongTien";
+            this.TongTien.ReadOnly = true;
+            this.TongTien.Width = 125;
             // 
             // button1
             // 
@@ -467,68 +530,6 @@ namespace MobileStoreApp
             this.lbMaNhanVien.Name = "lbMaNhanVien";
             this.lbMaNhanVien.Size = new System.Drawing.Size(337, 28);
             this.lbMaNhanVien.TabIndex = 6;
-            // 
-            // IDSanPham
-            // 
-            this.IDSanPham.DataPropertyName = "IDSanPham";
-            this.IDSanPham.HeaderText = "Mã sản phẩm";
-            this.IDSanPham.MinimumWidth = 6;
-            this.IDSanPham.Name = "IDSanPham";
-            this.IDSanPham.ReadOnly = true;
-            this.IDSanPham.Width = 125;
-            // 
-            // TenSanPham
-            // 
-            this.TenSanPham.DataPropertyName = "TenSanPham";
-            this.TenSanPham.HeaderText = "Tên sản phẩm";
-            this.TenSanPham.MinimumWidth = 6;
-            this.TenSanPham.Name = "TenSanPham";
-            this.TenSanPham.ReadOnly = true;
-            this.TenSanPham.Width = 125;
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.DataPropertyName = "SoLuong";
-            this.SoLuong.HeaderText = "Số lượng";
-            this.SoLuong.MinimumWidth = 6;
-            this.SoLuong.Name = "SoLuong";
-            this.SoLuong.Width = 125;
-            // 
-            // DonGia
-            // 
-            this.DonGia.DataPropertyName = "DonGia";
-            this.DonGia.HeaderText = "Đơn giá";
-            this.DonGia.MinimumWidth = 6;
-            this.DonGia.Name = "DonGia";
-            this.DonGia.ReadOnly = true;
-            this.DonGia.Width = 125;
-            // 
-            // DonVi
-            // 
-            this.DonVi.DataPropertyName = "DonVi";
-            this.DonVi.HeaderText = "Đơn vị";
-            this.DonVi.MinimumWidth = 6;
-            this.DonVi.Name = "DonVi";
-            this.DonVi.ReadOnly = true;
-            this.DonVi.Width = 125;
-            // 
-            // GiamGia
-            // 
-            this.GiamGia.DataPropertyName = "GiamGia";
-            this.GiamGia.HeaderText = "Giảm giá/Đơn vị";
-            this.GiamGia.MinimumWidth = 6;
-            this.GiamGia.Name = "GiamGia";
-            this.GiamGia.ReadOnly = true;
-            this.GiamGia.Width = 125;
-            // 
-            // TongTien
-            // 
-            this.TongTien.DataPropertyName = "TongTien";
-            this.TongTien.HeaderText = "Tổng tiền";
-            this.TongTien.MinimumWidth = 6;
-            this.TongTien.Name = "TongTien";
-            this.TongTien.ReadOnly = true;
-            this.TongTien.Width = 125;
             // 
             // frmHoaDon
             // 

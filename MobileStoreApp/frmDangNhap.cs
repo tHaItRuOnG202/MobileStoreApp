@@ -43,10 +43,14 @@ namespace MobileStoreApp
                         if (txtTenDangNhap.Text == n.TaiKhoanNhanVien && txtMatKhau.Text == n.MatKhauNhanVien && n.LoaiNhanVien == true)
                         {
                             MessageBox.Show("Đăng nhập thành công");
-                            frmHoaDon frmHoaDon = new frmHoaDon();
+
+                            TrangChuMuaHang trangChuMuaHang = new TrangChuMuaHang();
+                            //trangChuMuaHang.ShowDialog();
+                            //frmHoaDon frmHoaDon = new frmHoaDon();
                             frmHoaDon.HoTen = n.HoNhanVien + " " + n.TenNhanVien;
                             frmHoaDon.IDNhanVien = n.IDNhanVien.ToString();
-                            frmHoaDon.ShowDialog();
+                            trangChuMuaHang.ShowDialog();
+                            //frmHoaDon.ShowDialog();
                             //this.Close();
                             //frmHoaDon.Show();
                             break;

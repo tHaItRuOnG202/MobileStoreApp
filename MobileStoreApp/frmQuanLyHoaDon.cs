@@ -49,11 +49,6 @@ namespace MobileStoreApp
             }
         }
 
-        private void dgvHoaDon_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            
-        }
-
         private void SeeReceiptDetail()
         {
             int rowIndex = dgvHoaDon.CurrentRow.Index;

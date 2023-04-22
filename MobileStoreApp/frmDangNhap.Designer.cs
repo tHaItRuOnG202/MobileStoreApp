@@ -31,14 +31,15 @@ namespace MobileStoreApp
         {
             this.lbHeader = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.txtTenDangNhap = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbHeader
@@ -55,7 +56,6 @@ namespace MobileStoreApp
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.linkLabel1);
             this.groupBox1.Controls.Add(this.btnDangNhap);
             this.groupBox1.Controls.Add(this.txtMatKhau);
             this.groupBox1.Controls.Add(this.txtTenDangNhap);
@@ -63,28 +63,18 @@ namespace MobileStoreApp
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(655, 173);
+            this.groupBox1.Location = new System.Drawing.Point(526, 173);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(633, 432);
+            this.groupBox1.Size = new System.Drawing.Size(762, 432);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(242, 275);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(149, 24);
-            this.linkLabel1.TabIndex = 10;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Quên mật khẩu?";
             // 
             // btnDangNhap
             // 
             this.btnDangNhap.BackColor = System.Drawing.Color.Blue;
             this.btnDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangNhap.ForeColor = System.Drawing.Color.White;
-            this.btnDangNhap.Location = new System.Drawing.Point(101, 334);
+            this.btnDangNhap.Location = new System.Drawing.Point(176, 336);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(431, 51);
             this.btnDangNhap.TabIndex = 9;
@@ -97,7 +87,8 @@ namespace MobileStoreApp
             this.txtMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMatKhau.Location = new System.Drawing.Point(228, 205);
             this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(368, 30);
+            this.txtMatKhau.PasswordChar = '●';
+            this.txtMatKhau.Size = new System.Drawing.Size(492, 30);
             this.txtMatKhau.TabIndex = 7;
             // 
             // txtTenDangNhap
@@ -105,7 +96,7 @@ namespace MobileStoreApp
             this.txtTenDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenDangNhap.Location = new System.Drawing.Point(228, 127);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
-            this.txtTenDangNhap.Size = new System.Drawing.Size(368, 30);
+            this.txtTenDangNhap.Size = new System.Drawing.Size(492, 30);
             this.txtTenDangNhap.TabIndex = 8;
             // 
             // label2
@@ -135,16 +126,25 @@ namespace MobileStoreApp
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label1.Location = new System.Drawing.Point(3, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(627, 64);
+            this.label1.Size = new System.Drawing.Size(756, 64);
             this.label1.TabIndex = 0;
             this.label1.Text = "ĐĂNG NHẬP";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(31, 185);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(420, 420);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // frmDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1300, 731);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lbHeader);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -154,6 +154,7 @@ namespace MobileStoreApp
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -168,6 +169,6 @@ namespace MobileStoreApp
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

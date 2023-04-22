@@ -109,6 +109,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TrangChuMuaHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrangChuMuaHang.Designer.cs">
+      <DependentUpon>TrangChuMuaHang.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmTrangChuQuanLy.resx">
       <DependentUpon>frmTrangChuQuanLy.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,6 +154,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TrangChuMuaHang.resx">
+      <DependentUpon>TrangChuMuaHang.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

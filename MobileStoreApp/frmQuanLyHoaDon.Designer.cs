@@ -242,7 +242,6 @@ namespace MobileStoreApp
             this.dgvHoaDon.Size = new System.Drawing.Size(629, 254);
             this.dgvHoaDon.TabIndex = 0;
             this.dgvHoaDon.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvHoaDon_CellMouseClick);
-            this.dgvHoaDon.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvHoaDon_CellMouseDoubleClick);
             // 
             // btnDangXuat
             // 
