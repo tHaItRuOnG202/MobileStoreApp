@@ -19,6 +19,11 @@ namespace BUS_MobileStoreApp
             return ctrl_D.LoadEmployee();
         }
 
+        public DataTable ShowEmployeeV2()
+        {
+            return ctrl_D.LoadEmployeeV2();
+        }
+
         public bool AddEmployee(Employee epl)
         {
             return ctrl_D.InsertEmployee(epl);

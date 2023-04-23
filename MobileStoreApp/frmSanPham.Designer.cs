@@ -482,6 +482,7 @@ namespace MobileStoreApp
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmSanPham";
             this.Text = "Quản lý sản phẩm";
+            this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmSanPham_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.frmSanPham_Paint);

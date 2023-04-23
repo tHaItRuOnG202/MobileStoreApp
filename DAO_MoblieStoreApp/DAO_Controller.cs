@@ -26,6 +26,27 @@ namespace DAO_MoblieStoreApp
             return dt;
         }
 
+        public DataTable LoadEmployeeV2()
+        {
+            db = new IMPROOKSTOREDataContext();
+            DataTable tableNhanVien = new DataTable();
+            var nvid = from n in db.NhanViens
+                       select new
+                       {
+                           ID = n.IDNhanVien,
+                           Ho = n.HoNhanVien,
+                           Ten = n.TenNhanVien,
+                           TaiKhoan = n.TaiKhoanNhanVien,
+                           MatKhau = n.MatKhauNhanVien,
+                           Loai = n.LoaiNhanVien
+                       };
+            foreach(var row in nvid)
+            {
+                tableNhanVien.Rows.Add(row.ID, row.Ho, row.Ten, row.TaiKhoan, row.MatKhau, row.Loai);
+            }
+            return tableNhanVien;
+        }
+
         //public void InsertEmployee(Employee empl)
         //{
         //    NhanVien nhanVien = new NhanVien();

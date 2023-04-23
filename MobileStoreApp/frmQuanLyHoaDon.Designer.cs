@@ -389,6 +389,7 @@ namespace MobileStoreApp
             this.btnDong.TabIndex = 0;
             this.btnDong.Text = "Đóng";
             this.btnDong.UseVisualStyleBackColor = false;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // label4
             // 

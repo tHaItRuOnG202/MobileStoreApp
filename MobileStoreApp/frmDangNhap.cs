@@ -9,12 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAO_MoblieStoreApp;
+using BUS_MobileStoreApp;
 
 namespace MobileStoreApp
 {
     public partial class frmDangNhap : Form
     {
         IMPROOKSTOREDataContext db;
+        BUS_Controller ctrl_B = new BUS_Controller();
         public frmDangNhap()
         {
             InitializeComponent();
@@ -30,11 +32,11 @@ namespace MobileStoreApp
                     var nvid = from n in db.NhanViens
                                select new
                                {
-                                   n.TaiKhoanNhanVien,
-                                   n.MatKhauNhanVien,
                                    n.IDNhanVien,
                                    n.HoNhanVien,
                                    n.TenNhanVien,
+                                   n.TaiKhoanNhanVien,
+                                   n.MatKhauNhanVien,
                                    n.LoaiNhanVien
                                };
 
@@ -64,7 +66,7 @@ namespace MobileStoreApp
                             formTrangChuQuanLy formTrangChuQuanLy = new formTrangChuQuanLy();
                             formTrangChuQuanLy.ShowDialog();
                             break;
-                        }    
+                        }
                         else
                         {
                             count++;

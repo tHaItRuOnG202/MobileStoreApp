@@ -92,7 +92,7 @@ namespace MobileStoreApp
             this.dtpThoiGianSanPham.Location = new System.Drawing.Point(207, 51);
             this.dtpThoiGianSanPham.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpThoiGianSanPham.Name = "dtpThoiGianSanPham";
-            this.dtpThoiGianSanPham.Size = new System.Drawing.Size(332, 34);
+            this.dtpThoiGianSanPham.Size = new System.Drawing.Size(332, 30);
             this.dtpThoiGianSanPham.TabIndex = 2;
             this.dtpThoiGianSanPham.ValueChanged += new System.EventHandler(this.dtpThoiGianSanPham_ValueChanged);
             // 
@@ -102,13 +102,13 @@ namespace MobileStoreApp
             this.label6.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(20, 58);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(110, 27);
+            this.label6.Size = new System.Drawing.Size(95, 23);
             this.label6.TabIndex = 0;
             this.label6.Text = "Thời gian:";
             // 
             // grChiTiet
             // 
-            this.grChiTiet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.grChiTiet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grChiTiet.BackColor = System.Drawing.Color.Transparent;
             this.grChiTiet.Controls.Add(this.dgvKhachHangDoanhThu);
@@ -127,7 +127,7 @@ namespace MobileStoreApp
             // 
             // dgvKhachHangDoanhThu
             // 
-            this.dgvKhachHangDoanhThu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.dgvKhachHangDoanhThu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvKhachHangDoanhThu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKhachHangDoanhThu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -248,10 +248,11 @@ namespace MobileStoreApp
             this.btnDong.TabIndex = 3;
             this.btnDong.Text = "Đóng";
             this.btnDong.UseVisualStyleBackColor = false;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.dtpThoiGianKhachHang);
@@ -274,7 +275,7 @@ namespace MobileStoreApp
             this.dtpThoiGianKhachHang.Location = new System.Drawing.Point(202, 52);
             this.dtpThoiGianKhachHang.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpThoiGianKhachHang.Name = "dtpThoiGianKhachHang";
-            this.dtpThoiGianKhachHang.Size = new System.Drawing.Size(333, 34);
+            this.dtpThoiGianKhachHang.Size = new System.Drawing.Size(333, 30);
             this.dtpThoiGianKhachHang.TabIndex = 2;
             this.dtpThoiGianKhachHang.ValueChanged += new System.EventHandler(this.dtpThoiGianKhachHang_ValueChanged);
             // 
@@ -284,13 +285,13 @@ namespace MobileStoreApp
             this.label1.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(20, 58);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 27);
+            this.label1.Size = new System.Drawing.Size(95, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Thời gian:";
             // 
             // frmThongKe
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1300, 743);
             this.Controls.Add(this.grChiTiet);
@@ -301,6 +302,7 @@ namespace MobileStoreApp
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmThongKe";
             this.Text = "Quản lý thống kê";
+            this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmThongKe_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.frmThongKe_Paint);

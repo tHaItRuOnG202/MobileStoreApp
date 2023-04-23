@@ -399,12 +399,6 @@ namespace MobileStoreApp
             }    
         }
 
-        private void logOut()
-        {
-            this.Close();
-            
-        }
-
         private void btnDong_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -420,6 +414,11 @@ namespace MobileStoreApp
 
             myGraphics.FillRectangle(lgb, area);
             myGraphics.DrawRectangle(myPen, area);
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

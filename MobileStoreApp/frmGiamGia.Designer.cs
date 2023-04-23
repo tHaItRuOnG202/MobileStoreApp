@@ -97,7 +97,7 @@ namespace MobileStoreApp
             this.dtpNgayKetThuc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgayKetThuc.Location = new System.Drawing.Point(899, 107);
             this.dtpNgayKetThuc.Name = "dtpNgayKetThuc";
-            this.dtpNgayKetThuc.Size = new System.Drawing.Size(343, 36);
+            this.dtpNgayKetThuc.Size = new System.Drawing.Size(343, 32);
             this.dtpNgayKetThuc.TabIndex = 2;
             // 
             // dtpNgayBatDau
@@ -106,7 +106,7 @@ namespace MobileStoreApp
             this.dtpNgayBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgayBatDau.Location = new System.Drawing.Point(899, 43);
             this.dtpNgayBatDau.Name = "dtpNgayBatDau";
-            this.dtpNgayBatDau.Size = new System.Drawing.Size(343, 36);
+            this.dtpNgayBatDau.Size = new System.Drawing.Size(343, 32);
             this.dtpNgayBatDau.TabIndex = 2;
             // 
             // txtGiaTri
@@ -114,7 +114,7 @@ namespace MobileStoreApp
             this.txtGiaTri.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGiaTri.Location = new System.Drawing.Point(196, 109);
             this.txtGiaTri.Name = "txtGiaTri";
-            this.txtGiaTri.Size = new System.Drawing.Size(373, 36);
+            this.txtGiaTri.Size = new System.Drawing.Size(373, 32);
             this.txtGiaTri.TabIndex = 1;
             // 
             // label3
@@ -123,7 +123,7 @@ namespace MobileStoreApp
             this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(726, 109);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(169, 29);
+            this.label3.Size = new System.Drawing.Size(140, 24);
             this.label3.TabIndex = 0;
             this.label3.Text = "Ngày kết thúc:";
             // 
@@ -133,7 +133,7 @@ namespace MobileStoreApp
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(18, 113);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 29);
+            this.label1.Size = new System.Drawing.Size(71, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Giá trị:";
             // 
@@ -143,7 +143,7 @@ namespace MobileStoreApp
             this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(726, 45);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(165, 29);
+            this.label6.Size = new System.Drawing.Size(136, 24);
             this.label6.TabIndex = 0;
             this.label6.Text = "Ngày bắt đầu:";
             // 
@@ -152,7 +152,7 @@ namespace MobileStoreApp
             this.txtMaGiamGia.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaGiamGia.Location = new System.Drawing.Point(196, 48);
             this.txtMaGiamGia.Name = "txtMaGiamGia";
-            this.txtMaGiamGia.Size = new System.Drawing.Size(373, 36);
+            this.txtMaGiamGia.Size = new System.Drawing.Size(373, 32);
             this.txtMaGiamGia.TabIndex = 1;
             // 
             // label2
@@ -161,7 +161,7 @@ namespace MobileStoreApp
             this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(18, 48);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(151, 29);
+            this.label2.Size = new System.Drawing.Size(126, 24);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã giảm giá:";
             // 
@@ -170,7 +170,7 @@ namespace MobileStoreApp
             this.txtTimKiem.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTimKiem.Location = new System.Drawing.Point(911, 302);
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(343, 36);
+            this.txtTimKiem.Size = new System.Drawing.Size(343, 32);
             this.txtTimKiem.TabIndex = 2;
             this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
@@ -330,13 +330,13 @@ namespace MobileStoreApp
             this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(738, 305);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(205, 29);
+            this.label4.Size = new System.Drawing.Size(171, 24);
             this.label4.TabIndex = 0;
             this.label4.Text = "Tìm theo giá trị:";
             // 
             // frmGiamGia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1300, 743);
             this.Controls.Add(this.grDanhSach);
@@ -348,6 +348,7 @@ namespace MobileStoreApp
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmGiamGia";
             this.Text = "Quản lý giảm giá";
+            this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmGiamGia_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.frmGiamGia_Paint);

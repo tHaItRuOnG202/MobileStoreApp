@@ -88,5 +88,10 @@ namespace MobileStoreApp
             myGraphics.FillRectangle(lgb, area);
             myGraphics.DrawRectangle(myPen, area);
         }
+
+        private void btnDong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

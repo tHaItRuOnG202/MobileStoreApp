@@ -124,7 +124,7 @@ namespace MobileStoreApp
             this.cbChucVu.FormattingEnabled = true;
             this.cbChucVu.Location = new System.Drawing.Point(1012, 160);
             this.cbChucVu.Name = "cbChucVu";
-            this.cbChucVu.Size = new System.Drawing.Size(245, 35);
+            this.cbChucVu.Size = new System.Drawing.Size(245, 30);
             this.cbChucVu.TabIndex = 3;
             this.cbChucVu.SelectedIndexChanged += new System.EventHandler(this.cbChucVu_SelectedIndexChanged);
             // 
@@ -135,7 +135,7 @@ namespace MobileStoreApp
             this.dtpNgaySinh.Location = new System.Drawing.Point(558, 41);
             this.dtpNgaySinh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
-            this.dtpNgaySinh.Size = new System.Drawing.Size(250, 34);
+            this.dtpNgaySinh.Size = new System.Drawing.Size(250, 30);
             this.dtpNgaySinh.TabIndex = 3;
             // 
             // txtDienThoai
@@ -144,7 +144,7 @@ namespace MobileStoreApp
             this.txtDienThoai.Location = new System.Drawing.Point(558, 158);
             this.txtDienThoai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDienThoai.Name = "txtDienThoai";
-            this.txtDienThoai.Size = new System.Drawing.Size(250, 34);
+            this.txtDienThoai.Size = new System.Drawing.Size(250, 30);
             this.txtDienThoai.TabIndex = 5;
             // 
             // txtTenNhanVien
@@ -153,7 +153,7 @@ namespace MobileStoreApp
             this.txtTenNhanVien.Location = new System.Drawing.Point(112, 157);
             this.txtTenNhanVien.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTenNhanVien.Name = "txtTenNhanVien";
-            this.txtTenNhanVien.Size = new System.Drawing.Size(250, 34);
+            this.txtTenNhanVien.Size = new System.Drawing.Size(250, 30);
             this.txtTenNhanVien.TabIndex = 2;
             // 
             // label9
@@ -162,7 +162,7 @@ namespace MobileStoreApp
             this.label9.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(886, 162);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(98, 27);
+            this.label9.Size = new System.Drawing.Size(86, 23);
             this.label9.TabIndex = 0;
             this.label9.Text = "Chức vụ:";
             // 
@@ -172,7 +172,7 @@ namespace MobileStoreApp
             this.label7.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(426, 160);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(119, 27);
+            this.label7.Size = new System.Drawing.Size(102, 23);
             this.label7.TabIndex = 0;
             this.label7.Text = "Điện thoại:";
             // 
@@ -182,7 +182,7 @@ namespace MobileStoreApp
             this.label4.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(6, 160);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 27);
+            this.label4.Size = new System.Drawing.Size(49, 23);
             this.label4.TabIndex = 0;
             this.label4.Text = "Tên:";
             // 
@@ -192,7 +192,7 @@ namespace MobileStoreApp
             this.txtMatKhau.Location = new System.Drawing.Point(1012, 100);
             this.txtMatKhau.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(245, 34);
+            this.txtMatKhau.Size = new System.Drawing.Size(245, 30);
             this.txtMatKhau.TabIndex = 7;
             // 
             // txtDiaChi
@@ -201,7 +201,7 @@ namespace MobileStoreApp
             this.txtDiaChi.Location = new System.Drawing.Point(558, 99);
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(250, 34);
+            this.txtDiaChi.Size = new System.Drawing.Size(250, 30);
             this.txtDiaChi.TabIndex = 4;
             // 
             // txtHoNhanVien
@@ -210,7 +210,7 @@ namespace MobileStoreApp
             this.txtHoNhanVien.Location = new System.Drawing.Point(112, 98);
             this.txtHoNhanVien.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtHoNhanVien.Name = "txtHoNhanVien";
-            this.txtHoNhanVien.Size = new System.Drawing.Size(250, 34);
+            this.txtHoNhanVien.Size = new System.Drawing.Size(250, 30);
             this.txtHoNhanVien.TabIndex = 1;
             // 
             // label8
@@ -219,7 +219,7 @@ namespace MobileStoreApp
             this.label8.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(886, 103);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(110, 27);
+            this.label8.Size = new System.Drawing.Size(95, 23);
             this.label8.TabIndex = 0;
             this.label8.Text = "Mật khẩu:";
             // 
@@ -229,7 +229,7 @@ namespace MobileStoreApp
             this.label6.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(426, 104);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 27);
+            this.label6.Size = new System.Drawing.Size(74, 23);
             this.label6.TabIndex = 0;
             this.label6.Text = "Địa chỉ:";
             // 
@@ -239,7 +239,7 @@ namespace MobileStoreApp
             this.label3.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(6, 100);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 27);
+            this.label3.Size = new System.Drawing.Size(40, 23);
             this.label3.TabIndex = 0;
             this.label3.Text = "Họ:";
             // 
@@ -249,7 +249,7 @@ namespace MobileStoreApp
             this.txtTaiKhoan.Location = new System.Drawing.Point(1007, 40);
             this.txtTaiKhoan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTaiKhoan.Name = "txtTaiKhoan";
-            this.txtTaiKhoan.Size = new System.Drawing.Size(250, 34);
+            this.txtTaiKhoan.Size = new System.Drawing.Size(250, 30);
             this.txtTaiKhoan.TabIndex = 6;
             // 
             // label5
@@ -258,7 +258,7 @@ namespace MobileStoreApp
             this.label5.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(426, 43);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(116, 27);
+            this.label5.Size = new System.Drawing.Size(100, 23);
             this.label5.TabIndex = 0;
             this.label5.Text = "Ngày sinh:";
             // 
@@ -268,7 +268,7 @@ namespace MobileStoreApp
             this.label1.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(886, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 27);
+            this.label1.Size = new System.Drawing.Size(99, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tài khoản:";
             // 
@@ -278,7 +278,7 @@ namespace MobileStoreApp
             this.txtMaNhanVien.Location = new System.Drawing.Point(112, 39);
             this.txtMaNhanVien.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMaNhanVien.Name = "txtMaNhanVien";
-            this.txtMaNhanVien.Size = new System.Drawing.Size(250, 34);
+            this.txtMaNhanVien.Size = new System.Drawing.Size(250, 30);
             this.txtMaNhanVien.TabIndex = 0;
             // 
             // label2
@@ -287,7 +287,7 @@ namespace MobileStoreApp
             this.label2.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(6, 41);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 27);
+            this.label2.Size = new System.Drawing.Size(72, 23);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã NV:";
             // 
@@ -297,7 +297,7 @@ namespace MobileStoreApp
             this.txtTimKiem.Location = new System.Drawing.Point(1024, 355);
             this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(245, 34);
+            this.txtTimKiem.Size = new System.Drawing.Size(245, 30);
             this.txtTimKiem.TabIndex = 2;
             this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
@@ -516,13 +516,13 @@ namespace MobileStoreApp
             this.label10.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(841, 359);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(197, 27);
+            this.label10.Size = new System.Drawing.Size(169, 23);
             this.label10.TabIndex = 0;
             this.label10.Text = "Tìm kiếm theo tên:";
             // 
             // frmNhanVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1300, 743);
             this.Controls.Add(this.grDanhSach);
@@ -534,6 +534,7 @@ namespace MobileStoreApp
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmNhanVien";
             this.Text = "Quản lý nhân viên";
+            this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmNhanVien_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.frmNhanVien_Paint);

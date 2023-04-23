@@ -86,7 +86,7 @@ namespace MobileStoreApp
             this.txtTenLoaiSanPham.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenLoaiSanPham.Location = new System.Drawing.Point(924, 59);
             this.txtTenLoaiSanPham.Name = "txtTenLoaiSanPham";
-            this.txtTenLoaiSanPham.Size = new System.Drawing.Size(331, 34);
+            this.txtTenLoaiSanPham.Size = new System.Drawing.Size(331, 30);
             this.txtTenLoaiSanPham.TabIndex = 1;
             // 
             // label6
@@ -95,7 +95,7 @@ namespace MobileStoreApp
             this.label6.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(727, 62);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(200, 27);
+            this.label6.Size = new System.Drawing.Size(172, 23);
             this.label6.TabIndex = 0;
             this.label6.Text = "Tên loại sản phẩm:";
             // 
@@ -104,7 +104,7 @@ namespace MobileStoreApp
             this.txtMaLoaiSanPham.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaLoaiSanPham.Location = new System.Drawing.Point(196, 62);
             this.txtMaLoaiSanPham.Name = "txtMaLoaiSanPham";
-            this.txtMaLoaiSanPham.Size = new System.Drawing.Size(373, 34);
+            this.txtMaLoaiSanPham.Size = new System.Drawing.Size(373, 30);
             this.txtMaLoaiSanPham.TabIndex = 1;
             // 
             // label2
@@ -113,7 +113,7 @@ namespace MobileStoreApp
             this.label2.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(18, 62);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(192, 27);
+            this.label2.Size = new System.Drawing.Size(165, 23);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã loại sản phẩm:";
             // 
@@ -122,7 +122,7 @@ namespace MobileStoreApp
             this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTimKiem.Location = new System.Drawing.Point(936, 281);
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(331, 32);
+            this.txtTimKiem.Size = new System.Drawing.Size(331, 28);
             this.txtTimKiem.TabIndex = 2;
             this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
@@ -262,13 +262,13 @@ namespace MobileStoreApp
             this.label1.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(745, 281);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(219, 27);
+            this.label1.Size = new System.Drawing.Size(191, 23);
             this.label1.TabIndex = 5;
             this.label1.Text = "Tìm kiếm theo tên:";
             // 
             // frmLoaiSanPham
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1300, 743);
             this.Controls.Add(this.label1);
@@ -280,6 +280,7 @@ namespace MobileStoreApp
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmLoaiSanPham";
             this.Text = "Quản lý loại sản phẩm";
+            this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmLoaiSanPham_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.frmLoaiSanPham_Paint);

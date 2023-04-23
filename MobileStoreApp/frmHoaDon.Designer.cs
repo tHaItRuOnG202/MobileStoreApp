@@ -51,7 +51,6 @@ namespace MobileStoreApp
             this.GiamGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDangXuat = new System.Windows.Forms.Button();
-            this.btnDong = new System.Windows.Forms.Button();
             this.btnXoaHoaDon = new System.Windows.Forms.Button();
             this.btnThemHoaDon = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -72,6 +71,7 @@ namespace MobileStoreApp
             this.lbTenKhachHang = new System.Windows.Forms.Label();
             this.lbTenNhanVien = new System.Windows.Forms.Label();
             this.lbMaNhanVien = new System.Windows.Forms.Label();
+            this.btnDong = new System.Windows.Forms.Button();
             this.gbChiTietHoaDon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietHoaDon)).BeginInit();
             this.gbThongTinHoaDon.SuspendLayout();
@@ -141,7 +141,7 @@ namespace MobileStoreApp
             // 
             // gbChiTietHoaDon
             // 
-            this.gbChiTietHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.gbChiTietHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbChiTietHoaDon.BackColor = System.Drawing.Color.Transparent;
             this.gbChiTietHoaDon.Controls.Add(this.lbGiamGia);
@@ -195,7 +195,7 @@ namespace MobileStoreApp
             // 
             // lbDonGia
             // 
-            this.lbDonGia.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.lbDonGia.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbDonGia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lbDonGia.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -207,7 +207,7 @@ namespace MobileStoreApp
             // 
             // lbDonVi
             // 
-            this.lbDonVi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.lbDonVi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbDonVi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lbDonVi.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -219,7 +219,7 @@ namespace MobileStoreApp
             // 
             // lbTongTien
             // 
-            this.lbTongTien.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.lbTongTien.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbTongTien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lbTongTien.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -243,7 +243,7 @@ namespace MobileStoreApp
             // 
             // dgvChiTietHoaDon
             // 
-            this.dgvChiTietHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.dgvChiTietHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvChiTietHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvChiTietHoaDon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -335,18 +335,7 @@ namespace MobileStoreApp
             this.btnDangXuat.TabIndex = 3;
             this.btnDangXuat.Text = "Đăng xuất";
             this.btnDangXuat.UseVisualStyleBackColor = false;
-            // 
-            // btnDong
-            // 
-            this.btnDong.BackColor = System.Drawing.Color.White;
-            this.btnDong.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDong.ForeColor = System.Drawing.Color.Red;
-            this.btnDong.Location = new System.Drawing.Point(647, 409);
-            this.btnDong.Name = "btnDong";
-            this.btnDong.Size = new System.Drawing.Size(110, 38);
-            this.btnDong.TabIndex = 3;
-            this.btnDong.Text = "Đóng";
-            this.btnDong.UseVisualStyleBackColor = false;
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
             // btnXoaHoaDon
             // 
@@ -500,7 +489,7 @@ namespace MobileStoreApp
             // 
             // dtpNgayXuatHoaDon
             // 
-            this.dtpNgayXuatHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.dtpNgayXuatHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpNgayXuatHoaDon.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNgayXuatHoaDon.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -511,7 +500,7 @@ namespace MobileStoreApp
             // 
             // cbMaKhachHang
             // 
-            this.cbMaKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.cbMaKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbMaKhachHang.BackColor = System.Drawing.Color.White;
             this.cbMaKhachHang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -525,7 +514,7 @@ namespace MobileStoreApp
             // 
             // gbThongTinHoaDon
             // 
-            this.gbThongTinHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.gbThongTinHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbThongTinHoaDon.BackColor = System.Drawing.Color.Transparent;
             this.gbThongTinHoaDon.Controls.Add(this.lbTenKhachHang);
@@ -550,7 +539,7 @@ namespace MobileStoreApp
             // 
             // lbTenKhachHang
             // 
-            this.lbTenKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.lbTenKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbTenKhachHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lbTenKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -580,6 +569,19 @@ namespace MobileStoreApp
             this.lbMaNhanVien.Size = new System.Drawing.Size(337, 28);
             this.lbMaNhanVien.TabIndex = 6;
             // 
+            // btnDong
+            // 
+            this.btnDong.BackColor = System.Drawing.Color.White;
+            this.btnDong.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDong.ForeColor = System.Drawing.Color.Red;
+            this.btnDong.Location = new System.Drawing.Point(647, 409);
+            this.btnDong.Name = "btnDong";
+            this.btnDong.Size = new System.Drawing.Size(110, 38);
+            this.btnDong.TabIndex = 3;
+            this.btnDong.Text = "Đóng";
+            this.btnDong.UseVisualStyleBackColor = false;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
+            // 
             // frmHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -594,6 +596,7 @@ namespace MobileStoreApp
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmHoaDon";
             this.Text = "Thanh toán hóa đơn";
+            this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmHoaDon_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.frmHoaDon_Paint);
@@ -628,7 +631,6 @@ namespace MobileStoreApp
         private System.Windows.Forms.ComboBox cbMaKhachHang;
         private System.Windows.Forms.GroupBox gbThongTinHoaDon;
         private System.Windows.Forms.DataGridView dgvChiTietHoaDon;
-        private System.Windows.Forms.Button btnDong;
         private System.Windows.Forms.Button btnXoaHoaDon;
         private System.Windows.Forms.Button btnThemHoaDon;
         private System.Windows.Forms.Button btnXoa;
@@ -651,5 +653,6 @@ namespace MobileStoreApp
         private System.Windows.Forms.DataGridViewTextBoxColumn DonVi;
         private System.Windows.Forms.DataGridViewTextBoxColumn GiamGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn TongTien;
+        private System.Windows.Forms.Button btnDong;
     }
 }
