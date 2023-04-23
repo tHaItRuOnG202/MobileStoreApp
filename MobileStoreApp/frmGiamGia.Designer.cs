@@ -348,10 +348,8 @@ namespace MobileStoreApp
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmGiamGia";
             this.Text = "Quản lý giảm giá";
-            this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmGiamGia_Load);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.frmGiamGia_Paint);
             this.gbThongTin.ResumeLayout(false);
             this.gbThongTin.PerformLayout();
             this.grDanhSach.ResumeLayout(false);

@@ -732,11 +732,31 @@ namespace DAO_MoblieStoreApp
             return dt;
         }
 
-        public DataTable SearchedProduct(string kw)
+        public DataTable SearchedProductOriginal(string kw)
         {
             SqlDataAdapter da;
             DataTable dt = new DataTable();
             string query = "Select * From SanPham Where TenSanPham like N'%" + kw + "%' ";
+            da = new SqlDataAdapter(query, dc.Connect());
+            da.Fill(dt);
+            return dt;
+        }
+
+        public DataTable SearchedProductByPrice(float kw)
+        {
+            SqlDataAdapter da;
+            DataTable dt = new DataTable();
+            string query = String.Format("Select * From SanPham Where TRY_CONVERT(FLOAT, DonGia) >= {0}", kw);
+            da = new SqlDataAdapter(query, dc.Connect());
+            da.Fill(dt);
+            return dt;
+        }
+
+        public DataTable SearchedProduct(string kw)
+        {
+            SqlDataAdapter da;
+            DataTable dt = new DataTable();
+            string query = "Select sp.IDSanPham, sp.TenSanPham, sp.DonVi, sp.DonGia, ls.TenLoaiSanPham, gg.GiaTri, sp.HinhAnh From SanPham sp, LoaiSanPham ls, GiamGia gg Where sp.IDLoaiSanPham = ls.IDLoaiSanPham And gg.IDGiamGia = sp.IDGiamGia AND TenSanPham like N'%" + kw + "%' ";
             da = new SqlDataAdapter(query, dc.Connect());
             da.Fill(dt);
             return dt;
@@ -985,7 +1005,7 @@ namespace DAO_MoblieStoreApp
         {
             SqlDataAdapter da;
             DataTable dt = new DataTable();
-            string query = String.Format("Select sp.IDSanPham, sp.TenSanPham, cthd.SoLuong, sp.DonVi, sp.DonGia, km.GiaTri From SanPham sp, ChiTietHoaDon cthd, GiamGia km Where sp.IDSanPham = cthd.IDSanPham AND sp.IDGiamGia = km.IDGiamGia AND cthd.IDHoaDon = {0}", recp);
+            string query = String.Format("Select sp.IDSanPham, sp.TenSanPham, cthd.SoLuong, sp.DonVi, sp.DonGia From SanPham sp, ChiTietHoaDon cthd Where sp.IDSanPham = cthd.IDSanPham AND cthd.IDHoaDon = {0}", recp);
             da = new SqlDataAdapter(query, dc.Connect());
             da.Fill(dt);
             return dt;

@@ -142,7 +142,6 @@ namespace MobileStoreApp
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "formTrangChuQuanLy";
             this.Text = "Trang Chủ Quản Lý";
-            this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.formTrangChuQuanLy_Paint);
             this.menuQuanLy.ResumeLayout(false);

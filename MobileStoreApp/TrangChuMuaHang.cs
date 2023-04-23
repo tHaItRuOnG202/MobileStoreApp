@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using DAO_MoblieStoreApp;
 using BUS_MobileStoreApp;
 using System.Drawing.Drawing2D;
+using System.Text.RegularExpressions;
 
 namespace MobileStoreApp
 {
@@ -188,20 +189,37 @@ namespace MobileStoreApp
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             this.loadAll();
-            DataTable dt = ctrl_B.FoundProduct(txtSearch.Text);
+            DataTable dt = ctrl_B.FoundProductOriginal(txtSearch.Text);
             this.LoadProductMenu(dt);
         }
 
-        private void TrangChuMuaHang_Paint(object sender, PaintEventArgs e)
+        private void txtSearchPrice_TextChanged(object sender, EventArgs e)
         {
-            Graphics myGraphics = e.Graphics;
-            Pen myPen = new Pen(Color.FromArgb(144, 238, 144), 1);
-
-            Rectangle area = new Rectangle(0, 0, this.Width - 1, this.Height - 1);
-            LinearGradientBrush lgb = new LinearGradientBrush(area, Color.FromArgb(144, 238, 144), Color.FromArgb(245, 251, 251), LinearGradientMode.ForwardDiagonal);
-
-            myGraphics.FillRectangle(lgb, area);
-            myGraphics.DrawRectangle(myPen, area);
+            this.loadAll();
+            string pattern = @"^(\d*|\s*)$";
+            Regex regex = new Regex(pattern);
+            bool isMatch = regex.IsMatch(txtSearchPrice.Text);
+            if (isMatch && txtSearchPrice.Text != "0")
+            {
+                DataTable dt = ctrl_B.FoundProductByPrice(float.Parse(txtSearchPrice.Text));
+                this.LoadProductMenu(dt);
+            }
+            else
+            {
+                MessageBox.Show("Chỉ được phép nhập số lớn hơn 0!");
+            }
         }
+
+        //private void TrangChuMuaHang_Paint(object sender, PaintEventArgs e)
+        //{
+        //    Graphics myGraphics = e.Graphics;
+        //    Pen myPen = new Pen(Color.FromArgb(144, 238, 144), 1);
+
+        //    Rectangle area = new Rectangle(0, 0, this.Width - 1, this.Height - 1);
+        //    LinearGradientBrush lgb = new LinearGradientBrush(area, Color.FromArgb(144, 238, 144), Color.FromArgb(245, 251, 251), LinearGradientMode.ForwardDiagonal);
+
+        //    myGraphics.FillRectangle(lgb, area);
+        //    myGraphics.DrawRectangle(myPen, area);
+        //}
     }
 }

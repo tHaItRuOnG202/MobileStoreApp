@@ -55,20 +55,20 @@ namespace MobileStoreApp
             int rowIndex = dgvHoaDon.CurrentRow.Index;
             dgvChiTietHoaDon.DataSource = ctrl_B.ShowReceiptDetail(Int32.Parse(dgvHoaDon.Rows[rowIndex].Cells[0].Value.ToString()));
 
-            for (int j = 0; j < dgvChiTietHoaDon.RowCount - 1; j++)
-            {
-                string soLuong = dgvChiTietHoaDon.Rows[j].Cells[3].Value.ToString();
-                string donGia = dgvChiTietHoaDon.Rows[j].Cells[5].Value.ToString();
-                string giamGia = dgvChiTietHoaDon.Rows[j].Cells[6].Value.ToString();
+            //for (int j = 0; j < dgvChiTietHoaDon.RowCount - 1; j++)
+            //{
+            //    string soLuong = dgvChiTietHoaDon.Rows[j].Cells[3].Value.ToString();
+            //    string donGia = dgvChiTietHoaDon.Rows[j].Cells[5].Value.ToString();
+                //string giamGia = dgvChiTietHoaDon.Rows[j].Cells[6].Value.ToString();
 
                 //MessageBox.Show(soLuong + donGia + giamGia);
 
                 //string tongGiamGia = (Int32.Parse(soLuong) * double.Parse(giamGia)).ToString();
-                string tongTien = (Int32.Parse(soLuong) * double.Parse(donGia) - Int32.Parse(soLuong) * double.Parse(giamGia)).ToString();
+                //string tongTien = (Int32.Parse(soLuong) * double.Parse(donGia) - Int).ToString();
 
                 //dgvChiTietHoaDon.Rows[j].Cells[6].Value = tongGiamGia;
-                dgvChiTietHoaDon.Rows[j].Cells[0].Value = tongTien;
-            }
+                //dgvChiTietHoaDon.Rows[j].Cells[0].Value = tongTien;
+            //}
         }
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)

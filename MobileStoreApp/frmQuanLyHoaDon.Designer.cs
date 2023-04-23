@@ -48,8 +48,6 @@ namespace MobileStoreApp
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonVi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GiamGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label5 = new System.Windows.Forms.Label();
             this.dgvHoaDon = new System.Windows.Forms.DataGridView();
             this.IDHoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -215,9 +213,7 @@ namespace MobileStoreApp
             this.TenSanPham,
             this.SoLuong,
             this.DonVi,
-            this.DonGia,
-            this.GiamGia,
-            this.ThanhTien});
+            this.DonGia});
             this.dgvChiTietHoaDon.Location = new System.Drawing.Point(662, 39);
             this.dgvChiTietHoaDon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvChiTietHoaDon.Name = "dgvChiTietHoaDon";
@@ -271,24 +267,6 @@ namespace MobileStoreApp
             this.DonGia.Name = "DonGia";
             this.DonGia.ReadOnly = true;
             this.DonGia.Width = 125;
-            // 
-            // GiamGia
-            // 
-            this.GiamGia.DataPropertyName = "GiaTri";
-            this.GiamGia.HeaderText = "Giảm giá/Đơn vị";
-            this.GiamGia.MinimumWidth = 6;
-            this.GiamGia.Name = "GiamGia";
-            this.GiamGia.ReadOnly = true;
-            this.GiamGia.Width = 125;
-            // 
-            // ThanhTien
-            // 
-            this.ThanhTien.DataPropertyName = "ThanhTien";
-            this.ThanhTien.HeaderText = "Thành tiền";
-            this.ThanhTien.MinimumWidth = 6;
-            this.ThanhTien.Name = "ThanhTien";
-            this.ThanhTien.ReadOnly = true;
-            this.ThanhTien.Width = 125;
             // 
             // label5
             // 
@@ -428,7 +406,6 @@ namespace MobileStoreApp
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmQuanLyHoaDon";
             this.Text = "Quản lý hóa đơn";
-            this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmQuanLyHoaDon_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.frmQuanLyHoaDon_Paint);
@@ -474,7 +451,5 @@ namespace MobileStoreApp
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn DonVi;
         private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GiamGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
     }
 }

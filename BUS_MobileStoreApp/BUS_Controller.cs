@@ -143,9 +143,19 @@ namespace BUS_MobileStoreApp
             return ctrl_D.SearchProduct(keyword);
         }
 
+        public DataTable FoundProductOriginal(string keyword)
+        {
+            return ctrl_D.SearchedProductOriginal(keyword);
+        }
+
         public DataTable FoundProduct(string keyword)
         {
             return ctrl_D.SearchedProduct(keyword);
+        }
+
+        public DataTable FoundProductByPrice(float keyword)
+        {
+            return ctrl_D.SearchedProductByPrice(keyword);
         }
 
         public bool EditProduct(Product prod)
