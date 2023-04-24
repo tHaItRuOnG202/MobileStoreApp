@@ -81,13 +81,15 @@ namespace MobileStoreApp
             this.lbHeader.ForeColor = System.Drawing.Color.Navy;
             this.lbHeader.Location = new System.Drawing.Point(0, 0);
             this.lbHeader.Name = "lbHeader";
-            this.lbHeader.Size = new System.Drawing.Size(1300, 76);
+            this.lbHeader.Size = new System.Drawing.Size(1520, 76);
             this.lbHeader.TabIndex = 0;
             this.lbHeader.Text = "QUẢN LÝ NHÂN VIÊN";
             this.lbHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // gbThongTin
             // 
+            this.gbThongTin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gbThongTin.BackColor = System.Drawing.Color.Transparent;
             this.gbThongTin.Controls.Add(this.cbChucVu);
             this.gbThongTin.Controls.Add(this.dtpNgaySinh);
@@ -112,7 +114,7 @@ namespace MobileStoreApp
             this.gbThongTin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gbThongTin.Name = "gbThongTin";
             this.gbThongTin.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gbThongTin.Size = new System.Drawing.Size(1277, 221);
+            this.gbThongTin.Size = new System.Drawing.Size(1497, 221);
             this.gbThongTin.TabIndex = 0;
             this.gbThongTin.TabStop = false;
             this.gbThongTin.Text = "Thông tin nhân viên:";
@@ -122,7 +124,7 @@ namespace MobileStoreApp
             this.cbChucVu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbChucVu.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbChucVu.FormattingEnabled = true;
-            this.cbChucVu.Location = new System.Drawing.Point(1012, 160);
+            this.cbChucVu.Location = new System.Drawing.Point(1232, 163);
             this.cbChucVu.Name = "cbChucVu";
             this.cbChucVu.Size = new System.Drawing.Size(245, 30);
             this.cbChucVu.TabIndex = 3;
@@ -132,7 +134,7 @@ namespace MobileStoreApp
             // 
             this.dtpNgaySinh.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgaySinh.Location = new System.Drawing.Point(558, 41);
+            this.dtpNgaySinh.Location = new System.Drawing.Point(692, 42);
             this.dtpNgaySinh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
             this.dtpNgaySinh.Size = new System.Drawing.Size(250, 30);
@@ -141,7 +143,7 @@ namespace MobileStoreApp
             // txtDienThoai
             // 
             this.txtDienThoai.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDienThoai.Location = new System.Drawing.Point(558, 158);
+            this.txtDienThoai.Location = new System.Drawing.Point(692, 159);
             this.txtDienThoai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDienThoai.Name = "txtDienThoai";
             this.txtDienThoai.Size = new System.Drawing.Size(250, 30);
@@ -160,7 +162,7 @@ namespace MobileStoreApp
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(886, 162);
+            this.label9.Location = new System.Drawing.Point(1058, 162);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(86, 23);
             this.label9.TabIndex = 0;
@@ -170,7 +172,7 @@ namespace MobileStoreApp
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(426, 160);
+            this.label7.Location = new System.Drawing.Point(560, 161);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(102, 23);
             this.label7.TabIndex = 0;
@@ -189,7 +191,7 @@ namespace MobileStoreApp
             // txtMatKhau
             // 
             this.txtMatKhau.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMatKhau.Location = new System.Drawing.Point(1012, 100);
+            this.txtMatKhau.Location = new System.Drawing.Point(1232, 103);
             this.txtMatKhau.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(245, 30);
@@ -198,7 +200,7 @@ namespace MobileStoreApp
             // txtDiaChi
             // 
             this.txtDiaChi.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaChi.Location = new System.Drawing.Point(558, 99);
+            this.txtDiaChi.Location = new System.Drawing.Point(692, 100);
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(250, 30);
@@ -217,7 +219,7 @@ namespace MobileStoreApp
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(886, 103);
+            this.label8.Location = new System.Drawing.Point(1058, 103);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(95, 23);
             this.label8.TabIndex = 0;
@@ -227,7 +229,7 @@ namespace MobileStoreApp
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(426, 104);
+            this.label6.Location = new System.Drawing.Point(560, 105);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 23);
             this.label6.TabIndex = 0;
@@ -246,7 +248,7 @@ namespace MobileStoreApp
             // txtTaiKhoan
             // 
             this.txtTaiKhoan.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTaiKhoan.Location = new System.Drawing.Point(1007, 40);
+            this.txtTaiKhoan.Location = new System.Drawing.Point(1227, 43);
             this.txtTaiKhoan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTaiKhoan.Name = "txtTaiKhoan";
             this.txtTaiKhoan.Size = new System.Drawing.Size(250, 30);
@@ -256,7 +258,7 @@ namespace MobileStoreApp
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(426, 43);
+            this.label5.Location = new System.Drawing.Point(560, 44);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(100, 23);
             this.label5.TabIndex = 0;
@@ -266,7 +268,7 @@ namespace MobileStoreApp
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(886, 44);
+            this.label1.Location = new System.Drawing.Point(1058, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 23);
             this.label1.TabIndex = 0;
@@ -294,15 +296,17 @@ namespace MobileStoreApp
             // txtTimKiem
             // 
             this.txtTimKiem.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiem.Location = new System.Drawing.Point(1024, 355);
+            this.txtTimKiem.Location = new System.Drawing.Point(1209, 352);
             this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(245, 30);
+            this.txtTimKiem.Size = new System.Drawing.Size(280, 30);
             this.txtTimKiem.TabIndex = 2;
             this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // grDanhSach
             // 
+            this.grDanhSach.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grDanhSach.BackColor = System.Drawing.Color.Transparent;
             this.grDanhSach.Controls.Add(this.btnDangXuat);
             this.grDanhSach.Controls.Add(this.dgvNhanVien);
@@ -316,7 +320,7 @@ namespace MobileStoreApp
             this.grDanhSach.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grDanhSach.Name = "grDanhSach";
             this.grDanhSach.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grDanhSach.Size = new System.Drawing.Size(1277, 324);
+            this.grDanhSach.Size = new System.Drawing.Size(1497, 324);
             this.grDanhSach.TabIndex = 1;
             this.grDanhSach.TabStop = false;
             this.grDanhSach.Text = "Danh sách nhân viên:";
@@ -326,7 +330,7 @@ namespace MobileStoreApp
             this.btnDangXuat.BackColor = System.Drawing.Color.Red;
             this.btnDangXuat.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangXuat.ForeColor = System.Drawing.Color.White;
-            this.btnDangXuat.Location = new System.Drawing.Point(969, 270);
+            this.btnDangXuat.Location = new System.Drawing.Point(1102, 270);
             this.btnDangXuat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.Size = new System.Drawing.Size(151, 46);
@@ -337,6 +341,8 @@ namespace MobileStoreApp
             // 
             // dgvNhanVien
             // 
+            this.dgvNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDNhanVien,
@@ -354,7 +360,7 @@ namespace MobileStoreApp
             this.dgvNhanVien.ReadOnly = true;
             this.dgvNhanVien.RowHeadersWidth = 51;
             this.dgvNhanVien.RowTemplate.Height = 24;
-            this.dgvNhanVien.Size = new System.Drawing.Size(1251, 223);
+            this.dgvNhanVien.Size = new System.Drawing.Size(1471, 223);
             this.dgvNhanVien.TabIndex = 0;
             this.dgvNhanVien.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvNhanVien_CellMouseClick);
             // 
@@ -365,7 +371,7 @@ namespace MobileStoreApp
             this.IDNhanVien.MinimumWidth = 6;
             this.IDNhanVien.Name = "IDNhanVien";
             this.IDNhanVien.ReadOnly = true;
-            this.IDNhanVien.Width = 125;
+            this.IDNhanVien.Width = 200;
             // 
             // HoNhanVien
             // 
@@ -374,7 +380,7 @@ namespace MobileStoreApp
             this.HoNhanVien.MinimumWidth = 6;
             this.HoNhanVien.Name = "HoNhanVien";
             this.HoNhanVien.ReadOnly = true;
-            this.HoNhanVien.Width = 125;
+            this.HoNhanVien.Width = 150;
             // 
             // TenNhanVien
             // 
@@ -383,7 +389,7 @@ namespace MobileStoreApp
             this.TenNhanVien.MinimumWidth = 6;
             this.TenNhanVien.Name = "TenNhanVien";
             this.TenNhanVien.ReadOnly = true;
-            this.TenNhanVien.Width = 125;
+            this.TenNhanVien.Width = 150;
             // 
             // NgaySinhNhanVien
             // 
@@ -392,7 +398,7 @@ namespace MobileStoreApp
             this.NgaySinhNhanVien.MinimumWidth = 6;
             this.NgaySinhNhanVien.Name = "NgaySinhNhanVien";
             this.NgaySinhNhanVien.ReadOnly = true;
-            this.NgaySinhNhanVien.Width = 125;
+            this.NgaySinhNhanVien.Width = 150;
             // 
             // DiaChiNhanVien
             // 
@@ -401,7 +407,7 @@ namespace MobileStoreApp
             this.DiaChiNhanVien.MinimumWidth = 6;
             this.DiaChiNhanVien.Name = "DiaChiNhanVien";
             this.DiaChiNhanVien.ReadOnly = true;
-            this.DiaChiNhanVien.Width = 125;
+            this.DiaChiNhanVien.Width = 165;
             // 
             // DienThoaiNhanVien
             // 
@@ -410,7 +416,7 @@ namespace MobileStoreApp
             this.DienThoaiNhanVien.MinimumWidth = 6;
             this.DienThoaiNhanVien.Name = "DienThoaiNhanVien";
             this.DienThoaiNhanVien.ReadOnly = true;
-            this.DienThoaiNhanVien.Width = 125;
+            this.DienThoaiNhanVien.Width = 150;
             // 
             // TaiKhoanNhanVien
             // 
@@ -419,7 +425,7 @@ namespace MobileStoreApp
             this.TaiKhoanNhanVien.MinimumWidth = 6;
             this.TaiKhoanNhanVien.Name = "TaiKhoanNhanVien";
             this.TaiKhoanNhanVien.ReadOnly = true;
-            this.TaiKhoanNhanVien.Width = 125;
+            this.TaiKhoanNhanVien.Width = 150;
             // 
             // MatKhauNhanVien
             // 
@@ -428,7 +434,7 @@ namespace MobileStoreApp
             this.MatKhauNhanVien.MinimumWidth = 6;
             this.MatKhauNhanVien.Name = "MatKhauNhanVien";
             this.MatKhauNhanVien.ReadOnly = true;
-            this.MatKhauNhanVien.Width = 125;
+            this.MatKhauNhanVien.Width = 150;
             // 
             // LoaiNhanVien
             // 
@@ -437,14 +443,14 @@ namespace MobileStoreApp
             this.LoaiNhanVien.MinimumWidth = 6;
             this.LoaiNhanVien.Name = "LoaiNhanVien";
             this.LoaiNhanVien.ReadOnly = true;
-            this.LoaiNhanVien.Width = 125;
+            this.LoaiNhanVien.Width = 150;
             // 
             // btnDong
             // 
             this.btnDong.BackColor = System.Drawing.Color.White;
             this.btnDong.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDong.ForeColor = System.Drawing.Color.Red;
-            this.btnDong.Location = new System.Drawing.Point(804, 270);
+            this.btnDong.Location = new System.Drawing.Point(937, 270);
             this.btnDong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDong.Name = "btnDong";
             this.btnDong.Size = new System.Drawing.Size(120, 46);
@@ -458,7 +464,7 @@ namespace MobileStoreApp
             this.btnCapNhat.BackColor = System.Drawing.Color.DarkBlue;
             this.btnCapNhat.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapNhat.ForeColor = System.Drawing.Color.White;
-            this.btnCapNhat.Location = new System.Drawing.Point(615, 270);
+            this.btnCapNhat.Location = new System.Drawing.Point(748, 270);
             this.btnCapNhat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(144, 46);
@@ -472,7 +478,7 @@ namespace MobileStoreApp
             this.btnSua.BackColor = System.Drawing.Color.DarkBlue;
             this.btnSua.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Location = new System.Drawing.Point(450, 270);
+            this.btnSua.Location = new System.Drawing.Point(583, 270);
             this.btnSua.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(120, 46);
@@ -486,7 +492,7 @@ namespace MobileStoreApp
             this.btnXoa.BackColor = System.Drawing.Color.DarkBlue;
             this.btnXoa.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(285, 270);
+            this.btnXoa.Location = new System.Drawing.Point(418, 270);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(120, 46);
@@ -500,7 +506,7 @@ namespace MobileStoreApp
             this.btnThem.BackColor = System.Drawing.Color.DarkBlue;
             this.btnThem.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(120, 270);
+            this.btnThem.Location = new System.Drawing.Point(253, 270);
             this.btnThem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(120, 46);
@@ -514,7 +520,7 @@ namespace MobileStoreApp
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(841, 359);
+            this.label10.Location = new System.Drawing.Point(996, 359);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(169, 23);
             this.label10.TabIndex = 0;
@@ -524,19 +530,20 @@ namespace MobileStoreApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1300, 743);
+            this.BackColor = System.Drawing.Color.Lavender;
+            this.ClientSize = new System.Drawing.Size(1520, 743);
             this.Controls.Add(this.grDanhSach);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.gbThongTin);
             this.Controls.Add(this.lbHeader);
             this.Controls.Add(this.label10);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmNhanVien";
             this.Text = "Quản lý nhân viên";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmNhanVien_Load);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.frmNhanVien_Paint);
             this.gbThongTin.ResumeLayout(false);
             this.gbThongTin.PerformLayout();
             this.grDanhSach.ResumeLayout(false);
@@ -577,6 +584,7 @@ namespace MobileStoreApp
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnDangXuat;
         private System.Windows.Forms.ComboBox cbChucVu;
+        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDNhanVien;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoNhanVien;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenNhanVien;
@@ -586,6 +594,5 @@ namespace MobileStoreApp
         private System.Windows.Forms.DataGridViewTextBoxColumn TaiKhoanNhanVien;
         private System.Windows.Forms.DataGridViewTextBoxColumn MatKhauNhanVien;
         private System.Windows.Forms.DataGridViewTextBoxColumn LoaiNhanVien;
-        private System.Windows.Forms.Label label10;
     }
 }

@@ -74,6 +74,11 @@ namespace MobileStoreApp
             frmThongKe frmThongKe = new frmThongKe();
             frmThongKe.ShowDialog();
         }
+
+        private void menuThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 
 }

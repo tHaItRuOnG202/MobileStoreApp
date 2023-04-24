@@ -73,56 +73,57 @@ namespace MobileStoreApp
             // menuNhanVien
             // 
             this.menuNhanVien.Name = "menuNhanVien";
-            this.menuNhanVien.Size = new System.Drawing.Size(188, 26);
+            this.menuNhanVien.Size = new System.Drawing.Size(224, 26);
             this.menuNhanVien.Text = "Nhân viên";
             this.menuNhanVien.Click += new System.EventHandler(this.menuNhanVien_Click);
             // 
             // menuKhachHang
             // 
             this.menuKhachHang.Name = "menuKhachHang";
-            this.menuKhachHang.Size = new System.Drawing.Size(188, 26);
+            this.menuKhachHang.Size = new System.Drawing.Size(224, 26);
             this.menuKhachHang.Text = "Khách hàng";
             this.menuKhachHang.Click += new System.EventHandler(this.menuKhachHang_Click);
             // 
             // menuLoaiSanPham
             // 
             this.menuLoaiSanPham.Name = "menuLoaiSanPham";
-            this.menuLoaiSanPham.Size = new System.Drawing.Size(188, 26);
+            this.menuLoaiSanPham.Size = new System.Drawing.Size(224, 26);
             this.menuLoaiSanPham.Text = "Loại sản phẩm";
             this.menuLoaiSanPham.Click += new System.EventHandler(this.menuLoaiSanPham_Click);
             // 
             // menuSanPham
             // 
             this.menuSanPham.Name = "menuSanPham";
-            this.menuSanPham.Size = new System.Drawing.Size(188, 26);
+            this.menuSanPham.Size = new System.Drawing.Size(224, 26);
             this.menuSanPham.Text = "Sản phẩm";
             this.menuSanPham.Click += new System.EventHandler(this.menuSanPham_Click);
             // 
             // menuGiamGia
             // 
             this.menuGiamGia.Name = "menuGiamGia";
-            this.menuGiamGia.Size = new System.Drawing.Size(188, 26);
+            this.menuGiamGia.Size = new System.Drawing.Size(224, 26);
             this.menuGiamGia.Text = "Giảm giá";
             this.menuGiamGia.Click += new System.EventHandler(this.menuGiamGia_Click);
             // 
             // menuHoaDon
             // 
             this.menuHoaDon.Name = "menuHoaDon";
-            this.menuHoaDon.Size = new System.Drawing.Size(188, 26);
+            this.menuHoaDon.Size = new System.Drawing.Size(224, 26);
             this.menuHoaDon.Text = "Hóa đơn";
             this.menuHoaDon.Click += new System.EventHandler(this.menuHoaDon_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(185, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
             // 
             // menuThoat
             // 
             this.menuThoat.Name = "menuThoat";
             this.menuThoat.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.menuThoat.Size = new System.Drawing.Size(188, 26);
+            this.menuThoat.Size = new System.Drawing.Size(224, 26);
             this.menuThoat.Text = "Thoát";
+            this.menuThoat.Click += new System.EventHandler(this.menuThoat_Click);
             // 
             // menuThongKe
             // 

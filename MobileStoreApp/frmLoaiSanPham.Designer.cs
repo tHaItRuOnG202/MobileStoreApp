@@ -68,6 +68,8 @@ namespace MobileStoreApp
             // 
             // gbThongTin
             // 
+            this.gbThongTin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gbThongTin.BackColor = System.Drawing.Color.Transparent;
             this.gbThongTin.Controls.Add(this.txtTenLoaiSanPham);
             this.gbThongTin.Controls.Add(this.label6);
@@ -83,6 +85,8 @@ namespace MobileStoreApp
             // 
             // txtTenLoaiSanPham
             // 
+            this.txtTenLoaiSanPham.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTenLoaiSanPham.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenLoaiSanPham.Location = new System.Drawing.Point(924, 59);
             this.txtTenLoaiSanPham.Name = "txtTenLoaiSanPham";
@@ -119,6 +123,8 @@ namespace MobileStoreApp
             // 
             // txtTimKiem
             // 
+            this.txtTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTimKiem.Location = new System.Drawing.Point(936, 281);
             this.txtTimKiem.Name = "txtTimKiem";
@@ -128,6 +134,8 @@ namespace MobileStoreApp
             // 
             // grDanhSach
             // 
+            this.grDanhSach.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grDanhSach.BackColor = System.Drawing.Color.Transparent;
             this.grDanhSach.Controls.Add(this.dgvLoaiSanPham);
             this.grDanhSach.Controls.Add(this.btnDangXuat);
@@ -146,6 +154,8 @@ namespace MobileStoreApp
             // 
             // dgvLoaiSanPham
             // 
+            this.dgvLoaiSanPham.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvLoaiSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLoaiSanPham.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaLoaiSanPham,
@@ -182,7 +192,7 @@ namespace MobileStoreApp
             this.btnDangXuat.BackColor = System.Drawing.Color.Red;
             this.btnDangXuat.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangXuat.ForeColor = System.Drawing.Color.White;
-            this.btnDangXuat.Location = new System.Drawing.Point(1008, 315);
+            this.btnDangXuat.Location = new System.Drawing.Point(1051, 309);
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.Size = new System.Drawing.Size(161, 44);
             this.btnDangXuat.TabIndex = 3;
@@ -195,7 +205,7 @@ namespace MobileStoreApp
             this.btnDong.BackColor = System.Drawing.Color.White;
             this.btnDong.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDong.ForeColor = System.Drawing.Color.Red;
-            this.btnDong.Location = new System.Drawing.Point(833, 315);
+            this.btnDong.Location = new System.Drawing.Point(876, 309);
             this.btnDong.Name = "btnDong";
             this.btnDong.Size = new System.Drawing.Size(135, 44);
             this.btnDong.TabIndex = 3;
@@ -208,7 +218,7 @@ namespace MobileStoreApp
             this.btnCapNhat.BackColor = System.Drawing.Color.DarkBlue;
             this.btnCapNhat.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapNhat.ForeColor = System.Drawing.Color.White;
-            this.btnCapNhat.Location = new System.Drawing.Point(658, 315);
+            this.btnCapNhat.Location = new System.Drawing.Point(701, 309);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(135, 44);
             this.btnCapNhat.TabIndex = 3;
@@ -221,7 +231,7 @@ namespace MobileStoreApp
             this.btnSua.BackColor = System.Drawing.Color.DarkBlue;
             this.btnSua.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Location = new System.Drawing.Point(483, 315);
+            this.btnSua.Location = new System.Drawing.Point(526, 309);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(135, 44);
             this.btnSua.TabIndex = 3;
@@ -234,7 +244,7 @@ namespace MobileStoreApp
             this.btnXoa.BackColor = System.Drawing.Color.DarkBlue;
             this.btnXoa.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(308, 315);
+            this.btnXoa.Location = new System.Drawing.Point(351, 309);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(135, 44);
             this.btnXoa.TabIndex = 3;
@@ -247,7 +257,7 @@ namespace MobileStoreApp
             this.btnThem.BackColor = System.Drawing.Color.DarkBlue;
             this.btnThem.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(133, 315);
+            this.btnThem.Location = new System.Drawing.Point(176, 309);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(135, 44);
             this.btnThem.TabIndex = 3;
@@ -270,6 +280,7 @@ namespace MobileStoreApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(1300, 743);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.grDanhSach);
@@ -282,7 +293,6 @@ namespace MobileStoreApp
             this.Text = "Quản lý loại sản phẩm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmLoaiSanPham_Load);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.frmLoaiSanPham_Paint);
             this.gbThongTin.ResumeLayout(false);
             this.gbThongTin.PerformLayout();
             this.grDanhSach.ResumeLayout(false);

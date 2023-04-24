@@ -67,7 +67,7 @@ namespace MobileStoreApp
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(507, 137);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(762, 432);
+            this.groupBox1.Size = new System.Drawing.Size(912, 432);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -76,7 +76,7 @@ namespace MobileStoreApp
             this.btnDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnDangNhap.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangNhap.ForeColor = System.Drawing.Color.White;
-            this.btnDangNhap.Location = new System.Drawing.Point(228, 308);
+            this.btnDangNhap.Location = new System.Drawing.Point(331, 306);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(378, 73);
             this.btnDangNhap.TabIndex = 2;
@@ -90,7 +90,7 @@ namespace MobileStoreApp
             this.txtMatKhau.Location = new System.Drawing.Point(228, 205);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '●';
-            this.txtMatKhau.Size = new System.Drawing.Size(492, 32);
+            this.txtMatKhau.Size = new System.Drawing.Size(625, 32);
             this.txtMatKhau.TabIndex = 1;
             // 
             // txtTenDangNhap
@@ -98,7 +98,7 @@ namespace MobileStoreApp
             this.txtTenDangNhap.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenDangNhap.Location = new System.Drawing.Point(228, 127);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
-            this.txtTenDangNhap.Size = new System.Drawing.Size(492, 32);
+            this.txtTenDangNhap.Size = new System.Drawing.Size(625, 32);
             this.txtTenDangNhap.TabIndex = 0;
             // 
             // label2
@@ -128,7 +128,7 @@ namespace MobileStoreApp
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label1.Location = new System.Drawing.Point(3, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(756, 64);
+            this.label1.Size = new System.Drawing.Size(906, 64);
             this.label1.TabIndex = 0;
             this.label1.Text = "ĐĂNG NHẬP";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -137,9 +137,9 @@ namespace MobileStoreApp
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::MobileStoreApp.Properties.Resources._2_transparent1;
-            this.pictureBox1.Location = new System.Drawing.Point(66, 149);
+            this.pictureBox1.Location = new System.Drawing.Point(66, 157);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(336, 420);
+            this.pictureBox1.Size = new System.Drawing.Size(336, 412);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;

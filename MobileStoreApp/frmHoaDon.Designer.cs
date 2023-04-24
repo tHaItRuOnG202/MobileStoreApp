@@ -51,6 +51,7 @@ namespace MobileStoreApp
             this.GiamGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDangXuat = new System.Windows.Forms.Button();
+            this.btnDong = new System.Windows.Forms.Button();
             this.btnXoaHoaDon = new System.Windows.Forms.Button();
             this.btnThemHoaDon = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -71,7 +72,6 @@ namespace MobileStoreApp
             this.lbTenKhachHang = new System.Windows.Forms.Label();
             this.lbTenNhanVien = new System.Windows.Forms.Label();
             this.lbMaNhanVien = new System.Windows.Forms.Label();
-            this.btnDong = new System.Windows.Forms.Button();
             this.gbChiTietHoaDon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietHoaDon)).BeginInit();
             this.gbThongTinHoaDon.SuspendLayout();
@@ -229,6 +229,7 @@ namespace MobileStoreApp
             this.lbTongTien.Name = "lbTongTien";
             this.lbTongTien.Size = new System.Drawing.Size(309, 27);
             this.lbTongTien.TabIndex = 6;
+            this.lbTongTien.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cbMaSanPham
             // 
@@ -269,7 +270,7 @@ namespace MobileStoreApp
             this.IDSanPham.MinimumWidth = 6;
             this.IDSanPham.Name = "IDSanPham";
             this.IDSanPham.ReadOnly = true;
-            this.IDSanPham.Width = 125;
+            this.IDSanPham.Width = 200;
             // 
             // TenSanPham
             // 
@@ -278,7 +279,7 @@ namespace MobileStoreApp
             this.TenSanPham.MinimumWidth = 6;
             this.TenSanPham.Name = "TenSanPham";
             this.TenSanPham.ReadOnly = true;
-            this.TenSanPham.Width = 200;
+            this.TenSanPham.Width = 225;
             // 
             // SoLuong
             // 
@@ -286,7 +287,7 @@ namespace MobileStoreApp
             this.SoLuong.HeaderText = "Số lượng";
             this.SoLuong.MinimumWidth = 6;
             this.SoLuong.Name = "SoLuong";
-            this.SoLuong.Width = 150;
+            this.SoLuong.Width = 200;
             // 
             // DonGia
             // 
@@ -295,7 +296,7 @@ namespace MobileStoreApp
             this.DonGia.MinimumWidth = 6;
             this.DonGia.Name = "DonGia";
             this.DonGia.ReadOnly = true;
-            this.DonGia.Width = 150;
+            this.DonGia.Width = 200;
             // 
             // DonVi
             // 
@@ -304,7 +305,7 @@ namespace MobileStoreApp
             this.DonVi.MinimumWidth = 6;
             this.DonVi.Name = "DonVi";
             this.DonVi.ReadOnly = true;
-            this.DonVi.Width = 125;
+            this.DonVi.Width = 200;
             // 
             // GiamGia
             // 
@@ -313,7 +314,7 @@ namespace MobileStoreApp
             this.GiamGia.MinimumWidth = 6;
             this.GiamGia.Name = "GiamGia";
             this.GiamGia.ReadOnly = true;
-            this.GiamGia.Width = 150;
+            this.GiamGia.Width = 200;
             // 
             // TongTien
             // 
@@ -322,14 +323,14 @@ namespace MobileStoreApp
             this.TongTien.MinimumWidth = 6;
             this.TongTien.Name = "TongTien";
             this.TongTien.ReadOnly = true;
-            this.TongTien.Width = 150;
+            this.TongTien.Width = 200;
             // 
             // btnDangXuat
             // 
             this.btnDangXuat.BackColor = System.Drawing.Color.Red;
             this.btnDangXuat.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangXuat.ForeColor = System.Drawing.Color.White;
-            this.btnDangXuat.Location = new System.Drawing.Point(794, 409);
+            this.btnDangXuat.Location = new System.Drawing.Point(871, 411);
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.Size = new System.Drawing.Size(145, 38);
             this.btnDangXuat.TabIndex = 3;
@@ -337,12 +338,25 @@ namespace MobileStoreApp
             this.btnDangXuat.UseVisualStyleBackColor = false;
             this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
+            // btnDong
+            // 
+            this.btnDong.BackColor = System.Drawing.Color.White;
+            this.btnDong.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDong.ForeColor = System.Drawing.Color.Red;
+            this.btnDong.Location = new System.Drawing.Point(724, 411);
+            this.btnDong.Name = "btnDong";
+            this.btnDong.Size = new System.Drawing.Size(110, 38);
+            this.btnDong.TabIndex = 3;
+            this.btnDong.Text = "Đóng";
+            this.btnDong.UseVisualStyleBackColor = false;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
+            // 
             // btnXoaHoaDon
             // 
             this.btnXoaHoaDon.BackColor = System.Drawing.Color.DarkBlue;
             this.btnXoaHoaDon.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaHoaDon.ForeColor = System.Drawing.Color.White;
-            this.btnXoaHoaDon.Location = new System.Drawing.Point(441, 409);
+            this.btnXoaHoaDon.Location = new System.Drawing.Point(518, 411);
             this.btnXoaHoaDon.Name = "btnXoaHoaDon";
             this.btnXoaHoaDon.Size = new System.Drawing.Size(169, 38);
             this.btnXoaHoaDon.TabIndex = 3;
@@ -355,7 +369,7 @@ namespace MobileStoreApp
             this.btnThemHoaDon.BackColor = System.Drawing.Color.DarkBlue;
             this.btnThemHoaDon.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemHoaDon.ForeColor = System.Drawing.Color.White;
-            this.btnThemHoaDon.Location = new System.Drawing.Point(207, 409);
+            this.btnThemHoaDon.Location = new System.Drawing.Point(284, 411);
             this.btnThemHoaDon.Name = "btnThemHoaDon";
             this.btnThemHoaDon.Size = new System.Drawing.Size(197, 38);
             this.btnThemHoaDon.TabIndex = 3;
@@ -434,14 +448,14 @@ namespace MobileStoreApp
             this.txtMaHoaDon.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaHoaDon.Location = new System.Drawing.Point(152, 34);
             this.txtMaHoaDon.Name = "txtMaHoaDon";
-            this.txtMaHoaDon.Size = new System.Drawing.Size(337, 30);
+            this.txtMaHoaDon.Size = new System.Drawing.Size(419, 30);
             this.txtMaHoaDon.TabIndex = 1;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(651, 34);
+            this.label5.Location = new System.Drawing.Point(648, 34);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(147, 23);
             this.label5.TabIndex = 0;
@@ -461,7 +475,7 @@ namespace MobileStoreApp
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(651, 81);
+            this.label6.Location = new System.Drawing.Point(648, 80);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(154, 23);
             this.label6.TabIndex = 0;
@@ -495,7 +509,7 @@ namespace MobileStoreApp
             this.dtpNgayXuatHoaDon.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgayXuatHoaDon.Location = new System.Drawing.Point(817, 126);
             this.dtpNgayXuatHoaDon.Name = "dtpNgayXuatHoaDon";
-            this.dtpNgayXuatHoaDon.Size = new System.Drawing.Size(337, 30);
+            this.dtpNgayXuatHoaDon.Size = new System.Drawing.Size(336, 30);
             this.dtpNgayXuatHoaDon.TabIndex = 2;
             // 
             // cbMaKhachHang
@@ -508,7 +522,7 @@ namespace MobileStoreApp
             this.cbMaKhachHang.FormattingEnabled = true;
             this.cbMaKhachHang.Location = new System.Drawing.Point(817, 31);
             this.cbMaKhachHang.Name = "cbMaKhachHang";
-            this.cbMaKhachHang.Size = new System.Drawing.Size(337, 30);
+            this.cbMaKhachHang.Size = new System.Drawing.Size(336, 30);
             this.cbMaKhachHang.TabIndex = 3;
             this.cbMaKhachHang.SelectedIndexChanged += new System.EventHandler(this.cbMaKhachHang_SelectedIndexChanged);
             // 
@@ -532,7 +546,7 @@ namespace MobileStoreApp
             this.gbThongTinHoaDon.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbThongTinHoaDon.Location = new System.Drawing.Point(11, 91);
             this.gbThongTinHoaDon.Name = "gbThongTinHoaDon";
-            this.gbThongTinHoaDon.Size = new System.Drawing.Size(1178, 179);
+            this.gbThongTinHoaDon.Size = new System.Drawing.Size(1177, 179);
             this.gbThongTinHoaDon.TabIndex = 1;
             this.gbThongTinHoaDon.TabStop = false;
             this.gbThongTinHoaDon.Text = "Thông tin hóa đơn:";
@@ -546,7 +560,7 @@ namespace MobileStoreApp
             this.lbTenKhachHang.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTenKhachHang.Location = new System.Drawing.Point(817, 80);
             this.lbTenKhachHang.Name = "lbTenKhachHang";
-            this.lbTenKhachHang.Size = new System.Drawing.Size(337, 28);
+            this.lbTenKhachHang.Size = new System.Drawing.Size(336, 28);
             this.lbTenKhachHang.TabIndex = 6;
             // 
             // lbTenNhanVien
@@ -556,7 +570,7 @@ namespace MobileStoreApp
             this.lbTenNhanVien.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTenNhanVien.Location = new System.Drawing.Point(152, 129);
             this.lbTenNhanVien.Name = "lbTenNhanVien";
-            this.lbTenNhanVien.Size = new System.Drawing.Size(337, 28);
+            this.lbTenNhanVien.Size = new System.Drawing.Size(419, 28);
             this.lbTenNhanVien.TabIndex = 6;
             // 
             // lbMaNhanVien
@@ -566,27 +580,15 @@ namespace MobileStoreApp
             this.lbMaNhanVien.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMaNhanVien.Location = new System.Drawing.Point(152, 85);
             this.lbMaNhanVien.Name = "lbMaNhanVien";
-            this.lbMaNhanVien.Size = new System.Drawing.Size(337, 28);
+            this.lbMaNhanVien.Size = new System.Drawing.Size(419, 28);
             this.lbMaNhanVien.TabIndex = 6;
-            // 
-            // btnDong
-            // 
-            this.btnDong.BackColor = System.Drawing.Color.White;
-            this.btnDong.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDong.ForeColor = System.Drawing.Color.Red;
-            this.btnDong.Location = new System.Drawing.Point(647, 409);
-            this.btnDong.Name = "btnDong";
-            this.btnDong.Size = new System.Drawing.Size(110, 38);
-            this.btnDong.TabIndex = 3;
-            this.btnDong.Text = "Đóng";
-            this.btnDong.UseVisualStyleBackColor = false;
-            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // frmHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(1200, 773);
             this.Controls.Add(this.gbChiTietHoaDon);
             this.Controls.Add(this.gbThongTinHoaDon);
@@ -599,7 +601,6 @@ namespace MobileStoreApp
             this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmHoaDon_Load);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.frmHoaDon_Paint);
             this.gbChiTietHoaDon.ResumeLayout(false);
             this.gbChiTietHoaDon.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietHoaDon)).EndInit();
@@ -646,6 +647,7 @@ namespace MobileStoreApp
         private System.Windows.Forms.Label lbTenKhachHang;
         private System.Windows.Forms.Label lbTenNhanVien;
         private System.Windows.Forms.Label lbMaNhanVien;
+        private System.Windows.Forms.Button btnDong;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDSanPham;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenSanPham;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
@@ -653,6 +655,5 @@ namespace MobileStoreApp
         private System.Windows.Forms.DataGridViewTextBoxColumn DonVi;
         private System.Windows.Forms.DataGridViewTextBoxColumn GiamGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn TongTien;
-        private System.Windows.Forms.Button btnDong;
     }
 }

@@ -85,6 +85,8 @@ namespace MobileStoreApp
             // 
             // gbThongTin
             // 
+            this.gbThongTin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gbThongTin.BackColor = System.Drawing.Color.Transparent;
             this.gbThongTin.Controls.Add(this.picHinhAnh);
             this.gbThongTin.Controls.Add(this.cbGiamGia);
@@ -115,7 +117,9 @@ namespace MobileStoreApp
             // 
             // picHinhAnh
             // 
-            this.picHinhAnh.Location = new System.Drawing.Point(1020, 27);
+            this.picHinhAnh.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.picHinhAnh.Location = new System.Drawing.Point(1033, 30);
             this.picHinhAnh.Name = "picHinhAnh";
             this.picHinhAnh.Size = new System.Drawing.Size(207, 207);
             this.picHinhAnh.TabIndex = 4;
@@ -218,12 +222,15 @@ namespace MobileStoreApp
             // 
             // txtDuongDan
             // 
+            this.txtDuongDan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDuongDan.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDuongDan.Location = new System.Drawing.Point(1033, 255);
             this.txtDuongDan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDuongDan.Name = "txtDuongDan";
-            this.txtDuongDan.Size = new System.Drawing.Size(222, 30);
+            this.txtDuongDan.Size = new System.Drawing.Size(207, 30);
             this.txtDuongDan.TabIndex = 12;
+            this.txtDuongDan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtDonGia
             // 
@@ -284,6 +291,8 @@ namespace MobileStoreApp
             // 
             // grDanhSach
             // 
+            this.grDanhSach.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grDanhSach.BackColor = System.Drawing.Color.Transparent;
             this.grDanhSach.Controls.Add(this.dgvSanPham);
             this.grDanhSach.Controls.Add(this.btnDangXuat);
@@ -304,6 +313,8 @@ namespace MobileStoreApp
             // 
             // dgvSanPham
             // 
+            this.dgvSanPham.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSanPham.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaSanPham,
@@ -474,6 +485,7 @@ namespace MobileStoreApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(1300, 743);
             this.Controls.Add(this.grDanhSach);
             this.Controls.Add(this.gbThongTin);
@@ -484,7 +496,6 @@ namespace MobileStoreApp
             this.Text = "Quản lý sản phẩm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmSanPham_Load);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.frmSanPham_Paint);
             this.gbThongTin.ResumeLayout(false);
             this.gbThongTin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHinhAnh)).EndInit();

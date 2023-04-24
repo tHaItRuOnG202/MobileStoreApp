@@ -80,6 +80,8 @@ namespace MobileStoreApp
             // 
             // gbThongTin
             // 
+            this.gbThongTin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gbThongTin.BackColor = System.Drawing.Color.Transparent;
             this.gbThongTin.Controls.Add(this.dtpNgayXuatHoaDon);
             this.gbThongTin.Controls.Add(this.txtKhachHang);
@@ -101,6 +103,8 @@ namespace MobileStoreApp
             // 
             // dtpNgayXuatHoaDon
             // 
+            this.dtpNgayXuatHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpNgayXuatHoaDon.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNgayXuatHoaDon.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgayXuatHoaDon.Location = new System.Drawing.Point(920, 51);
@@ -111,6 +115,8 @@ namespace MobileStoreApp
             // 
             // txtKhachHang
             // 
+            this.txtKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtKhachHang.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKhachHang.Location = new System.Drawing.Point(920, 108);
             this.txtKhachHang.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -188,6 +194,8 @@ namespace MobileStoreApp
             // 
             // grChiTiet
             // 
+            this.grChiTiet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grChiTiet.BackColor = System.Drawing.Color.Transparent;
             this.grChiTiet.Controls.Add(this.dgvChiTietHoaDon);
             this.grChiTiet.Controls.Add(this.label5);
@@ -207,6 +215,8 @@ namespace MobileStoreApp
             // 
             // dgvChiTietHoaDon
             // 
+            this.dgvChiTietHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvChiTietHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvChiTietHoaDon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDSanPham,
@@ -214,13 +224,13 @@ namespace MobileStoreApp
             this.SoLuong,
             this.DonVi,
             this.DonGia});
-            this.dgvChiTietHoaDon.Location = new System.Drawing.Point(662, 39);
+            this.dgvChiTietHoaDon.Location = new System.Drawing.Point(731, 39);
             this.dgvChiTietHoaDon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvChiTietHoaDon.Name = "dgvChiTietHoaDon";
             this.dgvChiTietHoaDon.ReadOnly = true;
             this.dgvChiTietHoaDon.RowHeadersWidth = 51;
             this.dgvChiTietHoaDon.RowTemplate.Height = 24;
-            this.dgvChiTietHoaDon.Size = new System.Drawing.Size(590, 254);
+            this.dgvChiTietHoaDon.Size = new System.Drawing.Size(521, 254);
             this.dgvChiTietHoaDon.TabIndex = 0;
             // 
             // IDSanPham
@@ -293,7 +303,7 @@ namespace MobileStoreApp
             this.dgvHoaDon.ReadOnly = true;
             this.dgvHoaDon.RowHeadersWidth = 51;
             this.dgvHoaDon.RowTemplate.Height = 24;
-            this.dgvHoaDon.Size = new System.Drawing.Size(638, 254);
+            this.dgvHoaDon.Size = new System.Drawing.Size(713, 254);
             this.dgvHoaDon.TabIndex = 0;
             this.dgvHoaDon.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvHoaDon_CellMouseClick);
             // 
@@ -382,6 +392,8 @@ namespace MobileStoreApp
             // 
             // lbTongTien
             // 
+            this.lbTongTien.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbTongTien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lbTongTien.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbTongTien.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -396,6 +408,7 @@ namespace MobileStoreApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(1300, 743);
             this.Controls.Add(this.grChiTiet);
             this.Controls.Add(this.label4);
@@ -408,7 +421,6 @@ namespace MobileStoreApp
             this.Text = "Quản lý hóa đơn";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmQuanLyHoaDon_Load);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.frmQuanLyHoaDon_Paint);
             this.gbThongTin.ResumeLayout(false);
             this.gbThongTin.PerformLayout();
             this.grChiTiet.ResumeLayout(false);

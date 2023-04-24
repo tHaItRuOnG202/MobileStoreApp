@@ -16,7 +16,7 @@ namespace MobileStoreApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TrangChuMuaHang());
+            Application.Run(new frmDangNhap());
         }
     }
 }

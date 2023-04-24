@@ -193,20 +193,47 @@ namespace MobileStoreApp
             this.LoadProductMenu(dt);
         }
 
+        //private void txtSearchPrice_TextChanged(object sender, EventArgs e)
+        //{
+        //    this.loadAll();
+        //    string pattern = @"^(\d*|\s*)$";
+        //    Regex regex = new Regex(pattern);
+        //    bool isMatch = regex.IsMatch(txtSearchPrice.Text);
+        //    if (isMatch && txtSearchPrice.Text != "0")
+        //    {
+        //        DataTable dt = ctrl_B.FoundProductByPrice(float.Parse(txtSearchPrice.Text));
+        //        this.LoadProductMenu(dt);
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Chỉ được phép nhập số lớn hơn 0!");
+        //    }
+        //}
+
         private void txtSearchPrice_TextChanged(object sender, EventArgs e)
         {
             this.loadAll();
-            string pattern = @"^(\d*|\s*)$";
+            string pattern = @"^(\d*)+$";
             Regex regex = new Regex(pattern);
             bool isMatch = regex.IsMatch(txtSearchPrice.Text);
-            if (isMatch && txtSearchPrice.Text != "0")
+            if (isMatch)
             {
-                DataTable dt = ctrl_B.FoundProductByPrice(float.Parse(txtSearchPrice.Text));
-                this.LoadProductMenu(dt);
+                if (txtSearchPrice.Text != "" && txtSearchPrice.Text != String.Empty)
+                {
+                    DataTable dt = ctrl_B.FoundProductByPrice(float.Parse(txtSearchPrice.Text));
+                    this.LoadProductMenu(dt);
+                }
+                else
+                {
+                    DataTable dt = ctrl_B.FoundProductOriginal(txtSearchPrice.Text);
+                    this.LoadProductMenu(dt);
+                }
+
             }
             else
             {
-                MessageBox.Show("Chỉ được phép nhập số lớn hơn 0!");
+                txtSearchPrice.Text = "0";
+                MessageBox.Show("Chỉ được phép nhập số!");
             }
         }
 
